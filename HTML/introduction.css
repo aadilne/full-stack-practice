@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pageHead{
+    text-align: center;
+    color: #ff0000;
+    font-size: 2em;
+}
+
+#para1 {
+  text-align: left;
+  color: #0000ff;
+}
+
+
+p.center {
+  text-align: center;
+  color: rgb(255, 238, 0);
+  text-align:left;
+}
+

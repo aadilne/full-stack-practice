@@ -1,0 +1,44 @@
+body {
+  background-color: lightblue;
+}
+
+#heading1,
+#heading2,
+#paragraph1 {
+  text-align: center;
+  color: red;
+}
+
+/* This is a single-line comment */
+
+/* This is
+a multi-line
+comment */
+
+.div1 {
+  height: 100px;
+  width: 100%;
+  background-color: #ff0000;
+  opacity: 0.1;
+}
+
+.cpp {
+  background-color: lightyellow;
+}
+
+.bgImage {
+  height: 400px;
+  width: 600px;
+  border: 1px solid black;
+  background-image: url("71oDTJru50L.jpg");
+  /* background-size: cover; */
+  background-size: cover;
+  /* background-repeat: repeat-x; */
+  background-repeat: no-repeat;
+  background-position: right top;
+   background-attachment: fixed;
+
+/* background: #ffffff url("img_tree.png") no-repeat right top;    // background shorthand property */
+}
+
+
