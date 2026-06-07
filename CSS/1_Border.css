@@ -2,6 +2,48 @@
 .border-example{
     width: 200px;
     height: 100px;
+    text-align: center;
     border: 2px solid black;
+    margin: auto;
 }
 
+.dashed{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border: 2px dashed black;
+    margin: auto;
+
+}
+
+.double{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border: 5px double black;
+    margin: 0 auto;
+}
+
+.groove{
+    width: 200px;
+    height: 80px;
+     text-align: center;
+    border: 5px groove black;
+    margin: 0 auto;
+}
+
+.ridge{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border: 5px ridge black;
+    margin: 0 auto;
+}
+
+.inset{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border: 5px inset black;
+    margin: 0 auto;
+}
