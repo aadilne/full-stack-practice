@@ -1,0 +1,35 @@
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Element Selector */
+p{
+    color: blue;
+}
+
+/* Class Selector */
+.info{
+    background-color: lightyellow;
+    padding: 10px;
+    border: 2px solid orange;
+}
+
+/* ID Selector */
+#special{
+    color: red;
+    font-weight: bold;
+}
+
+/* Group Selector */
+h3,h4{
+    color: green;
+}

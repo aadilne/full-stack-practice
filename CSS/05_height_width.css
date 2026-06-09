@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.box{
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* 1. Length */
+.box1{
+    width: 300px;
+    height: 100px;
+}
+
+/* 2. Auto */
+.box2{
+    width: auto;
+    height: auto;
+}
+
+/* 3. Percentage */
+.parent{
+    width: 800px;
+    border: 2px solid red;
+}
+
+.box3{
+    width: 50%;
+}
+
+/* 4. Max Width */
+.box4{
+    width: 100%;
+    max-width: 500px;
+}
+
+/* 5. Min Width */
+.box5{
+    min-width: 300px;
+}
+
+/* 6. Max Height */
+.box6{
+    max-height: 100px;
+    overflow: auto;
+}
+
+/* 7. Min Height */
+.box7{
+    min-height: 150px;
+}
+
+/* 8. Initial */
+.box8{
+    width: initial;
+}
+
+/* 9. Inherit */
+.parent2{
+    width: 500px;
+    border: 2px solid green;
+}
+
+.child{
+    width: inherit;
+    background-color: lightgreen;
+}

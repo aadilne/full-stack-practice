@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.box{
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+/* Background Color */
+.box1{
+    background-color: lightblue;
+}
+
+/* Background Image */
+.box2{
+    background-image: url("https://picsum.photos/300");
+}
+
+/* Background Repeat */
+.box3{
+    background-image: url("https://picsum.photos/100");
+    background-repeat: repeat-x;
+}
+
+/* Background Position */
+.box4{
+    background-image: url("https://picsum.photos/150");
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+/* Background Size */
+.box5{
+    background-image: url("https://picsum.photos/500/300");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* background: #ffffff url("img_tree.png") no-repeat right top; */
+
+body{
+    background-image: url("https://picsum.photos/1200/800");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
