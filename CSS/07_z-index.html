@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Complete Practice</title>
+    <link rel="stylesheet" href="07_z-index.css">
+</head>
+<body>
+
+    <h1>Z-Index Complete Practice</h1>
+
+    
+    <!-- Example 1 : Basic Z-Index -->
+ 
+
+    <h2>Example 1 : Basic Z-Index</h2>
+
+    <div class="container">
+        <div class="box red">Red</div>
+        <div class="box blue">Blue</div>
+        <div class="box green">Green</div>
+    </div>
+
+
+
+    <!-- Example 2 : Negative Z-Index -->
+
+
+    <h2>Example 2 : Negative Z-Index</h2>
+
+    <div class="container">
+        <div class="box red negative-red">Red</div>
+        <div class="box blue">Blue</div>
+        <div class="box green">Green</div>
+    </div>
+
+
+    <!-- Example 3 : Same Z-Index -->
+
+    <h2>Example 3 : Same Z-Index</h2>
+
+    <div class="container">
+        <div class="box same-red">Red</div>
+        <div class="box same-blue">Blue</div>
+        <div class="box same-green">Green</div>
+    </div>
+
+    <!-- Example 4 : Parent Child -->
+
+    <h2>Example 4 : Parent Child</h2>
+
+    <div class="parent-one">
+        Parent 1
+        <div class="child-one">
+            Child z-index 9999
+        </div>
+    </div>
+
+    <div class="parent-two">
+        Parent 2
+    </div>
+    <!-- Example 5 : Fixed Navbar -->
+    
+
+    <div class="navbar">
+        Navbar (z-index:999)
+    </div>
+
+
+   
+    <!-- Example 6 : Modal -->
+    
+
+    <div class="modal">
+        Modal (z-index:1000)
+    </div>
+
+</body>
+</html>
