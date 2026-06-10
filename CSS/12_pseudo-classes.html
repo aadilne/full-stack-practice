@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes Practice</title>
+    <link rel="stylesheet" href="12_pseudo-classes.css">
+</head>
+<body>
+
+    <h1>CSS Pseudo Classes Practice</h1>
+
+    
+    <!-- Hover -->
+ 
+
+    <section>
+        <h2>1. :hover</h2>
+
+        <button class="hover-btn">
+            Hover Me
+        </button>
+    </section>
+
+
+    <!-- Active -->
+  
+
+    <section>
+        <h2>2. :active</h2>
+
+        <button class="active-btn">
+            Click Me
+        </button>
+    </section>
+
+    <!-- Focus -->
+
+    <section>
+        <h2>3. :focus</h2>
+
+        <input type="text" placeholder="Click Here">
+    </section>
+    <!-- Visited -->
+
+    <section>
+        <h2>4. :visited</h2>
+
+        <a href="https://google.com" target="_blank">
+            Google
+        </a>
+    </section>
+
+    <!-- Checked -->
+
+    <section>
+        <h2>5. :checked</h2>
+
+        <input type="checkbox">
+
+        Accept Terms
+    </section>
+
+    <!-- Disabled -->
+
+    <section>
+        <h2>6. :disabled</h2>
+
+        <input
+            type="text"
+            value="Disabled Input"
+            disabled
+        >
+    </section>
+
+
+    <!-- Enabled -->
+
+
+    <section>
+        <h2>7. :enabled</h2>
+
+        <input
+            type="text"
+            placeholder="Enabled Input"
+        >
+    </section>
+
+
+    <!-- Required -->
+
+    <section>
+        <h2>8. :required</h2>
+
+        <input
+            type="email"
+            required
+            placeholder="Required Email"
+        >
+    </section>
+
+   
+    <!-- Optional -->
+   
+
+    <section>
+        <h2>9. :optional</h2>
+
+        <input
+            type="text"
+            placeholder="Optional Field"
+        >
+    </section>
+
+  
+    <!-- Empty -->
+   
+
+    <section>
+        <h2>10. :empty</h2>
+
+        <div class="empty-box"></div>
+    </section>
+
+    
+    <!-- Not -->
+   
+
+    <section>
+        <h2>11. :not()</h2>
+
+        <p>Paragraph 1</p>
+
+        <p class="special">
+            Paragraph 2
+        </p>
+
+        <p>Paragraph 3</p>
+    </section>
+
+
+    
+
+     <h1>CSS Structural Pseudo Classes</h1>
+
+    <!-- first-child -->
+    <section>
+        <h2>1. first-child</h2>
+
+        <ul class="first-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </section>
+
+    <!-- last-child -->
+    <section>
+        <h2>2. last-child</h2>
+
+        <ul class="last-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </section>
+
+    <!-- nth-child -->
+    <section>
+        <h2>3. nth-child(2)</h2>
+
+        <ul class="nth-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+
+    <!-- odd -->
+    <section>
+        <h2>4. nth-child(odd)</h2>
+
+        <ul class="odd-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </section>
+
+    <!-- even -->
+    <section>
+        <h2>5. nth-child(even)</h2>
+
+        <ul class="even-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ul>
+    </section>
+
+    <!-- nth-last-child -->
+    <section>
+        <h2>6. nth-last-child(2)</h2>
+
+        <ul class="last-nth-demo">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </section>
+
+    <!-- only-child -->
+    <section>
+        <h2>7. only-child</h2>
+
+        <div class="only-demo">
+            <p>I am only child</p>
+        </div>
+    </section>
+
+    <!-- lang -->
+    <section>
+        <h2>8. lang()</h2>
+
+        <p lang="en">Hello World</p>
+
+        <p lang="hi">Namaste Dosto</p>
+
+        <p lang="fr">Bonjour</p>
+    </section>
+
+</body>
+</html

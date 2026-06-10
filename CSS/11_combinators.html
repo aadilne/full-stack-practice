@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators Practice</title>
+    <link rel="stylesheet" href="11_combinators.css">
+</head>
+<body>
+
+    <h1>CSS Combinators Practice</h1>
+
+    
+    <!-- 1. Descendant Selector -->
+
+
+    <section>
+        <h2>1. Descendant Selector (space)</h2>
+
+        <div class="descendant">
+            <p>Paragraph 1</p>
+
+            <div>
+                <p>Paragraph 2</p>
+            </div>
+
+            <article>
+                <div>
+                    <p>Paragraph 3</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+    <!-- 2. Child Selector -->
+
+
+    <section>
+        <h2>2. Child Selector (>)</h2>
+
+        <div class="child-parent">
+
+            <p>Direct Child Paragraph</p>
+
+            <div>
+                <p>Nested Paragraph not css apply </p>
+            </div>
+
+            <p>Another Direct Child Paragraph</p>
+
+        </div>
+    </section>
+
+
+    <!-- 3. Adjacent Sibling -->
+
+    <section>
+        <h2>3. Adjacent Sibling (+)</h2>
+
+        <h3>Heading</h3>
+
+        <p>
+            First Paragraph
+        </p>
+
+        <p>
+            Second Paragraph
+        </p>
+
+    </section>
+
+    <!-- 4. General Sibling -->
+    <section>
+        <h2>4. General Sibling (~)</h2>
+
+        <h4>Title</h4>
+
+        <p>Paragraph 1</p>
+
+        <p>Paragraph 2</p>
+
+        <div>
+            Some Div
+        </div>
+
+        <p>Paragraph 3</p>
+
+    </section>
+
+</body>
+</html>

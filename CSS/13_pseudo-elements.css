@@ -1,0 +1,80 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    padding:30px;
+    font-family:Arial, sans-serif;
+}
+
+section{
+    margin-bottom:40px;
+}
+
+h2{
+    margin-bottom:10px;
+}
+
+/* 1. before */
+
+.before-text::before{
+    content:"🔥 ";
+    color:red;
+}
+
+/* 2. after */
+
+.after-text::after{
+    content:" 🚀";
+}
+
+/* 3. first-letter */
+
+.first-letter-text::first-letter{
+    font-size:40px;
+    color:red;
+    font-weight:bold;
+}
+
+
+/* 4. first-line */
+
+
+.first-line-text{
+    width:300px;
+}
+
+.first-line-text::first-line{
+    color:blue;
+    font-weight:bold;
+}
+
+
+/* 5. selection */
+
+.selection-text::selection{
+    background:black;
+    color:white;
+}
+
+
+/* 6. marker */
+
+
+.marker-list li::marker{
+    color:red;
+    font-size:20px;
+}
+
+
+/* 7. placeholder */
+
+
+input::placeholder{
+    color:purple;
+    font-style:italic;
+}

@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+
+/* 1. Descendant Selector */
+
+
+.descendant p{
+    color: red;
+}
+
+/*
+Selects ALL p tags
+inside .descendant
+*/
+
+
+/* 2. Child Selector */
+
+
+.child-parent > p{
+    color: blue;
+    font-size: 22px;
+}
+
+/*
+Only direct child p
+*/
+
+
+/* 3. Adjacent Sibling */
+
+
+h3 + p{
+    background-color: yellow;
+}
+
+/*
+Only first p
+immediately after h3
+*/
+
+
+/* 4. General Sibling */
+
+
+h4 ~ p{
+    color: green;
+    font-weight: bold;
+}
+
+/*
+All p tags
+after h4
+*/
