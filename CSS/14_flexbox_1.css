@@ -1,0 +1,27 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.parent_1{
+    width:100%;
+    max-width: 600px;
+    height: 200px;
+    background-color: #f1dcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parent_1_box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ff0000;
+    background-color: #333;
+    flex-shrink:1;
+    
+    
+}
