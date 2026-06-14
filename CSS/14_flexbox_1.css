@@ -8,12 +8,14 @@
 .parent_1{
     width:100%;
     max-width: 600px;
-    height: 200px;
+    height: 400px;
     background-color: #f1dcdc;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .parent_1_box{
