@@ -40,6 +40,7 @@ h2{
 
 .columns-demo{
     grid-template-columns:200px 200px 200px;
+    grid-column-gap:10px;
 }
 
 /* 2. grid-template-rows */
@@ -47,6 +48,7 @@ h2{
 .rows-demo{
     grid-template-columns:100px;
     grid-template-rows:60px 60px 60px;
+    grid-row-gap:10px;
 }
 
 
@@ -146,4 +148,63 @@ h2{
 
 .align-self-box{
     align-self:center;
+}
+
+
+
+
+/* grid spaning */
+.parent-container{
+    width:100%;
+    max-width:700px;
+    height: 400px;
+    border:3px solid black;
+    display:grid;
+    grid-template-rows: 50px repeat(2,1fr) 50px;
+    grid-template-columns:50px repeat(2,1fr) 50px;
+    gap: 4px;
+
+
+}
+
+
+
+.item1{
+    background:#112233;
+    color:white;
+    grid-column: 1/-1;
+
+}
+
+.item2{
+    background:#664477;
+    color:white;
+    grid-row: 2/4;
+}
+
+.item3{
+    background:#558899;
+    color:white;
+    grid-row: 2/4;
+    
+}
+
+.item4{
+    background:#16c516;
+    color:white;
+    grid-row: 2/4;
+   
+}
+
+.item5{
+    background:#c51616;
+    color:white;
+    grid-row: 2/4;
+    
+}
+
+.item6{
+    background-color: #555000;
+    grid-column: 1/-1;
+
 }
