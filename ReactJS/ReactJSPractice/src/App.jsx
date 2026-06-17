@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import Demo from './component/Demo'
+import InlineStyle from './component/InlineStyle'
+import FunctionComponent from './component/FunctionComponent'
+
 
 function App() {
   
@@ -8,8 +11,10 @@ function App() {
     <>
       
       <h1>react</h1>
+      
       <Demo />
-
+      <InlineStyle />
+      <FunctionComponent />
       
     </>
   )
