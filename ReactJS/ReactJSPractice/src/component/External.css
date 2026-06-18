@@ -5,3 +5,12 @@
     border: 3px solid black;
     text-align: center;
 }
+
+
+.visiable{
+    display: block;
+}
+
+.unvisiable{
+    display: none;
+}
