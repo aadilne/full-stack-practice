@@ -4,12 +4,14 @@ import InlineStyle from './component/InlineStyle'
 import FunctionComponent from './component/FunctionComponent'
 import Array_and_Obj from './component/Array_and_Obj'
 import ConditionRendering from './component/ConditionRendering'
+import Props from './component/Props'
 
 
 
 
 function App() {
   
+  const propHobbies = ["Art" , "Singing" , "Swiming" , "Cooking"]
 
   return (
     <>
@@ -21,7 +23,12 @@ function App() {
       <FunctionComponent />
       <Array_and_Obj />
       <ConditionRendering />
-      
+
+      {/* we Can send single prop also */}
+      {/*<Props Name =" Nezam" /> */}
+      <Props Name =" AAdil" Age ={24} City = "Ara" propHobbies = {propHobbies} />
+      <Props Name =" Nezam" Age ={22} City = "Patna" />
+
     </>
   )
 }
