@@ -5,13 +5,14 @@ import FunctionComponent from './component/FunctionComponent'
 import Array_and_Obj from './component/Array_and_Obj'
 import ConditionRendering from './component/ConditionRendering'
 import Props from './component/Props'
+import StateManagement from './component/StateManagement'
 
 
 
 
 function App() {
   
-  const propHobbies = ["Art" , "Singing" , "Swiming" , "Cooking"]
+ //  const propHobbies = ["Art" , "Singing" , "Swiming" , "Cooking"]
 
   return (
     <>
@@ -26,8 +27,11 @@ function App() {
 
       {/* we Can send single prop also */}
       {/*<Props Name =" Nezam" /> */}
-      <Props Name =" AAdil" Age ={24} City = "Ara" propHobbies = {propHobbies} />
+    {/*   <Props Name =" AAdil" Age ={24} City = "Ara" propHobbies = {propHobbies} /> */}
+
       <Props Name =" Nezam" Age ={22} City = "Patna" />
+
+      <StateManagement />
 
     </>
   )

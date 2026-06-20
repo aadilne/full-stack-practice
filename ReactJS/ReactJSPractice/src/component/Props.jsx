@@ -24,12 +24,12 @@ function   Props(prop){       //prop always return object value
         <p>We can also print using Object Destructring</p>
         <p>Studen Name {Name}</p>
 
-        <h2>Array Student  Hobbies print </h2>
+     {/*    <h2>Array Student  Hobbies print </h2>
         <ul>{propHobbies.map((hobby , index) =>(
                 <li key = {index}> {hobby} </li>
              ))}
              </ul>
-
+      */}
         </>
 
     )
