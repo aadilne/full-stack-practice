@@ -6,6 +6,7 @@ import Array_and_Obj from './component/Array_and_Obj'
 import ConditionRendering from './component/ConditionRendering'
 import Props from './component/Props'
 import StateManagement from './component/StateManagement'
+import FormHandling from './component/FormHandling'
 
 
 
@@ -32,6 +33,8 @@ function App() {
       <Props Name =" Nezam" Age ={22} City = "Patna" />
 
       <StateManagement />
+
+       <FormHandling />
 
     </>
   )
