@@ -38,7 +38,7 @@ function    FormHandling(){
 
         const [formData , setFormData] = useState({
                                                     gender:"",
-                                                    agree:"false",
+                                                    agree:false,
                                                     country:"India"
 
                                                       })
@@ -52,7 +52,7 @@ function    FormHandling(){
         const handleChange = (e) =>{
             const {name , type , value, checked} = e.target; 
             setFormData((prev) => ({
-                ...prev , [name] : type === "checkebox" ? checked : value
+                ...prev , [name] : type === "checkbox" ? checked : value
             }))
         }
 
@@ -108,17 +108,17 @@ function    FormHandling(){
                 <input type="radio" 
                 name="gender" 
                 value="male" 
-                checked={formData.gender ==="Male"} 
+                checked={formData.gender ==="male"} 
                 onChange={handleChange} />
             Male</label>
 
             <label >
-                <input type="radio" name="gender" value="Female" checked={formData.gender ==="Female"} onChange={handleChange} />
+                <input type="radio" name="gender" value="female" checked={formData.gender ==="female"} onChange={handleChange} />
             Female</label>
             <br />
 
-            <label> Country 
-                <select name="Country" onChange={handleChange} value={formData.country}>
+            <label> country 
+                <select name="country" onChange={handleChange} value={formData.country}>
                     <option value="India">India </option>
                     <option value="USA">USA </option>
                     <option value="UK">UK</option>
