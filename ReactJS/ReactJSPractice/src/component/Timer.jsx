@@ -9,11 +9,6 @@ function    Timer() {
         const  interval = setInterval(() =>{
             setSecond((prev) => prev+1)
         },1000) 
-
-        return () =>{                   // cleanup function return function in return
-            clearInterval(interval) 
-            console.log("clear Interval");
-        } 
         
         
         //window Resize Update
@@ -23,10 +18,15 @@ function    Timer() {
 
         window.addEventListener("resize" , handalResize)
         
-        return () =>{
+
+        return () =>{                   // cleanup function return function in return
+            clearInterval(interval) 
+            console.log("clear Interval");
             window.removeEventListener("resize" , handalResize)
             console.log("unsubscribe From resize event");
-        }
+        } 
+
+       
 
     } ,[])
 
