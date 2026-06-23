@@ -9,6 +9,7 @@ import StateManagement from './component/StateManagement'
 import FormHandling from './component/FormHandling'
 import Todo from './component/Todo'
 import UseEffectHook from './component/UseEffectHook'
+import Timer from './component/Timer'
 
 
 
@@ -41,6 +42,7 @@ function App() {
     <Todo/>
 
     < UseEffectHook/>
+    <Timer/>
 
     </>
   )
