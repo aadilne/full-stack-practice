@@ -7,6 +7,8 @@ import ConditionRendering from './component/ConditionRendering'
 import Props from './component/Props'
 import StateManagement from './component/StateManagement'
 import FormHandling from './component/FormHandling'
+import Todo from './component/Todo'
+import UseEffectHook from './component/UseEffectHook'
 
 
 
@@ -30,11 +32,15 @@ function App() {
       {/*<Props Name =" Nezam" /> */}
     {/*   <Props Name =" AAdil" Age ={24} City = "Ara" propHobbies = {propHobbies} /> */}
 
-      <Props Name =" Nezam" Age ={22} City = "Patna" />
+    <Props Name =" Nezam" Age ={22} City = "Patna" />
 
-      <StateManagement />
+    <StateManagement />
 
-       <FormHandling />
+    <FormHandling />
+
+    <Todo/>
+
+    < UseEffectHook/>
 
     </>
   )
