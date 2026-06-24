@@ -11,10 +11,31 @@ import Todo from './component/Todo'
 import UseEffectHook from './component/UseEffectHook'
 import Timer from './component/Timer'
 
+import RouterHome from './component/RouterHome'
+import RouterAbout from './component/RouterAbout'
+import RouterContact from './component/RouterContact'
+
+import { BrowserRouter, Routes, Route , Link , useParams } from "react-router-dom";
+
+import RouterProdect from './component/RouterProdect'
+
+
+
 
 
 
 function App() {
+
+  function  User(){
+    console.log(useParams())
+    const {id}=useParams()
+    return <h2>User Profile for Id: {id}</h2>
+  }
+
+  function NotFound(){
+
+    return <h1>404 page ot found</h1>
+  }
   
  //  const propHobbies = ["Art" , "Singing" , "Swiming" , "Cooking"]
 
@@ -43,6 +64,36 @@ function App() {
 
     < UseEffectHook/>
     <Timer/>
+
+   
+    <BrowserRouter>
+    <h1>React Router Practice</h1>
+   {/*  <a href="/">Home</a> | 
+    <a href="/RouterAbout">About</a> |
+    <a href="/RouterContact">Contact</a> | */}
+
+    <nav>
+      <Link to='/'>Home</Link>|
+      <Link to='RouterAbout'>About</Link>|
+      <Link to="RouterContact">Contace</Link>|
+      <Link to="/User/10">User</Link>  |
+      <Link to="RouterProdect">Product</Link>
+    </nav>
+
+    <Routes>
+      <Route path='/' element={<RouterHome />}/>
+      <Route path='/RouterAbout' element={<RouterAbout />}/>
+      <Route path='/RouterContact' element={<RouterContact />}/>
+
+      <Route path='/User/:id' element={<User />}/>
+      <Route path='*' element={<NotFound />}/> 
+      <Route path='RouterProdect' element ={<RouterProdect/>} />
+        
+    </Routes>
+    </BrowserRouter>
+    
+     
+
 
     </>
   )
