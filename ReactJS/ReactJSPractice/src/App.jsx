@@ -18,6 +18,8 @@ import RouterContact from './component/RouterContact'
 import { BrowserRouter, Routes, Route , Link , useParams } from "react-router-dom";
 
 import RouterProdect from './component/RouterProdect'
+import RouterNestedPhone from './component/RouterNestedPhone'
+import RouterNestedLaptop from './component/RouterNestedLaptop'
 
 
 
@@ -76,19 +78,22 @@ function App() {
       <Link to='/'>Home</Link>|
       <Link to='RouterAbout'>About</Link>|
       <Link to="RouterContact">Contace</Link>|
-      <Link to="/User/10">User</Link>  |
-      <Link to="RouterProdect">Product</Link>
+      <Link to="/User/10">User</Link>
+      <Link to="RouterProdect">Produce</Link>
+      
     </nav>
 
     <Routes>
       <Route path='/' element={<RouterHome />}/>
       <Route path='/RouterAbout' element={<RouterAbout />}/>
       <Route path='/RouterContact' element={<RouterContact />}/>
-
       <Route path='/User/:id' element={<User />}/>
-      <Route path='*' element={<NotFound />}/> 
-      <Route path='RouterProdect' element ={<RouterProdect/>} />
-        
+      <Route path='*' element={<NotFound />}/>
+     
+      <Route   path='/RouterProdect'  element={<RouterProdect />}>
+        <Route path='RouterNestedPhone' element={<RouterNestedPhone />}/>
+        <Route path='RouterNestedLaptop' element={<RouterNestedLaptop />}/>
+      </Route>
     </Routes>
     </BrowserRouter>
     
