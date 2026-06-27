@@ -16,10 +16,17 @@ import RouterAbout from './component/RouterAbout'
 import RouterContact from './component/RouterContact'
 
 import { BrowserRouter, Routes, Route , Link , useParams } from "react-router-dom";
-
 import RouterProdect from './component/RouterProdect'
 import RouterNestedPhone from './component/RouterNestedPhone'
 import RouterNestedLaptop from './component/RouterNestedLaptop'
+
+import UseEffectEvent from './component/UseEffectEvent'
+import UEFAutoSaveForm from './component/UEFAutoSaveForm'
+import PropDrilingStateLiftingSharedState from './component/PropDrilingStateLiftingSharedState'
+import UseContext from './component/UseContext'
+
+import UseReducerHook from './component/UseReducerHook'
+
 
 
 
@@ -78,7 +85,7 @@ function App() {
       <Link to='/'>Home</Link>|
       <Link to='RouterAbout'>About</Link>|
       <Link to="RouterContact">Contace</Link>|
-      <Link to="/User/10">User</Link>
+      <Link to="/User/10">User</Link>|
       <Link to="RouterProdect">Produce</Link>
       
     </nav>
@@ -97,7 +104,13 @@ function App() {
     </Routes>
     </BrowserRouter>
     
-     
+    <UseEffectEvent />
+    <UEFAutoSaveForm/>
+
+    <PropDrilingStateLiftingSharedState />
+
+    <UseContext />
+    <UseReducerHook />
 
 
     </>

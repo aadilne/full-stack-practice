@@ -8,8 +8,8 @@ function   RouterProdect(){
         <h1>Product Page </h1>
 
         <nav>
-            <Link to="RouterNestedPhone">Phone</Link>
-            <Link to="RouterNestedLaptop">Laptop</Link>
+            <Link to="RouterNestedPhone">Phone</Link>|
+            <Link to="RouterNestedLaptop">Laptop</Link>|
         </nav>
 
         <Outlet />
