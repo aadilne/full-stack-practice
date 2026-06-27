@@ -26,7 +26,7 @@ import PropDrilingStateLiftingSharedState from './component/PropDrilingStateLift
 import UseContext from './component/UseContext'
 
 import UseReducerHook from './component/UseReducerHook'
-
+import UseMemoHook from './component/UseMemoHook'
 
 
 
@@ -111,6 +111,7 @@ function App() {
 
     <UseContext />
     <UseReducerHook />
+    <UseMemoHook />
 
 
     </>
