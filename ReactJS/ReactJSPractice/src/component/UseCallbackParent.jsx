@@ -1,13 +1,15 @@
+
 import { useState , useCallback } from "react"
+import UseCallbackChild from "./UseCallbackChild";
 
 
-function  UseCallbackHook(){
+function    UseCallbackParent(){
 
-    const [count , setCount] = useState(0);
+     const [count , setCount] = useState(0);
 
-    const increment = useCallback( () => {
-        setCount((prev) => prev+1) 
-    })
+    const handleClick = useCallback( () => {
+        console.log("Button Click");
+    }, [])
 
     
     return (
@@ -15,10 +17,13 @@ function  UseCallbackHook(){
         <h1>Practice useCallback Hook</h1>
 
         <h2>Count : {count}</h2>
-        <button onClick={increment}>increse</button>
+        <button onClick={() => setCount(count + 1)}>Parent Button</button>
+
+          <UseCallbackChild click ={handleClick} />
         
         </>
     )
 }
 
-export default UseCallbackHook
+
+export default UseCallbackParent

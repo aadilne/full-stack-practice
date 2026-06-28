@@ -27,7 +27,9 @@ import UseContext from './component/UseContext'
 
 import UseReducerHook from './component/UseReducerHook'
 import UseMemoHook from './component/UseMemoHook'
-
+import UseMemoPractice from './component/UseMemoPractice'
+import UseCallbackHook from './component/UseCallbackHook'
+import UseCallbackParent from './component/UseCallbackParent'
 
 
 
@@ -112,6 +114,10 @@ function App() {
     <UseContext />
     <UseReducerHook />
     <UseMemoHook />
+    <UseMemoPractice />
+
+    <UseCallbackHook/>
+    <UseCallbackParent />
 
 
     </>
