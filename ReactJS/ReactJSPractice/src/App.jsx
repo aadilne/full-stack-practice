@@ -30,7 +30,9 @@ import UseMemoHook from './component/UseMemoHook'
 import UseMemoPractice from './component/UseMemoPractice'
 import UseCallbackHook from './component/UseCallbackHook'
 import UseCallbackParent from './component/UseCallbackParent'
-
+import UseLayoutEffect from './component/UseLayoutEffect'
+import UseLayoutEffectPractice from './component/UseLayoutEffectPractice'
+import UseLayoutEffectPractice2 from './component/UseLayoutEffectPractice2'
 
 
 
@@ -119,6 +121,9 @@ function App() {
     <UseCallbackHook/>
     <UseCallbackParent />
 
+    <UseLayoutEffect />
+    <UseLayoutEffectPractice/>
+    < UseLayoutEffectPractice2/>
 
     </>
   )
