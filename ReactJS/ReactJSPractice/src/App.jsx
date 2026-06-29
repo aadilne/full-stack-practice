@@ -36,6 +36,8 @@ import UseLayoutEffectPractice2 from './component/UseLayoutEffectPractice2'
 import ToggleText from './component/CustomHook/ToggleText'
 import Users from './component/CustomHook/Users'
 
+import AppHOC from './component/HigherOrderComponent/AppHOC'
+
 
 
 
@@ -128,8 +130,9 @@ function App() {
     <UseLayoutEffectPractice/>
     < UseLayoutEffectPractice2/>
     <ToggleText />
-    <Users/>
+    <Users />
 
+    <AppHOC />
 
     </>
   )
