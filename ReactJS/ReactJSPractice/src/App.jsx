@@ -33,6 +33,9 @@ import UseCallbackParent from './component/UseCallbackParent'
 import UseLayoutEffect from './component/UseLayoutEffect'
 import UseLayoutEffectPractice from './component/UseLayoutEffectPractice'
 import UseLayoutEffectPractice2 from './component/UseLayoutEffectPractice2'
+import ToggleText from './component/CustomHook/ToggleText'
+import Users from './component/CustomHook/Users'
+
 
 
 
@@ -124,6 +127,9 @@ function App() {
     <UseLayoutEffect />
     <UseLayoutEffectPractice/>
     < UseLayoutEffectPractice2/>
+    <ToggleText />
+    <Users/>
+
 
     </>
   )

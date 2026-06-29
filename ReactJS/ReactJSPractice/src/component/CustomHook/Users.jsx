@@ -2,7 +2,7 @@
 import useFetch from "./useFetch";
 
 function  Users(){
-    const [data , loading , error] = useFetch("https://jsonplaceholder.typicode.com/users")
+    const {data , loading , error} = useFetch("https://jsonplaceholder.typicode.com/users")
 
     if(loading) return <p>loading...</p>
     if(error) return <h3>Error occurred</h3>
