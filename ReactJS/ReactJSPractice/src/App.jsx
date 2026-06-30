@@ -38,6 +38,8 @@ import Users from './component/CustomHook/Users'
 
 import AppHOC from './component/HigherOrderComponent/AppHOC'
 
+import AppLazyLodingAndSuspenseConponent from './component/LazyLodingAndSuspenseConponent/AppLazyLodingAndSuspenseConponent'
+
 
 
 
@@ -134,8 +136,11 @@ function App() {
 
     <AppHOC />
 
+    <AppLazyLodingAndSuspenseConponent />
+
     </>
   )
 }
+
 
 export default App
