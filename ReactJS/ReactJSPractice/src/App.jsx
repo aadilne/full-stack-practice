@@ -40,6 +40,12 @@ import AppHOC from './component/HigherOrderComponent/AppHOC'
 
 import AppLazyLodingAndSuspenseConponent from './component/LazyLodingAndSuspenseConponent/AppLazyLodingAndSuspenseConponent'
 
+//it's direct cretePortal component in App.jsx file and render in body tag
+import {createPortal} from 'react-dom'
+
+import PortalTest from './component/CreatePortal/PortalTest'
+
+import AppCreatePortal from './component/CreatePortal/AppCreatePortal'
 
 
 
@@ -137,6 +143,15 @@ function App() {
     <AppHOC />
 
     <AppLazyLodingAndSuspenseConponent />
+
+    <h1>Create Portal Component</h1>
+    {createPortal(<h1>Portal </h1> , document.body)}
+
+    <PortalTest />
+
+    <AppCreatePortal />
+
+    
 
     </>
   )
