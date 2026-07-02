@@ -47,6 +47,8 @@ import PortalTest from './component/CreatePortal/PortalTest'
 
 import AppCreatePortal from './component/CreatePortal/AppCreatePortal'
 
+import AppErrorBoundary from './component/ErrorBoundary/AppErrorBoundary'
+
 
 
 
@@ -150,6 +152,8 @@ function App() {
     <PortalTest />
 
     <AppCreatePortal />
+
+    <AppErrorBoundary />
 
     
 
