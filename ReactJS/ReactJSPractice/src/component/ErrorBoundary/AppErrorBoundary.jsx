@@ -1,5 +1,7 @@
 
+
 import UserProfile from './UserProfile'
+import ErrorBoundary from './ErrorBoundary'
 
 function  AppErrorBoundary(){
 
@@ -16,8 +18,15 @@ function  AppErrorBoundary(){
             <h1>Practice Error Boundary</h1>
             <h2>User Data</h2>
 
-            <UserProfile userData={userData} />
-            {/* <UserProfile userData={userData1} /> */}
+            <ErrorBoundary>
+                <UserProfile userData={userData} />
+            </ErrorBoundary>
+
+            <ErrorBoundary>
+                <UserProfile userData={userData1} />
+            </ErrorBoundary>
+            
+
         </div>
     )
 }
