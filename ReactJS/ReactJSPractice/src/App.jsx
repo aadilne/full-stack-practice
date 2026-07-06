@@ -49,6 +49,8 @@ import AppCreatePortal from './component/CreatePortal/AppCreatePortal'
 
 import AppErrorBoundary from './component/ErrorBoundary/AppErrorBoundary'
 
+import AppForm from './component/ReactHookForm/AppForm'
+
 
 
 
@@ -155,6 +157,7 @@ function App() {
 
     <AppErrorBoundary />
 
+    <AppForm />
     
 
     </>
