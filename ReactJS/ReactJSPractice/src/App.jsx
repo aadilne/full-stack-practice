@@ -53,6 +53,8 @@ import AppForm from './component/ReactHookForm/AppForm'
 
 import AppYup from './component/YupReact/AppYup'
 
+import AppTailwind from './component/TailwindCss/AppTailwind'
+
 function App() {
 
   function  User(){
@@ -159,6 +161,8 @@ function App() {
     <AppForm />
 
     <AppYup />
+
+    <AppTailwind />
     
 
     </>
