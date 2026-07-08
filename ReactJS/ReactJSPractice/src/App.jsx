@@ -51,8 +51,7 @@ import AppErrorBoundary from './component/ErrorBoundary/AppErrorBoundary'
 
 import AppForm from './component/ReactHookForm/AppForm'
 
-
-
+import AppYup from './component/YupReact/AppYup'
 
 function App() {
 
@@ -158,6 +157,8 @@ function App() {
     <AppErrorBoundary />
 
     <AppForm />
+
+    <AppYup />
     
 
     </>
