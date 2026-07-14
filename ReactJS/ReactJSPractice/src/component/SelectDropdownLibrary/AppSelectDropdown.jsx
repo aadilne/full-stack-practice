@@ -1,8 +1,6 @@
 
 import SelectDropdown from "./SelectDropdown"
 
-import Select from "react-select"
-
 function   AppSelectDropdown(){
 
 
