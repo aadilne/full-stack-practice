@@ -1,0 +1,28 @@
+{
+    "users" :[
+        {
+        "id" : 1,
+        "name" : "Aadil Nezam",
+        "username" : "Aadil",
+        "email" : "aadilnezam7782@gmail.com",
+        "age" : 24
+        },
+
+         {
+        "id" : 2,
+        "name" : "Salman Khan",
+        "username" : "Salman",
+        "email" : "salmankhan7782@gmail.com",
+        "age" : 56
+        },
+
+        {
+        "id" : 3,
+        "name" : "Aamir Kuraishi",
+        "username" : "Aamir",
+        "email" : "aamirkuraishi2@gmail.com",
+        "age" : 55
+        }
+
+    ]
+}

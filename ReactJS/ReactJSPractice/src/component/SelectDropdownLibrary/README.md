@@ -381,27 +381,7 @@ Vanilla
 
 Sab Blue aur Bold ho jayenge.
 
----
 
-# ⚠ Mistake
-
-Tumhare code me
-
-```jsx
-backgoundColor
-```
-
-likha hua hai.
-
-Correct
-
-```jsx
-backgroundColor
-```
-
-hoga.
-
----
 
 # React Select Component
 
