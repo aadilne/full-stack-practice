@@ -59,6 +59,8 @@ import AppCreatePortal from './component/CreatePortal/AppCreatePortal'
 
 import AppSelectDropdown from './component/SelectDropdownLibrary/AppSelectDropdown'
 
+import AppCurd from './component/CURD/AppCurd'
+
 
 function App() {
 
@@ -170,6 +172,8 @@ function App() {
     <AppTailwind />
 
     <AppSelectDropdown />
+
+    <AppCurd />
 
     </>
   )
