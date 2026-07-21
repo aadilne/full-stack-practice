@@ -45,9 +45,9 @@ function UserList(){
         <div className="p-4">
         <div className="flex justify-content-between" >
             <h1> Users </h1>
-            <Button label ="Add User"  icon="pi pi-plus" size="small" onChange={() => navigate("/add")} />
+            <Button label ="Add User"  icon="pi pi-plus" size="small" onClick={() => navigate("/add")} />
         </div>
-    <h1>
+    
     <DataTable value={users} 
     showGridlines 
     stripedRows 
@@ -61,7 +61,7 @@ function UserList(){
     <Column field="age" header="Age"  filter filterPlaceholder="Search"></Column>
     <Column header="Action"  body={actionTemplate} className="w-[13%]" ></Column>
     </DataTable>
-    </h1>
+    
 
         </div>
     )

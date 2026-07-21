@@ -1,28 +1,54 @@
 {
-    "users" :[
-        {
-        "id" : 1,
-        "name" : "Aadil Nezam",
-        "username" : "Aadil",
-        "email" : "aadilnezam7782@gmail.com",
-        "age" : 24
-        },
-
-         {
-        "id" : 2,
-        "name" : "Salman Khan",
-        "username" : "Salman",
-        "email" : "salmankhan7782@gmail.com",
-        "age" : 56
-        },
-
-        {
-        "id" : 3,
-        "name" : "Aamir Kuraishi",
-        "username" : "Aamir",
-        "email" : "aamirkuraishi2@gmail.com",
-        "age" : 55
-        }
-
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "Aadil Nezam",
+      "username": "Aadil",
+      "email": "aadilnezam7782@gmail.com",
+      "age": 24
+    },
+    {
+      "id": "2",
+      "name": "Salman Khan",
+      "username": "Salman",
+      "email": "salmankhan7782@gmail.com",
+      "age": 56
+    },
+    {
+      "id": "3",
+      "name": "Aamir Kuraishi",
+      "username": "Aamir",
+      "email": "aamirkuraishi2@gmail.com",
+      "age": 55
+    },
+    {
+      "name": "adfdf",
+      "username": "lkjsdkjfksldf",
+      "email": "jaku@gmail.com",
+      "age": 58,
+      "id": "2ik8cbICDAM"
+    },
+    {
+      "name": "nezam",
+      "username": "nezamdfkdf",
+      "email": "nezam@gmail.com",
+      "age": 32,
+      "id": "INyayrc8Tzs"
+    },
+    {
+      "name": "Aamir Kuraishi",
+      "username": "Aamir bul",
+      "email": "aamirkuraishi2@gmail.com",
+      "age": 555,
+      "id": "1EfSCzL8zho"
+    },
+    {
+      "name": "Aadil Nezam",
+      "username": "Aadil",
+      "email": "aadilnezam7782@gmail.com",
+      "age": 30,
+      "id": "gDuuhrvQjus"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
