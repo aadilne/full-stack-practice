@@ -22,32 +22,32 @@
       "age": 55
     },
     {
-      "name": "adfdf",
-      "username": "lkjsdkjfksldf",
-      "email": "jaku@gmail.com",
-      "age": 58,
-      "id": "2ik8cbICDAM"
+      "name": "Modi Mulla",
+      "username": "modimulaa",
+      "email": "modimulla@gmail.com",
+      "age": 60,
+      "id": "SxlSJuUBFFI"
     },
     {
-      "name": "nezam",
-      "username": "nezamdfkdf",
-      "email": "nezam@gmail.com",
-      "age": 32,
-      "id": "INyayrc8Tzs"
+      "name": "saif",
+      "username": "saif@12",
+      "email": "saif@gmail.com",
+      "age": 20,
+      "id": "MzpG9HGNVXE"
     },
     {
-      "name": "Aamir Kuraishi",
-      "username": "Aamir bul",
-      "email": "aamirkuraishi2@gmail.com",
-      "age": 555,
-      "id": "1EfSCzL8zho"
+      "name": "kakd",
+      "username": "kakad",
+      "email": "kaka@gmail.com",
+      "age": 52,
+      "id": "k4KnBj3sEoI"
     },
     {
-      "name": "Aadil Nezam",
-      "username": "Aadil",
-      "email": "aadilnezam7782@gmail.com",
-      "age": 30,
-      "id": "gDuuhrvQjus"
+      "name": "kdk",
+      "username": "kddkd",
+      "email": "ked@gmail.com",
+      "age": 52,
+      "id": "02eneekAKQY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

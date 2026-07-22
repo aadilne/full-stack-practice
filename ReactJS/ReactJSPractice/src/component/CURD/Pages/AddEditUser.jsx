@@ -15,7 +15,7 @@ import { object } from "yup";
 
 
 
-function AddEditUser() {
+function AddEditUser( { toast }) {
 
     const navigate = useNavigate()
 
@@ -31,8 +31,10 @@ function AddEditUser() {
 
             if (id) {
                 await Api.put(`/users/${id}` , data);
+                toast.current.show({ severity: 'success', summary: "Update", detail: 'User Update Successfully', life: 3000 });
                 } else {
                     await Api.post("/users" ,data);
+                    toast.current.show({ severity: 'Success', summary: 'Added', detail: 'User added successfully', life: 3000 });
                 }
             navigate("/");
 

@@ -11,9 +11,11 @@ import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 
 import { useNavigate } from "react-router-dom";
+
+import { confirmDialog } from 'primereact/confirmdialog';
         
 
-function UserList(){
+function UserList({ toast }){
 
     const [users , setUsers] = useState([])
 
@@ -31,12 +33,29 @@ function UserList(){
 
     } , [])
 
+    const deleteUser = (id) => {
+
+        confirmDialog({
+            message : "Are you sure you want to delte this user?",
+            header : "Delete Confirmation",
+            icon : "pi pi-exclamation-triangle",
+            accept : async () => {
+                await Api.delete(`/users/${id}`);
+                toast.current.show({ severity: 'info', summary: 'deleted', detail: 'User deleted successfully', life: 3000 });
+                featchUsers();
+            },
+        });
+
+    };
+
     const actionTemplate = (rowData) =>(
         <>
         <Button icon = "pi pi-pencil" className="p-button-sm p-button-warning mr-2" 
         onClick={() => navigate(`/edit/${rowData.id}`)}/>
 
-        <Button icon ="pi pi-trash" className="p-button-sm p-button-danger" />
+        <Button icon ="pi pi-trash" className="p-button-sm p-button-danger" 
+          onClick={() => deleteUser(rowData.id)} 
+        />
         </>
     )
 
