@@ -86,4 +86,17 @@ console.log(result);
 
 }
 
-// 
+
+{
+
+    console.log(20 == "20");
+    console.log(20 === "20");
+    console.log(false == 0);
+    console.log(false === 0);     // false  → Boolean   0   → Number  o/p --> false
+
+    console.log(10 != 20);
+    console.log(10 != 10);
+
+    console.log(5 !== "5");   // check value and type
+}
+
