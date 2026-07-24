@@ -1,5 +1,5 @@
 
-console.log("Today first day of node.js class");
+console.log ("Today first day of node.js class");
 
 
 const fs = require('fs');
