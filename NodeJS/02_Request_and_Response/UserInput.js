@@ -2,6 +2,7 @@
 
 
 const http = require('http')
+const fs = require('fs')
 
 const server = http.createServer((req , res) =>{
     console.log(req.url , req.method , req.headers);
@@ -24,6 +25,12 @@ const server = http.createServer((req , res) =>{
     res.write('</html>');
     return res.end();
 
+    }
+
+    else if (req.url.toLowerCase() === "/submit-details" && req.method == "POST") { 
+        fs.writeFileSync ('inp.txt' , 'hi user Input');
+        res.statusCode = 302;
+        res.setHeader('Location' , '/');
     }
 
     res.setHeader('Content-Type' , 'text/html');
