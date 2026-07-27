@@ -106,4 +106,11 @@ do{
 }
 
 
+{
+
+    do{
+   GameStart();
+}while(player === "Yes");
+}
+
 
