@@ -15,6 +15,29 @@ const server = http.createServer((req, res) => {
    // Request Handle
 });
 
+req aur res kyu likha?
+
+
+Node.js jab bhi koi browser request bhejta hai...
+
+Jaise tum browser me likhte ho
+
+http://localhost:3000
+
+to browser server ko request bhejta hai.
+
+Node.js automatically do object bana deta hai.
+
+Request Object
+Response Object
+
+
+
+createServer() ek function hai.
+
+Ye ek callback function maangta hai.
+
+
 server.listen(PORT);
 ```
 

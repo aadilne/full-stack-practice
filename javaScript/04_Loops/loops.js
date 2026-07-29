@@ -252,7 +252,8 @@ for(let index in fruits){
     name: "Aadil",
     age: 22,
     city: "Patna"
-};
+}
+
 
 for(let key in student){
     console.log(key);     // only print key
@@ -262,16 +263,17 @@ for(let key in student){
 
 
 
+
 {
     const student = {
     name: "Aadil",
     age: 22,
     city: "Patna"
-};
+ };
 
-for(let key in student){
+ for(let key in student){
     console.log(key , student[key]);     // key and value both print
-}
+ }
 
 }
 
