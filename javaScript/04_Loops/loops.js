@@ -108,12 +108,12 @@ do{
 }
 
 
-{
+// {
 
-    do{
-   GameStart();
-}while(player === "Yes");
-}
+//     do{
+//    GameStart();
+// }while(player === "Yes");
+// }
 
 
 //break and continue 
@@ -137,6 +137,7 @@ do{
    for(let i = 1; i <= 10; i++){
 
     if(i === 5){
+
         continue;
     }
 
@@ -254,7 +255,6 @@ for(let index in fruits){
     city: "Patna"
 }
 
-
 for(let key in student){
     console.log(key);     // only print key
 }
@@ -274,6 +274,22 @@ for(let key in student){
  for(let key in student){
     console.log(key , student[key]);     // key and value both print
  }
+
+}
+
+
+// nested loop
+{
+    for (let i = 0; i<=4; i++){
+        let row = "";
+
+        for (let j =0; j<=4; j++){
+             row += j + " ";
+            
+        }
+        console.log(row)
+
+    }
 
 }
 
