@@ -293,3 +293,34 @@ for(let key in student){
 
 }
 
+
+
+// stars print
+document.write("asecnding order * print")
+{
+    for(let i=0; i<=5; i++){
+        
+        for (let j=0; j<=i; j++){
+            
+            document.write("*")
+            
+        }
+        document.write(" <br>");
+
+    }
+
+
+}
+document.write("desecnding order * print")
+
+{
+
+    for(let i =0; i<=5; i++){
+        
+        for(let j=6; j>=i; j--){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+}
+
