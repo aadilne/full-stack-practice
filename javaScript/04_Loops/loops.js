@@ -84,15 +84,15 @@ while(i < 5){
 }
 
 
-{
+// {
 
-    let password = "";
+//     let password = "";
 
-while (password !== "1234") {
-    password = prompt("Enter Password");
-}
+// while (password !== "1234") {
+//     password = prompt("Enter Password");
+// }
 
-}
+// }
 
 
 // do while loop
@@ -296,7 +296,7 @@ for(let key in student){
 
 
 // stars print
-document.write("asecnding order * print")
+document.write("asecnding order stars print")
 {
     for(let i=0; i<=5; i++){
         
@@ -311,7 +311,7 @@ document.write("asecnding order * print")
 
 
 }
-document.write("desecnding order * print")
+document.write("desecnding order stars print")
 
 {
 
@@ -324,3 +324,24 @@ document.write("desecnding order * print")
     }
 }
 
+document.write("O stars print", "<br>");
+document.write("<br>")
+
+{
+    for(let i=0; i<=5; i++){
+        for (let j=0; j<=5; j++){
+
+            if(i ==0 || i==5 || j==0 || j==5){
+
+                document.write("*");
+            } 
+            else {
+                document.write(" ")
+            }
+           
+
+        }
+        document.write("<br>");
+    }
+
+}
