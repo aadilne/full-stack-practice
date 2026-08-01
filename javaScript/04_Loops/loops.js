@@ -296,7 +296,7 @@ for(let key in student){
 
 
 // stars print
-document.write("asecnding order stars print")
+document.write("asecnding order stars print" , "<br>")
 {
     for(let i=0; i<=5; i++){
         
@@ -311,7 +311,7 @@ document.write("asecnding order stars print")
 
 
 }
-document.write("desecnding order stars print")
+document.write("desecnding order stars print" , "<br>")
 
 {
 
@@ -336,7 +336,7 @@ document.write("<br>")
                 document.write("*");
             } 
             else {
-                document.write(" ")
+                document.write("&nbsp;&nbsp;")
             }
            
 
@@ -344,4 +344,62 @@ document.write("<br>")
         document.write("<br>");
     }
 
+}
+
+
+document.write("A stars print", "<br>");
+{
+    for(let i=0; i<=5; i++){
+        for (let j=0; j<=5; j++){
+
+            if(i ==0  ||i==2 || j==0 || j==5){
+
+                document.write("*");
+            } 
+            else {
+                document.write("&nbsp;&nbsp;")
+            }
+           
+
+        }
+        document.write("<br>");
+    }
+
+}
+
+document.write("D stars print", "<br>");
+{
+    for(let i=0; i<=5; i++){
+        for (let j=0; j<=5; j++){
+
+            if(i ==0  ||i==5 || j==2 || j==5){
+
+                document.write("*");
+            } 
+            else {
+                document.write("&nbsp;&nbsp;")
+            }
+           
+
+        }
+        document.write("<br>");
+    }
+
+}
+
+document.write("B  stars print", "<br>");
+{
+
+    for(let i =0 ; i<=5; i++){
+
+        for(let j=0; j<=4; j++){
+
+            if(i == 0|| i ==2 | i==3|| i==5 || j==0 || j==4){
+                document.write("*");
+            } else {
+                document.write("&nbsp; &nbsp;")
+            }
+            }
+            document.write("<br>");
+        }
 }
