@@ -375,3 +375,218 @@ console.log(result());  // function ko CALL karo aur uski returned value print k
     console.log(a + b);
 })(10, 20);
 }
+
+
+
+//Recursive Function
+// A function that calls itself is called a recursive function.
+{
+    function count(n) {
+
+    if (n === 0) {
+        return;
+    }
+
+    console.log(n);
+
+    count(n - 1); //  function call itself with n-1 until n is 0 
+}
+
+  count(3);
+}
+
+
+{
+    function number(n) {
+
+    if (n === 0) {
+        return;
+    }
+
+    console.log("Before:", n);
+
+    number(n - 1);
+
+    console.log("After:", n);
+}
+
+number(3);
+}
+
+//Call Stack skiped
+
+
+
+
+// 1. Global Scope
+{
+const name = "Aadil";
+
+function greet() {
+    console.log(name);
+}
+
+greet();
+}
+
+
+{
+ const name = "Aadil";
+
+function greet() {
+    console.log(name);
+}
+
+greet();
+
+console.log(name);
+}
+
+
+// 2. Local / Function Scope
+
+{
+    function greet() {
+
+    const name = "Aadil";
+
+    console.log(name);
+}
+
+greet();
+}
+
+{
+function greet() {
+
+    const name = "Aadil";
+
+    console.log(name);
+}
+
+greet();
+
+console.log(name);  // Uncaught ReferenceError: name is not defined because name is defined inside the function and cannot be accessed outside the function
+
+}
+
+
+{
+    const age = 22;
+
+function show() {
+
+    const name = "Aadil";
+
+    console.log(age); // age prit because it is defined in the global scope
+    console.log(name);
+}
+
+show();
+
+console.log(age); 
+console.log(name);  // name not prit because it is defined inside the function and cannot be accessed outside the function
+}
+
+
+{
+    const city = "Patna";      //  Global
+
+function student(name) {   //  name = Local parameter
+
+    const course = "JavaScript"; //  Local variable
+
+    console.log(city);
+    console.log(name);
+    console.log(course);
+}
+
+student("Aadil");
+
+console.log(city);
+}
+
+
+
+{
+const city = "Patna"; // Global
+
+function show() {
+    const city = "Delhi"; // Local
+
+    console.log(city);  // here access same name  Delhi
+}
+
+show();
+
+console.log(city); // here access same name  Patna
+}
+
+
+
+//🔥 HOISTING:
+{
+    
+//Function Declaration ko declaration se PEHLE call kar sakte hain.
+
+add(5, 4);       // ✅ Works
+
+function add(a, b) {
+    console.log(a + b);
+}
+}
+
+//Function Expression ko declaration se PEHLE call nahi kar sakte hain.
+{
+  //  add(5, 4);       // ❌ ERROR
+
+const add = function(a, b) {
+    console.log(a + b);
+};
+}
+
+{
+   // add(5, 4);       // ❌ ERROR
+
+const add = (a, b) => {
+    console.log(a + b);
+};
+}
+
+
+
+//Rest Parameters ...args
+// Rest Parameter multiple arguments ko collect karke ek Array bana deta hai.
+//
+{
+    function show(...values) {
+    console.log(values);
+}
+
+show(10, 20, 30);
+}
+
+
+{
+    function show(...numbers) {
+
+    numbers.forEach((num) => {
+        console.log(num);
+    });
+
+}
+
+show(10, 20, 30);
+}
+
+
+{
+    function user(name, age, ...skills) {  // rest parameter must be the last parameter
+
+    console.log(name);
+    console.log(age);
+    console.log(skills);
+}
+
+user("Aadil", 22, "HTML", "CSS", "JavaScript");
+}
