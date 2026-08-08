@@ -209,3 +209,56 @@ console.log("HTML-CSS-JS".split("-")); // ["HTML", "CSS", "JS"]
 console.log("HTML CSS JS React".split(" ", 2)); // ["HTML", "CSS"] it's returns only first 2 words
 }
 
+
+{
+let name = "Aadil";
+let sname = "Nezam";
+
+console.log(name + " " + sname);
+
+
+console.log(name.concat(" ", sname));
+}
+
+{
+
+console.log("A".repeat(4));
+
+
+console.log("Hi".repeat(3));
+
+
+console.log("5".padStart(3, "0"));
+
+
+console.log("5".padEnd(3, "0"));
+
+
+console.log("Aadil".padStart(8, "*"));
+
+
+console.log("Aadil".padEnd(8, "*"));
+
+
+console.log("123".padStart(2, "0"));
+}
+
+
+{
+let text = "JavaScript is JavaScript";
+
+console.log(text.search("JavaScript"));
+
+
+console.log(text.search("Python"));
+
+
+console.log(text.match(/JavaScript/));
+
+
+console.log(text.match(/JavaScript/g));
+
+
+console.log(text.match(/Python/));
+
+}
