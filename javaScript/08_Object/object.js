@@ -1,0 +1,632 @@
+{
+
+// Part 2: Object Properties Access
+
+
+let student = {
+    name: "Aadil",
+    age: 22,
+    course: "BCA"
+};
+
+
+
+// 7. Dot Notation
+
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.course);
+
+
+
+// 8. Bracket Notation
+
+
+console.log(student["name"]);
+console.log(student["age"]);
+console.log(student["course"]);
+
+
+
+
+// 9. Dot vs Bracket
+
+
+console.log(student.name);
+console.log(student["name"]);
+
+
+
+// 10. Variable ke through Property Access
+
+
+let key = "name";
+
+console.log(student[key]);
+
+
+
+// 11. Missing / Non-existing Property
+
+
+console.log(student.city);
+
+
+
+// Important Difference
+
+
+console.log(student[key]);      // "Aadil"
+console.log(student["key"]);    // undefined
+}
+
+
+{
+
+//  Add / Update / Delete
+
+
+let student = {
+    name: "Aadil",
+    age: 22
+};
+
+
+
+// 12. Add new property
+
+student.course = "BCA";
+
+console.log(student);
+
+
+
+// Add new property through Bracket Notation
+student["city"] = "Arrah";
+
+console.log(student);
+
+
+
+// 13. Existing Property Update 
+
+
+student.age = 23;
+
+console.log(student);
+
+
+// Bracket Notation se update
+student["age"] = 24;
+
+console.log(student);
+
+
+
+// 14. Property Delete 
+
+
+delete student.city;
+
+console.log(student);
+
+
+// Bracket Notation se delete
+delete student["course"];
+
+console.log(student);
+
+
+
+// 15. Modify Object 
+
+
+student.name = "Nezam";       // Update
+
+student.gender = "Male";      // Add
+
+delete student.age;           // Delete
+
+console.log(student);
+
+}
+
+
+{
+
+// Part 4: Object Methods
+
+
+
+
+// 16. Function inside Object
+
+
+let student = {
+    name: "Aadil",
+    age: 22,
+
+    sayHello: function() {
+        console.log("Hello Aadil");
+    }
+};
+
+
+
+// 17. Method
+
+
+
+// 18. Method ko Call Karna
+
+
+student.sayHello();
+
+
+
+// 19. this Keyword 
+
+let student2 = {
+    name: "Aadil",
+
+    sayHello: function() {
+        console.log("Hello " + this.name);
+    }
+};
+
+student2.sayHello();
+
+
+
+// 20. Object Method me this
+
+
+let student3 = {
+    name: "Aadil",
+    age: 22,
+    course: "BCA",
+
+    introduce: function() {
+        console.log("My name is " + this.name);
+        console.log("My age is " + this.age);
+        console.log("My course is " + this.course);
+    }
+};
+
+student3.introduce();
+
+
+
+// this ko samajhne ka simple example
+
+let user = {
+    name: "Aadil",
+    age: 22,
+
+    showData: function() {
+        console.log(this.name);
+        console.log(this.age);
+    }
+};
+
+user.showData();
+
+
+// this.name ka basic meaning:
+// user.name
+
+// this.age ka basic meaning:
+// user.age
+}
+
+
+{
+
+    
+// Part 5: Important Object Methods
+
+
+
+// 21. Object.keys()
+
+
+let student = {
+    name: "Aadil",
+    age: 22,
+    course: "BCA"
+};
+
+console.log(Object.keys(student));
+
+// Output:
+// ["name", "age", "course"]
+
+
+
+// 22. Object.values()
+
+
+console.log(Object.values(student));
+
+// Output:
+// ["Aadil", 22, "BCA"]
+
+
+
+// 23. Object.entries()
+
+
+console.log(Object.entries(student));
+
+// Output:
+// [
+//     ["name", "Aadil"],
+//     ["age", 22],
+//     ["course", "BCA"]
+// ]
+
+
+
+// 24. Object.assign()
+
+
+let extraInfo = {
+    city: "Arrah",
+    gender: "Male"
+};
+
+Object.assign(student, extraInfo);
+
+console.log(student);
+
+// Output:
+// {
+//     name: "Aadil",
+//     age: 22,
+//     course: "BCA",
+//     city: "Arrah",
+//     gender: "Male"
+// }
+
+
+
+// 25. Object.hasOwn()
+
+
+console.log(Object.hasOwn(student, "name"));
+// true
+
+console.log(Object.hasOwn(student, "city"));
+// true
+
+console.log(Object.hasOwn(student, "phone"));
+// false
+
+
+
+// 26. Object.freeze()
+
+
+let user = {
+    name: "Aadil",
+    age: 22
+};
+
+Object.freeze(user);
+
+user.age = 25;
+user.city = "Arrah";
+delete user.name;
+
+console.log(user);
+
+// Object change nahi hoga:
+// {
+//     name: "Aadil",
+//     age: 22
+// }
+
+
+
+// 27. Object.seal()
+
+
+let person = {
+    name: "Aadil",
+    age: 22
+};
+
+Object.seal(person);
+
+person.age = 25;          // Allowed
+person.city = "Arrah";    // Not allowed
+delete person.name;       // Not allowed
+
+console.log(person);
+
+// Output:
+// {
+//     name: "Aadil",
+//     age: 25
+// }
+
+
+}
+
+{
+
+
+// Part 6: Object + Loops
+
+
+
+// 28. for...in Loop
+
+
+let student = {
+    name: "Aadil",
+    age: 22,
+    course: "BCA"
+};
+
+for (let key in student) {
+    console.log(key);
+}
+
+// Output:
+// name
+// age
+// course
+
+
+
+
+// 29. Object ke Keys ko Loop Karna
+
+
+for (let key in student) {
+    console.log("Key:", key);
+}
+
+// Output:
+// Key: name
+// Key: age
+// Key: course
+
+
+
+
+// 30. Object ki Values ko Loop Karna
+
+
+for (let key in student) {
+    console.log(student[key]);
+}
+
+// Output:
+// Aadil
+// 22
+// BCA
+
+
+
+
+// Key + Value Dono
+
+
+for (let key in student) {
+    console.log(key + ":", student[key]);
+}
+
+// Output:
+// name: Aadil
+// age: 22
+// course: BCA
+
+
+
+
+// 31. Object + for...in Practice
+
+
+let user = {
+    name: "Aadil",
+    age: 22,
+    city: "Arrah",
+    course: "BCA"
+};
+
+for (let key in user) {
+    console.log(key + " = " + user[key]);
+}
+
+// Output:
+// name = Aadil
+// age = 22
+// city = Arrah
+// course = BCA
+
+
+
+
+// Practice Example
+
+
+let employee = {
+    name: "Aadil",
+    age: 22,
+    salary: 25000,
+    department: "IT"
+};
+
+for (let key in employee) {
+    console.log(key + ":", employee[key]);
+}
+
+}
+
+
+{
+
+// Part 7: Nested Objects
+
+
+
+
+// 32. Nested Object
+
+
+let student = {
+    name: "Aadil",
+    age: 22,
+
+    address: {
+        city: "Arrah",
+        state: "Bihar"
+    }
+};
+
+console.log(student);
+
+
+
+// 33. Object ke andar Object
+
+
+let user = {
+    name: "Aadil",
+
+    contact: {
+        email: "aadil@gmail.com",
+        phone: "9876543210"
+    }
+};
+
+console.log(user.contact);
+
+
+
+// 34. Nested Property Access
+
+
+console.log(student.address.city);
+console.log(student.address.state);
+
+
+// Bracket Notation
+
+console.log(student["address"]["city"]);
+
+
+// Dot + Bracket
+
+console.log(student.address["city"]);
+
+
+
+// 35. Nested Object Update
+
+
+student.address.city = "Patna";
+
+console.log(student.address.city);
+
+
+// Nested Property Add
+
+student.address.pincode = 802112;
+
+console.log(student.address);
+
+
+// Nested Property Delete
+
+delete student.address.state;
+
+console.log(student.address);
+
+
+
+// 36. Object + Array
+
+
+let student2 = {
+    name: "Aadil",
+    age: 22,
+
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+};
+
+console.log(student2.skills);
+
+console.log(student2.skills[0]);
+console.log(student2.skills[1]);
+console.log(student2.skills[2]);
+
+
+
+// 37. Array ke andar Objects
+
+
+let students = [
+
+    {
+        name: "Aadil",
+        age: 22
+    },
+
+    {
+        name: "Rahul",
+        age: 23
+    },
+
+    {
+        name: "Aman",
+        age: 21
+    }
+
+];
+
+
+// First Object
+
+console.log(students[0]);
+console.log(students[0].name);
+console.log(students[0].age);
+
+
+// Second Object
+
+console.log(students[1].name);
+console.log(students[1].age);
+
+
+// Third Object
+
+console.log(students[2].name);
+console.log(students[2].age);
+
+
+
+// Array + Objects + Loop
+
+
+for (let student of students) {
+
+    console.log("Name:", student.name);
+    console.log("Age:", student.age);
+
+}
+
+}
+
+{
+    
+
+
+}
