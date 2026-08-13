@@ -1288,5 +1288,171 @@ processStudentData(student5, function({ name, age }) {
 
 });
 
+}
+
+
+{
+
+// Part 12: Constructor & Advanced Objects
+
+
+
+
+// 59. Constructor Function
+
+
+function Student(name, age) {
+
+    this.name = name;
+    this.age = age;
+
+}
+
+let student1 = new Student("Aadil", 22);
+let student2 = new Student("Rahul", 23);
+let student3 = new Student("Aman", 21);
+
+console.log(student1);
+console.log(student2);
+console.log(student3);
+
+console.log(student1.name);
+console.log(student1.age);
+
+
+
+// 60. new Keyword
+
+
+let student4 = new Student("Aadil", 22);
+
+console.log(student4);
+
+// new:
+// 1. Naya object create karta hai
+// 2. this ko new object se connect karta hai
+// 3. Constructor function run karta hai
+// 4. Object return karta hai
+
+
+
+// 61. Object.create()
+
+
+let studentInfo = {
+
+    showName: function() {
+        console.log("Student:", this.name);
+    }
+
+};
+
+let student5 = Object.create(studentInfo);
+
+student5.name = "Aadil";
+
+console.log(student5.name);
+
+student5.showName();
+
+
+
+// 62. Prototype - Basic
+
+
+let person = {
+
+    greet: function() {
+        console.log("Hello");
+    }
+
+};
+
+let student6 = Object.create(person);
+
+student6.name = "Aadil";
+
+console.log(student6.name);
+
+student6.greet();
+
+
+
+
+
+// 63. Object Inheritance - Basic
+
+
+let person2 = {
+
+    greet: function() {
+        console.log("Hello");
+    }
+
+};
+
+let student7 = Object.create(person2);
+
+student7.study = function() {
+    console.log("Studying JavaScript");
+};
+
+student7.greet();
+student7.study();
+
+
+
+// 64. Class vs Object
+
+
+class StudentClass {
+
+    constructor(name, age) {
+
+        this.name = name;
+        this.age = age;
+
+    }
+
+}
+
+let student8 = new StudentClass("Aadil", 22);
+let student9 = new StudentClass("Rahul", 23);
+
+console.log(student8);
+console.log(student9);
+
+console.log(student8.name);
+console.log(student9.name);
+
+
+
+// Class + Method
+
+
+class StudentDetails {
+
+    constructor(name, age) {
+
+        this.name = name;
+        this.age = age;
+
+    }
+
+    introduce() {
+
+        console.log(
+            "My name is " + this.name +
+            " and my age is " + this.age
+        );
+
+    }
+
+}
+
+let student10 = new StudentDetails("Aadil", 22);
+
+student10.introduce();
+
 
 }
