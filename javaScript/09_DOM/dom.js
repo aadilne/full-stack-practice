@@ -31,3 +31,52 @@ btn.addEventListener("click", function () {
     heading.innerText = "Button Clicked!";
 
 });
+
+
+let ts = document.querySelector(".ts")
+ts.innerHTML = "changeable text"
+console.log(ts);
+
+let btns = document.querySelector("#btns")
+
+btns.addEventListener( "click" , () => {
+    ts.innerText = "ts change by btn clicked"
+})
+
+
+// Select all elements with class="text".
+let text = document.querySelectorAll(".text");
+
+// Select the second element.
+text[1].innerText = "Hello";
+
+// Print the second element.
+console.log(text[1]);
+
+
+
+// Select the div.
+let box = document.querySelector("#box");
+
+// Replace the div's inner content.
+box.innerText = "Hello Aadil";
+
+
+// Find the <h1> inside #box.
+let box2 = document.querySelector("#box2 h1");
+// heading stores the <h1> element.
+console.log(box2);
+
+
+// Find the <p> inside #box.
+let element = document.querySelector("#box3 p");
+
+// element stores the <p>.
+console.log(element);
+
+
+// Select the div.
+let box4 = document.querySelector("#box4");
+
+// Get the direct child elements.
+console.log(box4.children);
