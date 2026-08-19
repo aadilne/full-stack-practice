@@ -1,0 +1,68 @@
+   /* 64. Normal CSS */
+
+#mainHeading {
+    color: blue;
+}
+
+
+   /* 65. style property */
+
+#messageText {
+    color: gray;
+}
+
+
+   /* 66. style.color */
+
+#colorHeading {
+    color: purple;
+}
+
+
+   /* 67. style.backgroundColor */
+
+#colorBox {
+    background-color: rgb(10, 145, 145);
+    padding: 20px;
+}
+
+
+   /* 68. Multiple CSS properties */
+
+#multiStyleBox {
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+
+
+   /* 70. style.cssText */
+
+#cssTextBox {
+    color: blue;
+}
+
+
+   /* 71. getComputedStyle() */
+
+#computedText {
+    color: green;
+    font-size: 25px;
+}
+
+
+   /* 72. Inline CSS vs CSS Class
+   73. Add / Remove CSS class */
+
+
+.normalBox {
+    background-color: lightgray;
+    color: black;
+    padding: 20px;
+}
+
+.activeBox {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}

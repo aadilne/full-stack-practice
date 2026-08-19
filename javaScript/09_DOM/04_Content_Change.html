@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Change</title>
+</head>
+
+<body>
+
+    <!-- 38 / 39. Text change -->
+    <h1 id="heading">Old Heading</h1>
+
+    <p id="message">Old Message</p>
+
+
+    <!-- 40. textContent -->
+    <div id="textBox">
+        Old Text
+    </div>
+
+
+    <!-- 41 / 42. innerHTML -->
+    <div id="box">
+        <p>Old Content</p>
+    </div>
+
+
+    <!-- 43. Text vs HTML -->
+    <div id="difference"></div>
+
+
+    <!-- 44. XSS basic example -->
+    <div id="userContent"></div>
+
+
+
+
+    
+     <!-- 45. Attribute get and set -->
+    <input
+        id="emailField"
+        type="email"
+        placeholder="Enter Email"
+        class="input-box"
+    >
+
+
+    <!-- 46. getAttribute() -->
+    <a
+        id="profileLink"
+        href="https://example.com"
+        target="_blank"
+    >
+        Visit Profile
+    </a>
+
+
+    <!-- 47. setAttribute() -->
+    <button
+        id="actionButton"
+        type="button"
+    >
+        Click Me
+    </button>
+
+
+    <!-- 48. removeAttribute() -->
+    <input
+        id="lockedInput"
+        type="text"
+        value="Aadil"
+        disabled
+    >
+
+
+    <!-- 49. hasAttribute() -->
+    <input
+        id="checkField"
+        type="text"
+        placeholder="Enter Name"
+    >
+
+
+    <!-- 50. data-* attributes -->
+    <div
+        id="productCard"
+        data-product-id="101"
+        data-category="laptop"
+        data-price="55000"
+    >
+        Laptop
+    </div>
+
+
+    <!-- 51. dataset -->
+    <div
+        id="studentCard"
+        data-student-name="Aadil"
+        data-student-age="22"
+        data-course="MCA"
+    >
+        Student
+    </div>
+
+
+    <!-- 52. dataset ka use -->
+    <button
+        id="courseButton"
+        data-course="JavaScript"
+        data-level="Beginner"
+    >
+        Start Course
+    </button>
+
+
+    <script src="04_Content_Change.js"></script>
+
+
+</body>
+</html>
