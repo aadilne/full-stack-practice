@@ -1,0 +1,67 @@
+/* Style for created div */
+.createdDiv {
+    padding: 20px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+
+/* Style for created paragraph */
+.createdPara {
+    color: blue;
+}
+
+
+/* Style for created list item */
+.createdLi {
+    color: green;
+}
+
+
+/* Style for created button */
+.createdButton {
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+
+/* Style for created card */
+.card {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+
+/* Active class */
+.active {
+    background-color: yellow;
+}
+
+
+/* Style for image */
+.myImage {
+    width: 150px;
+}
+
+
+/* Box styles */
+#box1,
+#box2 {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+
+/* Parent */
+#parent {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+
+/* New element */
+.newElement {
+    color: blue;
+    font-size: 25px;
+}
