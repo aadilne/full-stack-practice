@@ -66,3 +66,32 @@
     color: white;
     padding: 30px;
 }
+
+
+#styleBox74{
+    width: 50%;
+    height: 100px;
+    background-color: bisque;
+    font-size: x-large;
+    padding: 15px;
+}
+
+.dark74{
+    width: 50%;
+    height: 100px;
+    color: blue;
+    border: solid 2px black;
+    background: yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+
+#btn74{
+    border-radius: 50%;
+    position: relative;
+    left: 25%;
+    border: solid 2px red;
+    margin: 15px 0px 15px 0px;
+}
+
+

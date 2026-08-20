@@ -102,3 +102,19 @@ styleBtn.addEventListener("click", () => {
     classBox.classList.toggle("activeBox");
 
 });
+
+
+let styleBox74 = document.querySelector("#styleBox74");
+
+let btn74 = document.querySelector("#btn74");
+
+btn74.addEventListener("click" , () =>{
+    styleBox74.classList.toggle("dark74");
+    
+    if(styleBox74.classList.contains("dark74")){
+
+        btn74.innerText = "💡";
+    }else {
+        btn74.innerText = "🌑";
+    }
+});

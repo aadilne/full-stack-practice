@@ -128,6 +128,5 @@ changeBtn.addEventListener("click", function () {
 
     // Toggle the active class on click.
     changeBtn.classList.toggle("active");
-    
 
 });
