@@ -93,7 +93,7 @@ console.log(secondPara.previousSibling);
 // closest() finds the nearest matching parent element.
 let box = document.querySelector("#childBox");
 
-console.log(box.closest("#parent"));
+console.log(box.closest("#Parent"));
 
 
 // matches()
