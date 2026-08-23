@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Form Events</title>
+    <link rel="stylesheet" href="10_Form_Events.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration Form</h1>
+
+        <form id="studentForm">
+
+            <!-- Text input -->
+            <label>Name:</label>
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter your name"
+            >
+
+            <p id="inputResult"></p>
+
+            <!-- Radio buttons -->
+            <label>Gender:</label>
+
+            <div class="radio-group">
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                    >
+                    Male
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                    >
+                    Female
+                </label>
+            </div>
+
+            <!-- Checkbox -->
+            <label class="check-label">
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+                I agree to the terms
+            </label>
+
+            <!-- Select dropdown -->
+            <label>Course:</label>
+
+            <select id="course">
+                <option value="">Select Course</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React">React</option>
+                <option value="Python">Python</option>
+            </select>
+
+            <!-- Submit and Reset -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+        <!-- Form result -->
+        <div id="result"></div>
+
+    </div>
+
+    <script src="10_Form_Events.js"></script>
+</body>
+</html>
