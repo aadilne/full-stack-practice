@@ -194,8 +194,7 @@ terms.addEventListener("change", () => {
 
 // Radio buttons use checked to find the selected option.
 
-let genderRadios =
-    document.querySelectorAll('input[name="gender"]');
+let genderRadios = document.querySelectorAll('input[name="gender"]');
 
 genderRadios.forEach((radio) => {
 
