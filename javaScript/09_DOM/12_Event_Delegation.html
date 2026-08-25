@@ -1,0 +1,123 @@
+<!-- =========================================
+     EVENT DELEGATION PRACTICE
+     ========================================= -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Delegation</title>
+
+    <!-- CSS file connect -->
+    <link rel="stylesheet" href="12_Event_Delegation.css">
+</head>
+
+<body>
+
+    <h1>Event Delegation</h1>
+
+
+    <!-- =====================================
+         PARENT
+         ===================================== -->
+
+    <!--
+        Ye hamara PARENT hai.
+
+        Iske andar bahut saare buttons hain.
+
+        Hum har button par alag listener
+        nahi lagayenge.
+
+        Sirf is parent par listener lagayenge.
+    -->
+
+    <div id="buttonBox">
+
+        <button class="myBtn">Button 1</button>
+
+        <button class="myBtn">Button 2</button>
+
+        <button class="myBtn">Button 3</button>
+
+        <button class="myBtn">Button 4</button>
+
+    </div>
+
+
+    <!--
+        Ye button baad mein
+        ek NEW button banayega.
+
+        Isse hum DYNAMIC ELEMENT
+        samjhenge.
+    -->
+
+    <button id="addBtn">
+        Add New Button
+    </button>
+
+
+
+    <!-- =====================================
+         TODO LIST
+         ===================================== -->
+
+    <h2>Todo List</h2>
+
+    <!--
+        Ye bhi ek PARENT hai.
+
+        Iske andar Todo items hain.
+
+        Delete button par alag-alag
+        listener nahi lagayenge.
+
+        Sirf todoList par listener lagayenge.
+    -->
+
+    <div id="todoList">
+
+
+        <div class="todo">
+
+            <span>Learn JavaScript</span>
+
+            <button class="deleteBtn">
+                Delete
+            </button>
+
+        </div>
+
+
+        <div class="todo">
+
+            <span>Learn DOM</span>
+
+            <button class="deleteBtn">
+                Delete
+            </button>
+
+        </div>
+
+
+        <div class="todo">
+
+            <span>Learn Events</span>
+
+            <button class="deleteBtn">
+                Delete
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- JavaScript file connect -->
+    <script src="12_Event_Delegation.js"></script>
+
+</body>
+
+</html>

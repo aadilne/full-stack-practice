@@ -96,10 +96,7 @@ myLink.addEventListener("click", (event) => {
 
     event.preventDefault();
 
-    console.log(
-        "Default prevented:",
-        event.defaultPrevented
-    );
+    console.log("Default prevented:",event.defaultPrevented);
 
 });
 
@@ -165,9 +162,6 @@ parentBox.addEventListener("click", (event) => {
 
     console.log("Target:", event.target);
 
-    console.log(
-        "Current Target:",
-        event.currentTarget
-    );
+    console.log("Current Target:",event.currentTarget);
 
 });

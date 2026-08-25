@@ -1,0 +1,93 @@
+/* =========================================
+   PAGE
+   ========================================= */
+
+body {
+
+    font-family: Arial;
+
+    padding: 30px;
+
+}
+
+
+/* =========================================
+   BUTTON BOX
+   ========================================= */
+
+#buttonBox {
+
+    border: 2px solid black;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/*
+    Parent ke andar buttons
+*/
+
+.myBtn {
+
+    padding: 10px;
+
+    margin: 5px;
+
+}
+
+
+/* =========================================
+   ADD BUTTON
+   ========================================= */
+
+#addBtn {
+
+    padding: 10px;
+
+}
+
+
+/* =========================================
+   TODO LIST
+   ========================================= */
+
+#todoList {
+
+    border: 2px solid black;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+/*
+    Har Todo ek box hai
+*/
+
+.todo {
+
+    padding: 10px;
+
+    margin: 10px 0;
+
+    border: 1px solid gray;
+
+}
+
+
+/*
+    Delete button
+*/
+
+.deleteBtn {
+
+    margin-left: 20px;
+
+    padding: 5px;
+
+}
