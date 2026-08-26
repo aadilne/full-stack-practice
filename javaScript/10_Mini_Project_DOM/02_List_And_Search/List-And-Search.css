@@ -1,0 +1,85 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.container{
+    width: 100%;
+    background-color: white;
+    max-width: 40rem;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 15px;
+    box-shadow: 0 0 20px rgb(85, 70, 70);
+    border-radius: 5px;
+}
+
+.heading{
+text-align: center;
+}
+
+
+#searchInput{
+    padding: 12px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.userContainer .userItem img{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.userContainer .userItem .image{
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+
+}
+
+.userContainer .userItem {
+    display: flex;
+    gap: 5px;
+    background-color: #f0e7e7;
+    height: 4rem;
+    padding: 10px 15px 0px 15px;
+
+
+}
+
+.userContainer .userItem .userDetails{
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+
+.userContainer .userItem .userDetails h3{
+font-size: 20px;
+}
+
+.userContainer .userItem .userDetails p{
+    font-size: 12px;
+}
+
+.userContainer{
+
+}
+
+.userIten{
+
+}
