@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container{
+    background-color: lightgreen;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inputContainer{
+margin: 10px 0px;
+display: flex;
+gap: 1rem;
+}
+
+
+.headin{
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 40px;
+
+}
+
+button{
+    background-color: rgb(41, 54, 58);
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: wheat;
+    border-radius: 10px;
+    transition: all linear 0.2s;
+}
+
+button:active{
+    scale: 0.9;
+}
+
+
+.btnRandom{
+
+
+}
+
+#inputText{
+
+
+}
+
+.btnAplly{
+
+
+}
+
+.currentColor{
+font-size: 18px;
+background-color: white;
+padding: 8px;
+border-radius: 5px;
+}
+
+.currentColorValue{
+
+}
