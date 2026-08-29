@@ -38,5 +38,5 @@ arr.map((item) =>{
                 <p>${email}</p>
     </div>`
 
-            userContainer.append(divElement);
+            userContainer.append(divElement); 
 })
