@@ -1,9 +1,10 @@
 
 let userContainer = document.querySelector(".userContainer");
+let searchInput = document.querySelector("#searchInput");
 
 
 
-const arr =[
+const users =[
     {
         profileUrl : "https://images.news18.com/ibnlive/uploads/2017/12/Salman-Khan6.jpg",
         name : "Salman Khan",
@@ -23,7 +24,31 @@ const arr =[
     }
 ]
 
-arr.map((item) =>{
+function randerUsers(arr){
+    userContainer.innerHTML = '';
+
+   arr.map((item) =>{
+
+    let {profileUrl , name , email} = item;
+    
+    let divElement = document.createElement("div");
+    divElement.className = "userItem";
+    divElement.innerHTML = `<div class="image">
+                <img src="${profileUrl}" alt="error loding image">
+                </div>
+
+                <div class="userDetails">
+                    <h3>${name}</h3>
+                    <p>${email}</p>
+                </div>`
+
+            userContainer.append(divElement); 
+}) 
+}
+
+randerUsers(users)
+
+users.map((item) =>{
 
     let {profileUrl , name , email} = item;
     
@@ -40,3 +65,19 @@ arr.map((item) =>{
 
             userContainer.append(divElement); 
 })
+
+
+function handelSearch(event){
+    let searchValue = event.target.value;
+    let filterUsers = users.filter((obj) => {
+        return (
+        obj.name.toLowerCase().includes(searchValue.toLowerCase())  ||
+        obj.email.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+        )
+    })
+
+    randerUsers(filterUsers)
+
+}
+
+ searchInput.addEventListener("input" ,handelSearch); 
