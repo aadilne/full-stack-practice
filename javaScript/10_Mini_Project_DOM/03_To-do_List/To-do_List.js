@@ -5,15 +5,8 @@ let addInput = document.querySelector("#addInput");
 let addBtn = document.querySelector(".addBtn");
 
 
-const list = [
-    {
-        id: 123,
-        text: "Hello"
-    },
-    {
-        id: 124,
-        text: "By"
-    },
+let list = [ 
+
 ];
 
 list.map((obj) =>{
@@ -29,14 +22,22 @@ list.map((obj) =>{
 
 
 function randerList (arr){    // this blocek of i have to understand
+    listContainer.innerHTML = "";
     arr.map((obj) =>{
 
     let divEle = document.createElement("div");
     divEle.classList.add("list");
     divEle.innerHTML = `
-            <p>${obj.text}</p>
-            <button class="deletBtn">❌</button>`
+            <p>${obj.text}</p>`
 
+            let buttonElem = document.createElement("button");
+            buttonElem.classList.add("deletBtn");
+            buttonElem.innerText = "❌";
+            divEle.append(buttonElem);
+            buttonElem.onclick = () =>{
+                handelRemoveList(obj.id);
+
+            }
             listContainer.append(divEle);
         })
 
@@ -45,7 +46,25 @@ function randerList (arr){    // this blocek of i have to understand
 randerList(list);
 
 function handelAddList (){
-    console.log("button clicked");
+    let obj = {
+        id : Date.now(),
+        text : addInput.value
+    }
+
+    list.unshift(obj);
+    randerList(list);
+    addInput.value = "";
+}
+
+function handelRemoveList (id){
+    let a = list.fillter((obj) => {
+        return obj.id !== id;
+    })
+
+     list = a;
+renderList(list);
+    console.log(id);
+
 }
 
 addBtn.addEventListener("click" , handelAddList);
