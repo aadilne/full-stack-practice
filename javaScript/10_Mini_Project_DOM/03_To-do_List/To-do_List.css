@@ -1,0 +1,79 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+}
+
+
+.contanier{
+background-color: red;
+width: 100%;
+max-width: 35rem;
+border-radius: 10px;
+box-shadow: 0 0 10px black;
+margin: 50px auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 13px;
+padding: 30px 10px;
+
+}
+
+.addContainer{
+    display: flex;
+    width: 100%;
+}
+
+.addContainer > input{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.367);
+    width: 100%;
+    border-radius: 7px;
+
+}
+
+.addContainer > button{
+    padding: 0 15px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    border: none;
+    transition: all linear 0.3s;
+}
+
+.addContainer > button:active{
+ scale: 0.9;
+}
+
+.listContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.listContainer > .list{
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.listContainer .deletBtn{
+    padding: 10px;
+}
+
+
+
+
+
+.listContainer{
+
+}
