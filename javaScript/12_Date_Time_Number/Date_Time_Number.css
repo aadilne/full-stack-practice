@@ -1,0 +1,51 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+/*
+    Main heading ki styling.
+*/
+h1 {
+    margin-bottom: 20px;
+}
+
+/*
+    JavaScript ke output ko ek box ke andar dikhayenge.
+*/
+#output {
+    padding: 20px;
+    border: 1px solid black;
+    line-height: 1.8;
+}
+
+/*
+    Har example ko alag line me dikhane ke liye.
+*/
+.example {
+    margin-bottom: 10px;
+}
+
+
+
+/*
+    Ye class/name pichhle code se different rakha gaya hai.
+*/
+
+.numberConversionTitle {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/*
+    Result box ki basic styling.
+*/
+
+.numberConversionResult {
+    border: 1px solid black;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
