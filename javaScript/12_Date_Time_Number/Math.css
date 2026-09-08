@@ -1,0 +1,21 @@
+
+/*
+    Ye class unique hai.
+    Purane examples ki class ko reuse nahi kiya gaya hai.
+*/
+
+.mathCompleteItem {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/*
+    Result box ki styling.
+*/
+
+.mathCompleteResult {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
