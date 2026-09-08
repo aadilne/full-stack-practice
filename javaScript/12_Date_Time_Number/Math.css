@@ -1,8 +1,4 @@
 
-/*
-    Ye class unique hai.
-    Purane examples ki class ko reuse nahi kiya gaya hai.
-*/
 
 .mathCompleteItem {
     margin-bottom: 10px;
@@ -10,9 +6,7 @@
     border: 1px solid #ccc;
 }
 
-/*
-    Result box ki styling.
-*/
+
 
 .mathCompleteResult {
     padding: 20px;
