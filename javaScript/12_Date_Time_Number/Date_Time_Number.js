@@ -2,7 +2,6 @@
 console.log("Date and Time in JavaScript");
 
 // Number ek mathematical value hoti hai.
-//
 // Examples:
 // 10
 // 25
@@ -22,10 +21,7 @@ let price = 99.99;
 // 2. JAVASCRIPT ME Number DATA TYPE
 
 // JavaScript me numbers ke liye "number" data type hota hai.
-// JavaScript me alag se:
-//     int
-//     float
-// jaisa data type nahi hota.
+// JavaScript me alag se: int or float jaisa data type nahi hota.
 // Integer aur decimal dono "number" type ke hote hain.
 
 let number1 = 100;
@@ -39,29 +35,11 @@ console.log(typeof number2); // "number"
 
 // 3. INTEGER AUR DECIMAL NUMBERS
 
-// INTEGER
-// Examples:
-// 10
-// 25
-// 100
-// -50
-// 0
-
 let integerNumber = 100;
-
-
-// DECIMAL
-// Examples:
-// 10.5
-// 3.14
-// 99.99
-// -2.5
 
 let decimalNumber = 10.5;
 
-
-// Important:
-// JavaScript me dono ka data type "number" hota hai.
+// Important: JavaScript me dono ka data type "number" hota hai.
 
 console.log(typeof integerNumber); // number
 console.log(typeof decimalNumber); // number
@@ -69,28 +47,12 @@ console.log(typeof decimalNumber); // number
 
 // 4. POSITIVE AUR NEGATIVE NUMBERS
 
-// POSITIVE NUMBER
-// 0 se bada number positive hota hai.
-// Examples:
-// 1
-// 10
-
 let positiveNumber = 50;
-
-// NEGATIVE NUMBER
-// 0 se chhota number negative hota hai.
-// Examples:
-// -1
-// -10
 
 let negativeNumber = -50;
 
-
-// 5. 0
-
 // 0 bhi JavaScript me ek valid number hai.
 // 0 na positive hai aur na negative.
-// Example:
 
 let zero = 0;
 
@@ -98,7 +60,7 @@ console.log(typeof zero); // number
 
 
 // 0 ka use bahut jagah hota hai.
-// Example:
+
 let score = 0;
 
 
@@ -131,10 +93,8 @@ let d = 0;
 // 7. SCIENTIFIC NOTATION
 
 // JavaScript me: e  ya E use hota hai.
-// Example:
 // 5e3
-// Iska matlab:
-// 5 × 10³    = 5000
+// Iska matlab: 5 × 10³    = 5000
 
 let bigNumber = 5e3;
 
@@ -145,16 +105,10 @@ console.log(bigNumber); // 5000
 
 let anotherNumber = 2e4;
 
-// 2 × 10⁴
-// = 20000
-
 
 // Negative exponent bhi use kar sakte hain.
-// Example:
 // 5e-3
-// Iska matlab:
 // 5 × 10⁻³
-// Result:
 // 0.005
 
 let smallNumber = 5e-3;
@@ -170,17 +124,11 @@ console.log(smallNumber); // 0.005
 // 8. BINARY NUMBERS
 
 // Binary number system me sirf do digits hote hain:  0 or 1
-// JavaScript me binary number literal ko likhne ke liye
 // number ke aage 0b ya 0B lagate hain.
-// Example:
-
 let binaryNumber = 0b1010;
-
-
 // 0b batata hai ki ye binary number hai.
 
 console.log(binaryNumber); // 10
-
 
 // Another example:
 
@@ -197,7 +145,7 @@ let binaryNumber2 = 0b1111;
 // 0, 1, 2, 3, 4, 5, 6, 7
 // JavaScript me modern way se octal literal likhne ke liye
 // 0o ya 0O use karte hain.
-// Example:
+
 
 let octalNumber = 0o17;
 
@@ -232,7 +180,6 @@ let octalNumber2 = 0o20;
 // F = 15
 // JavaScript me hexadecimal number literal ke liye
 // 0x ya 0X use karte hain.
-// Example:
 
 let hexadecimalNumber = 0xFF;
 
@@ -249,15 +196,6 @@ console.log(hexadecimalNumber); // 255
 let hexadecimalNumber2 = 0x10;
 
 // Hexadecimal 10 = Decimal 16
-
-
-// ALL CONCEPTS KO SCREEN PAR SHOW KARNA
-
-// HTML me humne:
-// <div id="output"></div>
-// banaya tha.
-//
-// Us element ko JavaScript me select kar rahe hain.
 
 let output = document.querySelector("#output");
 
@@ -344,123 +282,90 @@ output.innerHTML = `
 
 let conversionStringValue = "100";
 
-console.log(typeof conversionStringValue);
-// string
+console.log(typeof conversionStringValue); // string
 
 
 // Number() se String ko Number me convert kar sakte hain.
 
 let conversionNumberValue = Number(conversionStringValue);
 
-console.log(conversionNumberValue);
-// 100
+console.log(conversionNumberValue); // 100
 
-console.log(typeof conversionNumberValue);
-// number
-
+console.log(typeof conversionNumberValue);// number
 
 
 // 12. NUMBER → STRING
 
-// 500 ek Number hai.
-
 let conversionOriginalNumber = 500;
-
 
 // String() se Number ko String bana sakte hain.
 
 let conversionStringResult = String(conversionOriginalNumber);
 
-console.log(conversionStringResult);
-// "500"
+console.log(conversionStringResult); // "500"
 
-console.log(typeof conversionStringResult);
-// string
+console.log(typeof conversionStringResult); // string
 
 
 
-// ============================================================
 // 13. Number()
-// ============================================================
 
 // Number() kisi value ko Number me convert karta hai.
 
-console.log(Number("50"));
-// 50
+console.log(Number("50")); // 50
 
-console.log(Number("10.5"));
-// 10.5
+console.log(Number("10.5")); // 10.5
 
-console.log(Number("hello"));
-// NaN
+console.log(Number("hello")); // NaN
 
 
 // Empty String ko Number() 0 bana deta hai.
 
-console.log(Number(""));
-// 0
+console.log(Number("")); // 0
 
 
 
-// ============================================================
 // 14. parseInt()
-// ============================================================
+// parseInt() INTEGER number deta hai. Decimal part hata deta hai.
 
-// parseInt() INTEGER number deta hai.
-// Decimal part hata deta hai.
-
-console.log(parseInt("25.99"));
-// 25
+console.log(parseInt("25.99")); // 25
 
 
 // String ke start me number ho,
 // to parseInt() number nikal sakta hai.
 
-console.log(parseInt("100px"));
-// 100
+console.log(parseInt("100px")); // 100
 
 
 
-// ============================================================
 // 15. parseFloat()
-// ============================================================
 
 // parseFloat() decimal number ko bhi rakhta hai.
 
-console.log(parseFloat("25.99"));
-// 25.99
+console.log(parseFloat("25.99")); // 25.99
 
 
-// String ke start me number ho,
-// to parseFloat() number nikal sakta hai.
+// String ke start me number ho, to parseFloat() number nikal sakta hai.
 
-console.log(parseFloat("20.50px"));
-// 20.5
+console.log(parseFloat("20.50px")); // 20.5
 
 
 
-// ============================================================
 // 16. UNARY +
-// ============================================================
 
-// String ke aage + lagane se
-// String Number me convert ho sakti hai.
+// String ke aage + lagane se String Number me convert ho sakti hai.
 
 let unaryConversionText = "200";
 
 let unaryConversionResult = +unaryConversionText;
 
-console.log(unaryConversionResult);
-// 200
+console.log(unaryConversionResult); // 200
 
-console.log(typeof unaryConversionResult);
-// number
+console.log(typeof unaryConversionResult); // number
 
 
 
-// ============================================================
 // 17. toString()
-// ============================================================
 
 // toString() Number ko String banata hai.
 
@@ -468,103 +373,73 @@ let tostringOriginalValue = 300;
 
 let tostringFinalValue = tostringOriginalValue.toString();
 
-console.log(tostringFinalValue);
-// "300"
+console.log(tostringFinalValue); // "300"
 
-console.log(typeof tostringFinalValue);
-// string
+console.log(typeof tostringFinalValue); // string
 
 
 
-// ============================================================
 // NUMBER CHECKING
-// ============================================================
 
-
-// ============================================================
 // 18. Number.isInteger()
-// ============================================================
 
 // Check karta hai ki value INTEGER hai ya nahi.
 
-console.log(Number.isInteger(100));
-// true
+console.log(Number.isInteger(100)); // true
 
-console.log(Number.isInteger(10.5));
-// false
+console.log(Number.isInteger(10.5)); // false
 
 
 
-// ============================================================
 // 19. Number.isFinite()
-// ============================================================
 
 // Check karta hai ki value normal finite Number hai ya nahi.
 
-console.log(Number.isFinite(100));
-// true
+console.log(Number.isFinite(100));  // true
 
-console.log(Number.isFinite(Infinity));
-// false
+console.log(Number.isFinite(Infinity)); // false
 
 
 // String ko ye automatically Number me convert nahi karta.
 
-console.log(Number.isFinite("100"));
-// false
+console.log(Number.isFinite("100")); // false
 
 
 
-// ============================================================
 // 20. Number.isNaN()
-// ============================================================
 
 // Check karta hai ki value exactly NaN hai ya nahi.
 
-console.log(Number.isNaN(NaN));
-// true
+console.log(Number.isNaN(NaN)); // true
 
-console.log(Number.isNaN(100));
-// false
+console.log(Number.isNaN(100)); // false
 
-console.log(Number.isNaN("hello"));
-// false
+console.log(Number.isNaN("hello")); // false
 
 
 
-// ============================================================
 // 21. isNaN()
-// ============================================================
 
-// isNaN() pehle value ko Number me convert karne ki
-// koshish karta hai.
+// isNaN() pehle value ko Number me convert karne ki koshish karta hai.
 
-console.log(isNaN("hello"));
-// true
+console.log(isNaN("hello")); // true
 
-console.log(isNaN("100"));
-// false
-
+console.log(isNaN("100"));// false
 
 // Difference:
-//
+
 // Number.isNaN("hello") → false
 // isNaN("hello")        → true
 
 
 
-// ============================================================
 // 22. isFinite()
-// ============================================================
 
-// isFinite() value ko Number me convert karke
-// check karta hai ki finite hai ya nahi.
+// isFinite() value ko Number me convert karke check karta hai ki finite hai ya nahi.
 
-console.log(isFinite(100));
-// true
+console.log(isFinite(100)); // true
 
-console.log(isFinite("100"));
-// true
+console.log(isFinite("100")); // true
 
 
 // Number.isFinite("100") → false
@@ -572,12 +447,8 @@ console.log(isFinite("100"));
 
 
 
-// ============================================================
 // 23. NaN
-// ============================================================
-
-// NaN ka full form:
-// Not a Number
+// NaN ka full form: Not a Number
 
 
 // Jab valid Number nahi ban pata,
@@ -585,119 +456,85 @@ console.log(isFinite("100"));
 
 let nanExampleValue = Number("hello");
 
-console.log(nanExampleValue);
-// NaN
+console.log(nanExampleValue); // NaN
 
 
 // NaN ka typeof "number" hota hai.
 
-console.log(typeof NaN);
-// number
+console.log(typeof NaN); // number
 
 
 
-// ============================================================
 // 24. Infinity
-// ============================================================
 
 // Number ko 0 se divide karne par
 // positive Infinity mil sakta hai.
 
-console.log(10 / 0);
-// Infinity
+console.log(10 / 0); // Infinity
 
 
 
-// ============================================================
 // 25. -Infinity
-// ============================================================
 
 // Negative Number ko 0 se divide karne par
 // -Infinity mil sakta hai.
 
-console.log(-10 / 0);
-// -Infinity
+console.log(-10 / 0); // -Infinity
 
 
 
-// ============================================================
 // NUMBER METHODS
-// ============================================================
 
 
-// ============================================================
 // 26. toFixed()
-// ============================================================
 
 // toFixed() decimal places fix karta hai.
 
 let fixedMethodNumber = 10.5678;
 
-console.log(fixedMethodNumber.toFixed(2));
-// "10.57"
+console.log(fixedMethodNumber.toFixed(2)); // "10.57"
 
 
-// 2 ka matlab:
-// decimal ke baad 2 digits.
+// 2 ka matlab:  decimal ke baad 2 digits.
 
 
-console.log(typeof fixedMethodNumber.toFixed(2));
-// string
+console.log(typeof fixedMethodNumber.toFixed(2)); // string
 
+// Important: // toFixed() ka result String hota hai.
 
-// Important:
-// toFixed() ka result String hota hai.
-
-
-
-// ============================================================
 // 27. toPrecision()
-// ============================================================
 
 // toPrecision() total digits ko control karta hai.
 
 let precisionMethodNumber = 123.456;
 
-console.log(precisionMethodNumber.toPrecision(4));
-// "123.5"
-
+console.log(precisionMethodNumber.toPrecision(4)); // "123.5"
 
 // Yahan total 4 digits rakhe gaye hain.
 
 
 
-// ============================================================
 // 28. toExponential()
-// ============================================================
 
-// toExponential() Number ko
-// scientific notation me convert karta hai.
+// toExponential() Number ko scientific notation me convert karta hai.
 
 let exponentialMethodNumber = 12345;
 
-console.log(exponentialMethodNumber.toExponential(2));
-// "1.23e+4"
+console.log(exponentialMethodNumber.toExponential(2)); // "1.23e+4"
 
 
 
-// ============================================================
 // 29. toLocaleString()
-// ============================================================
 
 // Number ko readable format me dikhata hai.
 
 let localeMethodNumber = 1000000;
 
-console.log(localeMethodNumber.toLocaleString());
-// "1,000,000"
-
+console.log(localeMethodNumber.toLocaleString()); // "1,000,000"
 
 // India ke format me:
 
-console.log(
-    localeMethodNumber.toLocaleString("en-IN")
-);
-// "10,00,000"
+console.log(localeMethodNumber.toLocaleString("en-IN")); // "10,00,000"
 
 
 
@@ -709,231 +546,157 @@ console.log(
 
 let valueofMethodNumber = 500;
 
-console.log(valueofMethodNumber.valueOf());
-// 500
+console.log(valueofMethodNumber.valueOf()); // 500
 
 
 
-// ============================================================
 // NUMBER PROPERTIES
-// ============================================================
-
-
-// ============================================================
 // 31. Number.MAX_VALUE
-// ============================================================
 
 // JavaScript ka sabse bada FINITE Number.
 
-console.log(Number.MAX_VALUE);
-
-
-
-// ============================================================
+console.log(Number.MAX_VALUE);// 1.7976931348623157e+308
 // 32. Number.MIN_VALUE
-// ============================================================
 
-// JavaScript ka sabse chhota POSITIVE Number.
-//
-// Dhyan:
-// Ye sabse chhota negative Number nahi hai.
+// JavaScript ka sabse chhota FINITE Number.
 
-console.log(Number.MIN_VALUE);
+console.log(Number.MIN_VALUE);// 5e-324
 
 
-
-// ============================================================
 // 33. Number.MAX_SAFE_INTEGER
-// ============================================================
 
 // Sabse bada SAFE INTEGER.
 
-console.log(Number.MAX_SAFE_INTEGER);
-// 9007199254740991
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
 
 
 
-// ============================================================
 // 34. Number.MIN_SAFE_INTEGER
-// ============================================================
 
 // Sabse chhota SAFE INTEGER.
 
-console.log(Number.MIN_SAFE_INTEGER);
-// -9007199254740991
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 
 
 
-// ============================================================
 // 35. Number.POSITIVE_INFINITY
-// ============================================================
 
 // Positive Infinity ki property.
 
-console.log(Number.POSITIVE_INFINITY);
-// Infinity
+console.log(Number.POSITIVE_INFINITY); // Infinity
 
 
 
-// ============================================================
 // 36. Number.NEGATIVE_INFINITY
-// ============================================================
 
 // Negative Infinity ki property.
 
-console.log(Number.NEGATIVE_INFINITY);
-// -Infinity
+console.log(Number.NEGATIVE_INFINITY); // -Infinity
 
 
 
-// ============================================================
 // 37. Number.NaN
-// ============================================================
 
 // Number.NaN ki value NaN hoti hai.
+console.log(Number.NaN);// NaN
 
-console.log(Number.NaN);
-// NaN
-
-
-
-// ============================================================
 // 38. Number.EPSILON
-// ============================================================
 
 // EPSILON ek bahut chhoti Number value hai.
-//
 // Iska use floating-point comparison me
 // precision problem ko handle karne me hota hai.
 
-console.log(Number.EPSILON);
+console.log(Number.EPSILON); 
 
 
 
-// ============================================================
 // IMPORTANT CONCEPTS
-// ============================================================
 
 
-// ============================================================
 // 39. FLOATING-POINT NUMBERS
-// ============================================================
 
 // Decimal numbers ko Floating-Point Number kaha jata hai.
 
 let floatingConceptNumber = 10.25;
 
-console.log(floatingConceptNumber);
-// 10.25
+console.log(floatingConceptNumber); // 10.25
 
 
 
-// ============================================================
 // 40. FLOATING-POINT CALCULATION PROBLEMS
-// ============================================================
 
-// Computer kuch decimal values ko
-// exactly store nahi kar pata.
-//
-// Isliye calculation me kabhi-kabhi
-// unexpected result aa sakta hai.
+// Computer kuch decimal values ko exactly store nahi kar pata. Isliye calculation me kabhi-kabhi unexpected result aa sakta hai.
 
-console.log(0.1 + 0.2);
-// 0.30000000000000004
+console.log(0.1 + 0.2); // 0.30000000000000004
 
-
-
-// ============================================================
 // 41. 0.1 + 0.2 PROBLEM
-// ============================================================
 
-// Mathematics me:
-// 0.1 + 0.2 = 0.3
-//
+// Mathematics me: // 0.1 + 0.2 = 0.3
+
 // Lekin JavaScript me:
 
 let decimalProblemResult = 0.1 + 0.2;
 
-console.log(decimalProblemResult);
-// 0.30000000000000004
+console.log(decimalProblemResult); // 0.30000000000000004
 
 
 // Agar hume 2 decimal places chahiye,
 // to toFixed() use kar sakte hain.
 
-console.log(decimalProblemResult.toFixed(2));
-// "0.30"
+console.log(decimalProblemResult.toFixed(2)); // "0.30"
 
 
 
-// ============================================================
 // 42. SAFE INTEGERS
-// ============================================================
 
 // Safe Integer wo Integer hai
 // jise JavaScript Number safely represent kar sakta hai.
-//
+
 // Safe range:
 
-console.log(Number.MIN_SAFE_INTEGER);
-// -9007199254740991
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 
-console.log(Number.MAX_SAFE_INTEGER);
-// 9007199254740991
-
-
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+ 
 // Check karne ke liye:
 
-console.log(Number.isSafeInteger(100));
-// true
+console.log(Number.isSafeInteger(100)); // true
 
-console.log(Number.isSafeInteger(9007199254740992));
-// false
+console.log(Number.isSafeInteger(9007199254740992)); // false
 
 
 
-// ============================================================
 // 43. NUMBER PRECISION
-// ============================================================
 
 // JavaScript Number ki precision limited hoti hai.
-//
+
 // Isliye bahut bade numbers ya
 // decimal calculation me problem aa sakti hai.
 
-console.log(0.1 + 0.2);
-// 0.30000000000000004
+console.log(0.1 + 0.2); // 0.30000000000000004
 
 
-// Bahut bade exact Integer ke liye
-// BigInt use kiya ja sakta hai.
+// Bahut bade exact Integer ke liye BigInt use kiya ja sakta hai.
 
 
 
-// ============================================================
 // 44. BigInt
-// ============================================================
 
 // BigInt ka use bahut bade INTEGER numbers ke liye hota hai.
-//
 // Number ke end me "n" lagate hain.
 
 let bigintConceptValue = 9007199254740993n;
 
-console.log(bigintConceptValue);
-// 9007199254740993n
+console.log(bigintConceptValue); // 9007199254740993n
 
 
 // BigInt ka type:
 
-console.log(typeof bigintConceptValue);
-// bigint
+console.log(typeof bigintConceptValue); // bigint
 
 
 
-// ============================================================
 // 45. BigInt() CONVERSION
-// ============================================================
 
 // String ko BigInt me convert kar sakte hain.
 
@@ -941,28 +704,21 @@ let bigintConversionText = "9007199254740993";
 
 let bigintConversionResult = BigInt(bigintConversionText);
 
-console.log(bigintConversionResult);
-// 9007199254740993n
+console.log(bigintConversionResult); // 9007199254740993n
 
 
 // Normal safe Integer ko bhi BigInt me convert kar sakte hain.
 
-console.log(BigInt(100));
-// 100n
+console.log(BigInt(100)); // 100n
 
 
 // Decimal ko BigInt nahi bana sakte.
-
-// Example:
-//
 // BigInt(10.5)
 // Error dega.
 
 
 
-// ============================================================
 // 46. BigInt OPERATORS
-// ============================================================
 
 // BigInt ke saath:
 // +, -, *, /, %
@@ -971,20 +727,15 @@ console.log(BigInt(100));
 let bigintOperatorFirst = 20n;
 let bigintOperatorSecond = 5n;
 
-console.log(bigintOperatorFirst + bigintOperatorSecond);
-// 25n
+console.log(bigintOperatorFirst + bigintOperatorSecond); // 25n
 
-console.log(bigintOperatorFirst - bigintOperatorSecond);
-// 15n
+console.log(bigintOperatorFirst - bigintOperatorSecond); // 15n
 
-console.log(bigintOperatorFirst * bigintOperatorSecond);
-// 100n
+console.log(bigintOperatorFirst * bigintOperatorSecond); // 100n
 
-console.log(bigintOperatorFirst / bigintOperatorSecond);
-// 4n
+console.log(bigintOperatorFirst / bigintOperatorSecond); // 4n
 
-console.log(bigintOperatorFirst % bigintOperatorSecond);
-// 0n
+console.log(bigintOperatorFirst % bigintOperatorSecond); // 0n
 
 
 // BigInt division me decimal part nahi aata.
@@ -992,29 +743,24 @@ console.log(bigintOperatorFirst % bigintOperatorSecond);
 let bigintDivisionFirst = 10n;
 let bigintDivisionSecond = 3n;
 
-console.log(bigintDivisionFirst / bigintDivisionSecond);
-// 3n
+console.log(bigintDivisionFirst / bigintDivisionSecond); // 3n
 
 
 
-// ============================================================
 // 47. NUMBER VS BigInt
-// ============================================================
 
 // Normal Number:
 
 let numberVsBigintNormal = 100;
 
-console.log(typeof numberVsBigintNormal);
-// number
+console.log(typeof numberVsBigintNormal); // number
 
 
 // BigInt:
 
 let numberVsBigintLarge = 100n;
 
-console.log(typeof numberVsBigintLarge);
-// bigint
+console.log(typeof numberVsBigintLarge); // bigint
 
 
 // Dono alag data types hain.
@@ -1024,50 +770,40 @@ console.log(typeof numberVsBigintLarge);
 // mix nahi kar sakte.
 
 // Example:
-//
 // 100 + 100n
-//
 // Ye Error dega.
 
 
 // Same type ke saath calculation karo:
 
-console.log(100 + 100);
-// 200
+console.log(100 + 100); // 200
 
-console.log(100n + 100n);
-// 200n
+console.log(100n + 100n); // 200n
 
 
 // Comparison me:
 
-console.log(100n === 100);
-// false
-//
+console.log(100n === 100); // false
 // Kyunki type different hai.
 
 
-console.log(100n == 100);
-// true
-//
+console.log(100n == 100); // true
+
 // == value ko compare karta hai.
 
 
 
-// ============================================================
 // 48. BigInt LIMITATIONS
-// ============================================================
 
 
 // 1. BigInt me Decimal nahi hota.
-//
+
 // 10.5n
 // Invalid hai.
 
 
 // 2. Number aur BigInt ko
 // direct arithmetic me mix nahi kar sakte.
-//
 // 10n + 5
 // Error
 
@@ -1085,9 +821,8 @@ console.log(100n == 100);
 
 
 
-// ============================================================
+
 // FINAL QUICK REVISION
-// ============================================================
 
 // String → Number
 // Number("100") → 100
