@@ -1,0 +1,28 @@
+.obj-box {
+    width: 350px;
+    padding: 20px;
+    margin: 50px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#objBtn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ /* 2 Object Creation  */
+.create-card {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#createBtn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
