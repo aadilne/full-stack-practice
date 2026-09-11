@@ -216,3 +216,198 @@ showBtn.addEventListener("click", function () {
     outputBox.textContent ="Student: " + studentOne.name +" | Course: " + studentOne.course;
 
 });
+
+
+// PHASE 3: CONSTRUCTOR FUNCTION
+// 1. Creating a Constructor Function
+// Student is a constructor function. It works like a blueprint for student objects.
+
+function Student(name, age, course) {
+
+    // "this" refers to the new object. created by the "new" keyword.
+    this.name = name;
+    this.age = age;
+    this.course = course;
+    // Constructor Function Method
+
+    this.showInfo = function () {
+        return this.name + " - " +
+               this.age + " - " +
+               this.course;
+    };
+}
+
+
+// 2. Creating Multiple Objects. "new" creates a new object from Student.
+
+let studentA = new Student("Aadil",22,"MCA");
+
+let studentB = new Student( "Rahul", 21, "BCA");
+
+let studentC = new Student( "Aman", 23, "BTech" );
+
+
+// 3. Accessing Constructor Properties
+console.log(studentA.name);
+console.log(studentB.age);
+console.log(studentC.course);
+
+
+// 4. Calling Constructor Method
+
+console.log(studentA.showInfo());
+console.log(studentB.showInfo());
+console.log(studentC.showInfo());
+
+
+// 5. Showing Data in HTML
+document.querySelector("#constructorOne").textContent = studentA.showInfo();
+
+document.querySelector("#constructorTwo").textContent = studentB.showInfo();
+
+document.querySelector("#constructorThree").textContent = studentC.showInfo();
+
+console.log(this);
+
+
+// PHASE 4 — THIS KEYWORD
+
+// 1. THIS INSIDE OBJECT
+
+let cameraInfo = {
+
+    brand: "Canon",
+    price: 70000,
+
+    showCamera: function () {
+
+        // Here "this" refers to cameraInfo object.
+
+        return this.brand + " - ₹" + this.price;
+    }
+};
+
+
+// 2. CONSTRUCTOR FUNCTION + THIS
+
+function Mobile(device, cost) {
+
+    // "this" refers to the new Mobile object.
+
+    this.device = device;
+    this.cost = cost;
+}
+
+
+// Create a new object using constructor.
+
+let mobileItem = new Mobile( "Pixel", 60000);
+
+
+// 3. CALL()
+
+function showPerson(city, job) {
+
+    // "this" is decided by call().
+
+    return this.personName + " - " + city + " - " + job;
+}
+
+
+let personDelta = {
+    personName: "Aman"
+};
+
+
+// call() immediately executes the function.
+
+let callResult = showPerson.call( personDelta, "Patna","Developer");
+
+
+// 4. APPLY()
+
+let personEpsilon = {
+    personName: "Ravi"
+};
+
+
+// apply() receives arguments inside an array.
+
+let applyResult = showPerson.apply( personEpsilon, ["Delhi", "Designer"] );
+
+
+// 5. BIND()
+
+let personZeta = {
+    personName: "Neha"
+};
+
+
+// bind() creates a new function.
+// It does NOT execute immediately.
+
+let bindResultFunction = showPerson.bind( personZeta, "Mumbai", "Manager" );
+
+
+// Now the bound function is executed.
+
+let bindResult = bindResultFunction();
+
+
+// 6. ARROW FUNCTION + THIS
+
+let arrowDemo = {
+
+    title: "Arrow Example",
+
+    showTitle: function () {
+
+        // Normal function has its this.
+
+        let arrowReader = () => {
+
+            // Arrow function uses the outer this. 
+
+            return this.title;
+        };
+
+        return arrowReader();
+    }
+};
+
+
+// 7. SHOW DATA IN HTML
+
+document.querySelector("#thisObjectOutput").textContent = "Object this: " + cameraInfo.showCamera();
+
+
+document.querySelector("#thisConstructorOutput").textContent = "Constructor this: " + mobileItem.device + " - ₹" + mobileItem.cost;
+
+
+document.querySelector("#thisCallOutput").textContent = "call(): " + callResult;
+
+
+document.querySelector("#thisApplyOutput").textContent = "apply(): " + applyResult;
+
+
+document.querySelector("#thisBindOutput").textContent = "bind(): " + bindResult;
+
+
+// 8. EVENT HANDLER + THIS
+
+let thisEventButton = document.querySelector("#thisEventButton");
+
+
+let thisEventOutput = document.querySelector("#thisEventOutput");
+
+
+thisEventButton.addEventListener( "click", function () {
+
+        // In this normal event handler,
+        // "this" refers to the clicked button.
+        thisEventOutput.textContent ="this refers to: " + this.textContent;
+    }
+);
+
+
+

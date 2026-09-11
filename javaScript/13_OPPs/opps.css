@@ -26,3 +26,64 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+
+
+
+/* 3. constructor function */
+/* Main page box */
+#constructorCard {
+    width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    background: #f4f4f4;
+}
+
+/* Student information box */
+.constructor-box {
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+}
+
+/* Student text */
+.constructor-box p {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* 4. this keyword */
+/* Main container */
+#thisDemoPanel {
+    width: 550px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f4f4f4;
+}
+
+/* Information box */
+.this-info-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: white;
+}
+
+/* Information text */
+.this-info-box p {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Event button */
+#thisEventButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
