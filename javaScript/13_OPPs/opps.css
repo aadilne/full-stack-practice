@@ -87,3 +87,111 @@
     cursor: pointer;
 }
 
+
+/* 5 prototype */
+/* Main page area */
+#prototypeDemoArea {
+    width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f4f4f4;
+}
+
+/* Information card */
+.prototype-info-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Output text */
+.prototype-info-card p {
+    padding: 10px;
+    margin: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Phase 6  class*/
+
+/* Main class demo area */
+#classDemoPanel {
+    width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f4f4f4;
+}
+
+/* Result card */
+.class-result-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Result text */
+.class-result-card p {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Phase 7 - Class Methods */
+/* Main Phase 7 container */
+#methodLab7 {
+    width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* Card for class method examples */
+.method-card7 {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+/* Output text */
+.method-card7 p {
+    padding: 8px;
+    margin: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* PHASE 8 - ENCAPSULATION  */
+/* Main Phase 8 container */
+#encapsulationZone8 {
+    width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+
+    text-align: center;
+
+    border: 2px solid #333;
+    border-radius: 12px;
+}
+
+/* Encapsulation card */
+.encapsulation-card8 {
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+}
+
+/* Output paragraphs */
+.encapsulation-card8 p {
+    padding: 10px;
+    margin: 8px;
+
+    border-bottom: 1px solid #ccc;
+}
