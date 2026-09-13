@@ -1085,4 +1085,695 @@ secureWalletAlpha8.addMoney8(2000);
 secureWalletAlpha8.removeMoney8(500);
 
 // Show final balance
-document.querySelector("#classEncapsulationResult8").textContent = "Class Encapsulation Balance: ₹" + secureWalletAlpha8.showMoney8();
+document.querySelector("#classEncapsulationResult8").textContent =
+    "Class Encapsulation Balance: ₹" + secureWalletAlpha8.showMoney8();
+
+
+
+// PHASE 9 - GETTERS AND SETTERS
+// 102 + 103. WHAT IS GETTER / get KEYWORD
+
+class ProfileManager9 {
+
+    // Private field
+    #displayName9 = "Aadil";
+
+    // Getter
+    // Used to read the private value
+    get displayName9() {
+
+        return this.#displayName9;
+    }
+}
+
+// Create object
+let profileManagerAlpha9 = new ProfileManager9();
+
+// Getter is accessed like a property
+document.querySelector("#getterDisplay9").textContent ="Getter Value: " + profileManagerAlpha9.displayName9;
+
+
+// 104 + 105. WHAT IS SETTER / set KEYWORD
+
+class NicknameManager9 {
+
+    #nickname9 = "Coder";
+
+    // Getter
+    get nickname9() {
+
+        return this.#nickname9;
+    }
+
+    // Setter
+    // Used to update the private value
+    set nickname9(newNickname9) {
+
+        this.#nickname9 = newNickname9;
+    }
+}
+
+let nicknameManagerAlpha9 = new NicknameManager9();
+
+// Setter is triggered by assignment
+nicknameManagerAlpha9.nickname9 = "JavaScript Coder";
+
+// Getter reads the updated value
+document.querySelector("#setterDisplay9").textContent = "Setter Updated Value: " + nicknameManagerAlpha9.nickname9;
+
+
+// 106. GETTER VS NORMAL METHOD
+
+class NameReader9 {
+
+    #personName9 = "Aadil";
+
+    // Normal method
+    showName9() {
+
+        return this.#personName9;
+    }
+
+    // Getter
+    get name9() {
+
+        return this.#personName9;
+    }
+}
+
+let nameReaderAlpha9 = new NameReader9();
+
+// Normal method requires ()
+let normalMethodValue9 = nameReaderAlpha9.showName9();
+
+// Getter does not require ()
+let getterValue9 = nameReaderAlpha9.name9;
+
+document.querySelector("#methodGetterDisplay9").textContent = "Normal Method: " + normalMethodValue9 +
+            " | Getter: " + getterValue9;
+
+
+// 107. SETTER VALIDATION
+
+class AgeValidator9 {
+
+    #userAge9 = 18;
+
+    // Getter
+    get userAge9() {
+
+        return this.#userAge9;
+    }
+
+    // Setter with validation
+    set userAge9(newAge9) {
+
+        // Only allow age from 0 to 120
+        if (newAge9 >= 0 && newAge9 <= 120) {
+
+            this.#userAge9 = newAge9;
+
+        } else {
+
+            console.log("Invalid age rejected.");
+        }
+    }
+}
+
+let ageValidatorAlpha9 = new AgeValidator9();
+
+// Valid value
+ageValidatorAlpha9.userAge9 = 25;
+
+// Invalid value
+ageValidatorAlpha9.userAge9 = -50;
+
+// Invalid value will not replace 25
+document.querySelector("#validationDisplay9").textContent =
+    "Validated Age: " + ageValidatorAlpha9.userAge9;
+
+
+// 108. READ-ONLY PROPERTY
+
+class ProductIdentity9 {
+
+    // Private ID
+    #identityCode9 = "ITEM-9009";
+
+    // Getter only
+    get identityCode9() {
+
+        return this.#identityCode9;
+    }
+
+    // No setter exists
+}
+
+let productIdentityAlpha9 = new ProductIdentity9();
+
+// Reading is allowed
+document.querySelector("#readonlyDisplay9").textContent ="Read-only ID: " + productIdentityAlpha9.identityCode9;
+
+
+// 109 + 110. GETTER + SETTER WITH PRIVATE FIELD
+
+class SecureBalance9 {
+
+    // Private field
+    #accountMoney9 = 15000;
+
+    // Getter
+    get accountMoney9() {
+
+        return this.#accountMoney9;
+    }
+
+    // Setter
+    set accountMoney9(newMoney9) {
+
+        // Do not allow negative money
+        if (newMoney9 >= 0) {
+
+            this.#accountMoney9 = newMoney9;
+
+        } else {
+
+            console.log("Negative balance rejected.");
+        }
+    }
+}
+
+let secureBalanceAlpha9 = new SecureBalance9();
+
+// Update through setter
+secureBalanceAlpha9.accountMoney9 = 20000;
+
+// Read through getter
+document.querySelector("#privateFieldDisplay9").textContent = "Private Field Balance: ₹" + 
+            secureBalanceAlpha9.accountMoney9;
+
+
+
+// PHASE 10 - INHERITANCE
+// INHERITANCE + PARENT + CHILD + extends
+// Parent class
+class VehicleFamily10 {
+
+    startVehicle10() {
+        return "Vehicle started";
+    }
+
+    stopVehicle10() {
+        return "Vehicle stopped";
+    }
+}
+
+// Child class  extends creates inheritance
+class CarFamily10 extends VehicleFamily10 {
+
+    driveCar10() {
+        return "Car is driving";
+    }
+}
+
+// Create child object
+let carFamilyAlpha10 = new CarFamily10();
+
+// Child can use its own method
+let childMethodValue10 = carFamilyAlpha10.driveCar10();
+
+// Child can also use parent method
+let parentMethodValue10 = carFamilyAlpha10.startVehicle10();
+
+document.querySelector("#parentChildResult10").textContent = childMethodValue10 + " | " + parentMethodValue10;
+
+
+// super() + CALLING PARENT CONSTRUCTOR
+// Parent class
+class WorkerBase10 {
+
+    constructor(workerName10) {
+
+        this.workerName = workerName10;
+    }
+
+    showWorker10() {
+
+        return this.workerName;
+    }
+}
+
+// Child class
+class DeveloperChild10 extends WorkerBase10 {
+
+    constructor(workerName10, codingSkill10) {
+
+        // super() calls parent constructor
+        super(workerName10);        // super() method always call before child this.anyName
+
+        // Child's own property
+        this.codingSkill = codingSkill10;
+    }
+
+    showSkill10() {
+
+        return this.codingSkill;
+    }
+}
+
+// Create child object
+let developerChildAlpha10 = new DeveloperChild10( "Aadil", "JavaScript");
+
+document.querySelector("#superConstructorResult10").textContent = developerChildAlpha10.showWorker10() +
+        " knows " + developerChildAlpha10.showSkill10();
+
+
+// 118. CALLING PARENT METHOD
+
+class AnimalBaseFamily10 {
+
+    eatFood10() {
+
+        return "Animal is eating";
+    }
+}
+
+class DogFamily10 extends AnimalBaseFamily10 {
+
+    barkDog10() {
+
+        return "Dog is barking";
+    }
+}
+
+let dogFamilyAlpha10 = new DogFamily10();
+
+// Parent method
+let parentEatingValue10 = dogFamilyAlpha10.eatFood10();
+
+// Child method
+let childBarkingValue10 = dogFamilyAlpha10.barkDog10();
+
+document.querySelector("#parentMethodResult10").textContent = parentEatingValue10 + " | " + childBarkingValue10;
+
+
+// 119. METHOD OVERRIDING
+
+class NotificationBase10 {
+
+    sendMessage10() {
+
+        return "Generic notification";
+    }
+}
+
+class EmailNotification10 extends NotificationBase10 {
+
+    // Same method name
+    // Child provides its own implementation
+    sendMessage10() {
+
+        return "Email notification sent";
+    }
+}
+
+let emailNotificationAlpha10 = new EmailNotification10();
+
+document.querySelector("#overrideResult10").textContent = emailNotificationAlpha10.sendMessage10();
+
+
+// 120. MULTILEVEL INHERITANCE
+
+// Level 1
+class LivingBase10 {
+
+    breathe10() {
+
+        return "Breathing";
+    }
+}
+
+// Level 2
+class AnimalLevel10 extends LivingBase10 {
+
+    eat10() {
+
+        return "Eating";
+    }
+}
+
+// Level 3
+class DogLevel10 extends AnimalLevel10 {
+
+    bark10() {
+
+        return "Barking";
+    }
+}
+
+let dogLevelAlpha10 = new DogLevel10();
+
+document.querySelector("#multilevelResult10").textContent = dogLevelAlpha10.breathe10() + " | " +
+    dogLevelAlpha10.eat10() + " | " + dogLevelAlpha10.bark10();
+
+
+// 121. HIERARCHICAL INHERITANCE
+
+// One parent
+class ShapeBase10 {
+
+    showShape10() {
+
+        return "This is a shape";
+    }
+}
+
+// Child 1
+class CircleChild10 extends ShapeBase10 {
+
+}
+
+// Child 2
+class SquareChild10 extends ShapeBase10 {
+
+}
+
+let circleChildAlpha10 = new CircleChild10();
+let squareChildAlpha10 = new SquareChild10();
+
+document.querySelector("#hierarchicalResult10").textContent = circleChildAlpha10.showShape10() +
+    " | " + squareChildAlpha10.showShape10();
+
+
+// 122. SINGLE INHERITANCE
+
+// One parent
+class DeviceParent10 {
+
+    powerOn10() {
+
+        return "Device powered on";
+    }
+}
+
+// One child
+class PhoneChild10 extends DeviceParent10 {
+
+}
+
+let phoneChildAlpha10 = new PhoneChild10();
+
+console.log(phoneChildAlpha10.powerOn10());
+
+
+// 123. PROTOTYPE-BASED INHERITANCE
+
+// Parent constructor function
+function VehiclePrototype10(vehicleName10) {
+
+    this.vehicleName = vehicleName10;
+}
+
+// Parent prototype method
+VehiclePrototype10.prototype.move10 = function () {
+
+    return this.vehicleName + " is moving";
+};
+
+
+// Child constructor function
+function BikePrototype10(vehicleName10) {
+
+    // Call parent constructor
+    VehiclePrototype10.call(this, vehicleName10);
+}
+
+
+// Connect child prototype to parent prototype
+BikePrototype10.prototype = Object.create(VehiclePrototype10.prototype);
+
+
+// Restore correct constructor reference
+BikePrototype10.prototype.constructor = BikePrototype10;
+
+
+// Create child object
+let bikePrototypeAlpha10 = new BikePrototype10("Bike");
+
+document.querySelector("#prototypeResult10").textContent = bikePrototypeAlpha10.move10();
+
+
+// 124. CLASS-BASED INHERITANCE
+
+// Parent class
+class MachineParent10 {
+
+    operate10() {
+
+        return "Machine operating";
+    }
+}
+
+// Child class using extends
+class PrinterChild10 extends MachineParent10 {
+
+    printPaper10() {
+
+        return "Printing paper";
+    }
+}
+
+let printerChildAlpha10 = new PrinterChild10();
+
+document.querySelector("#classInheritanceResult10").textContent = printerChildAlpha10.operate10() +
+    " | " + printerChildAlpha10.printPaper10();
+
+
+// PHASE 11 - super KEYWORD
+
+
+// What is super? super() Constructor
+
+// Parent class
+class SuperParent11 {
+
+    constructor() {
+        this.parentTitle11 = "Parent Class";
+
+        console.log("Parent constructor called");
+    }
+
+    // Parent method
+    showParentInfo11() {
+        return "Message from Parent";
+    }
+}
+
+
+// Child class extends Parent
+class SuperChild11 extends SuperParent11 {
+
+    constructor() {
+
+        // super() calls the Parent constructor
+        // It must come before using this
+        super();
+
+        this.childTitle11 = "Child Class";
+
+        console.log("Child constructor called");
+    }
+}
+
+
+// Creating child object
+const superChildAlpha11 = new SuperChild11();
+
+
+// super.method()
+class SuperMethodParent11 {
+
+    showParentMessage11() {
+        return "Parent method is running";
+    }
+}
+
+
+class SuperMethodChild11 extends SuperMethodParent11 {
+
+    showChildMessage11() {
+
+        // super.method() calls the Parent method
+        return super.showParentMessage11();
+    }
+}
+
+
+const superMethodChildAlpha11 = new SuperMethodChild11();
+
+document.querySelector("#superMethodOutput11").textContent = superMethodChildAlpha11.showChildMessage11();
+
+
+// Parent Constructor Access
+
+class SuperDataParent11 {
+
+    constructor(productName11) {
+
+        // Parent receives product name
+        this.productName11 = productName11;
+    }
+}
+
+
+class SuperDataChild11 extends SuperDataParent11 {
+
+    constructor(productName11, productPrice11) {
+
+        // Send productName to Parent constructor
+        super(productName11);
+
+        // Child property
+        this.productPrice11 = productPrice11;
+    }
+}
+
+
+const superDataChildAlpha11 = new SuperDataChild11("Laptop", 55000);
+
+
+document.querySelector("#superParentConstructorOutput11").textContent = "Product: " +
+    superDataChildAlpha11.productName11 + " | Price: ₹" + superDataChildAlpha11.productPrice11;
+
+
+// Parent Method Access
+
+class SuperActionParent11 {
+
+    startService11() {
+        return "Parent service started";
+    }
+}
+
+
+class SuperActionChild11 extends SuperActionParent11 {
+
+    startChildService11() {
+
+        // Calling Parent method
+        const parentServiceText11 = super.startService11();
+
+        return parentServiceText11 + " → Child service is ready";
+    }
+}
+
+
+const superActionChildAlpha11 = new SuperActionChild11();
+
+
+document.querySelector("#superParentMethodOutput11").textContent =
+    superActionChildAlpha11.startChildService11();
+
+
+// super with Method Overriding
+
+class SuperOverrideParent11 {
+
+    showStatus11() {
+
+        return "Parent: Basic system active";
+    }
+}
+
+
+class SuperOverrideChild11 extends SuperOverrideParent11 {
+
+    showStatus11() {
+
+        // Calling Parent's original method
+        const parentStatus11 = super.showStatus11();
+
+        // Adding Child's own behavior
+        return parentStatus11 + " | Child: Advanced system active";
+    }
+}
+
+
+const superOverrideChildAlpha11 = new SuperOverrideChild11();
+
+
+document.querySelector("#superOverrideOutput11").textContent = superOverrideChildAlpha11.showStatus11();
+
+
+// Important super Rules
+
+class SuperRuleParent11 {
+
+    constructor(userName11) {
+
+        this.userName11 = userName11;
+    }
+
+    showUser11() {
+
+        return "User: " + this.userName11;
+    }
+}
+
+
+class SuperRuleChild11 extends SuperRuleParent11 {
+
+    constructor(userName11, userRole11) {
+
+        // RULE:
+// super() must be called before this
+        super(userName11);
+
+        // Now this can be safely used
+        this.userRole11 = userRole11;
+    }
+
+    showCompleteUser11() {
+
+        // super.method() accesses Parent method
+        const parentUser11 = super.showUser11();
+
+        return parentUser11 +" | Role: " + this.userRole11;
+    }
+}
+
+
+const superRuleChildAlpha11 = new SuperRuleChild11("Aadil", "Developer");
+
+
+document.querySelector("#superConstructorOutput11").textContent =
+    "Parent + Child constructor executed successfully";
+
+
+document.querySelector("#superRulesOutput11").textContent = superRuleChildAlpha11.showCompleteUser11();
+
+
+// Extra Example Static method + super
+
+// super can also be used with Parent static methods
+
+class SuperStaticParent11 {
+
+    static getCompany11() {
+
+        return "Parent Company";
+    }
+}
+
+
+class SuperStaticChild11 extends SuperStaticParent11 {
+
+    static getCompanyInfo11() {
+
+        // Access Parent static method
+        return super.getCompany11() + " → Child Division";
+    }
+}
+
+
+document.querySelector("#superRulesOutput11").textContent += " | " + SuperStaticChild11.getCompanyInfo11();

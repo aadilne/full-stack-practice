@@ -195,3 +195,98 @@
 
     border-bottom: 1px solid #ccc;
 }
+
+
+/* Phase 9 Getters and Setters */
+/* Main Phase 9 container */
+#getterSetterHub9 {
+    width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+
+    text-align: center;
+
+    border: 2px solid #333;
+    border-radius: 12px;
+}
+
+/* Main card */
+.getter-setter-card9 {
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #f4f4f4;
+}
+
+/* Output paragraphs */
+.getter-setter-card9 p {
+    padding: 10px;
+    margin: 8px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*  Phase 10 - Inheritance */
+/* Main Phase 10 container */
+#inheritanceArena10 {
+    width: 680px;
+    margin: 40px auto;
+    padding: 25px;
+
+    text-align: center;
+
+    border: 2px solid #333;
+    border-radius: 12px;
+}
+
+/* Main inheritance card */
+.inheritance-card10 {
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #f4f4f4;
+}
+
+/* Result paragraphs */
+.inheritance-card10 p {
+    padding: 10px;
+    margin: 8px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Phase 11 Super keyword */
+/* Phase 11 main container */
+#superKeywordZone11 {
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Each Phase 11 topic card */
+.super-topic-card11 {
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+
+/* Topic headings */
+.super-topic-card11 h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Output text */
+.super-topic-card11 p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
