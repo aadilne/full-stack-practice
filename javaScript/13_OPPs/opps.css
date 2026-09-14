@@ -290,3 +290,45 @@
     font-weight: bold;
 }
 
+
+/* Phase 12 - Polymorphism */
+/* Main Phase 12 container */
+#polymorphismLab12 {
+
+    width: 80%;
+
+    margin: 30px auto;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* Individual topic card */
+.polymorphism-card12 {
+
+    padding: 20px;
+
+    margin: 15px 0;
+
+    border: 2px solid #333;
+
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+}
+
+
+/* Heading */
+.polymorphism-card12 h2 {
+
+    margin-bottom: 10px;
+}
+
+
+/* Output */
+.polymorphism-card12 p {
+
+    font-size: 18px;
+
+    font-weight: bold;
+}

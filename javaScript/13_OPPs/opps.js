@@ -1777,3 +1777,208 @@ class SuperStaticChild11 extends SuperStaticParent11 {
 
 
 document.querySelector("#superRulesOutput11").textContent += " | " + SuperStaticChild11.getCompanyInfo11();
+
+
+
+// PHASE 12 - POLYMORPHISM
+
+// What is Polymorphism?
+
+// Parent class
+class PolyAnimal12 {
+
+    makeSound12() {
+
+        return "Animal makes a sound";
+    }
+}
+
+
+// Dog changes the behavior
+class PolyDog12 extends PolyAnimal12 {
+
+    makeSound12() {
+
+        // Method overriding
+        return "Dog says: Bark";
+    }
+}
+
+
+// Cat changes the behavior
+class PolyCat12 extends PolyAnimal12 {
+
+    makeSound12() {
+
+        // Method overriding
+        return "Cat says: Meow";
+    }
+}
+
+
+const polyDogAlpha12 = new PolyDog12();
+
+const polyCatAlpha12 = new PolyCat12();
+
+
+// Same method
+// Different behavior
+const polyBasicText12 = polyDogAlpha12.makeSound12() + " | " + polyCatAlpha12.makeSound12();
+
+
+document.querySelector("#polyBasicOutput12").textContent = polyBasicText12;
+
+
+// Method Overriding
+// Runtime Polymorphism
+// This function does not care
+// whether the object is Dog or Cat.
+function runAnimalSound12(animalItem12) {
+
+    // JavaScript decides at runtime
+    // which makeSound12() should run.
+    return animalItem12.makeSound12();
+}
+
+
+const polyRuntimeDog12 = runAnimalSound12(polyDogAlpha12);
+
+
+const polyRuntimeCat12 = runAnimalSound12(polyCatAlpha12);
+
+
+document.querySelector("#polyRuntimeOutput12").textContent = polyRuntimeDog12 + " | " + polyRuntimeCat12;
+
+
+// Polymorphism using Inheritance
+
+class PolyPayment12 {
+
+    processPayment12() {
+
+        return "Generic payment";
+    }
+}
+
+
+class PolyCardPayment12 extends PolyPayment12 {
+
+    processPayment12() {
+
+        return "Payment processed using Card";
+    }
+}
+
+
+class PolyUpiPayment12 extends PolyPayment12 {
+
+    processPayment12() {
+
+        return "Payment processed using UPI";
+    }
+}
+
+
+const polyCardAlpha12 =
+    new PolyCardPayment12();
+
+
+const polyUpiAlpha12 =
+    new PolyUpiPayment12();
+
+
+document.querySelector("#polyInheritanceOutput12").textContent = polyCardAlpha12.processPayment12() +
+    " | " + polyUpiAlpha12.processPayment12();
+
+
+// Polymorphism using Duck Typing
+
+// Object 1
+const polySpeakerObject12 = {
+
+    speak12() {
+
+        return "Human is speaking";
+    }
+};
+
+
+// Object 2
+const polyRobotObject12 = {
+
+    speak12() {
+
+        return "Robot is speaking";
+    }
+};
+
+
+// No inheritance is required.
+// The function only needs speak12().
+function startSpeaking12(speakerItem12) {
+
+    return speakerItem12.speak12();
+}
+
+
+const polyHumanText12 = startSpeaking12(polySpeakerObject12);
+
+
+const polyRobotText12 = startSpeaking12(polyRobotObject12);
+
+
+document.querySelector("#polyDuckOutput12").textContent = polyHumanText12 + " | " + polyRobotText12;
+
+
+// JavaScript vs Java Polymorphism
+// JavaScript can use objects based on behavior.
+// Here we don't check the object's class.
+
+function executeAction12(actionItem12) {
+
+    return actionItem12.perform12();
+}
+
+
+const polyJsObject12 = {
+
+    perform12() {
+
+        return "JavaScript object performed the action";
+    }
+};
+
+
+document.querySelector("#polyLanguageOutput12").textContent = executeAction12(polyJsObject12);
+
+
+// Function Overloading Concept
+// Limitations in JavaScript
+// JavaScript does not support traditional
+// function overloading by parameter signature.
+
+// Instead, we can use rest parameters.
+function calculateTotal12(...amountList12) {
+
+    let totalAmount12 = 0;
+
+
+    // Add every received value
+    for (const amountItem12 of amountList12) {
+
+        totalAmount12 += amountItem12;
+    }
+
+
+    return totalAmount12;
+}
+
+
+const polyTwoAmount12 = calculateTotal12(100, 200);
+
+
+const polyThreeAmount12 = calculateTotal12(100, 200, 300);
+
+
+document.querySelector("#polyOverloadOutput12").textContent = "2 values = ₹" + polyTwoAmount12 +
+ " | 3 values = ₹" + polyThreeAmount12;
