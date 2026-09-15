@@ -1783,7 +1783,6 @@ document.querySelector("#superRulesOutput11").textContent += " | " + SuperStatic
 // PHASE 12 - POLYMORPHISM
 
 // What is Polymorphism?
-
 // Parent class
 class PolyAnimal12 {
 
@@ -1792,7 +1791,6 @@ class PolyAnimal12 {
         return "Animal makes a sound";
     }
 }
-
 
 // Dog changes the behavior
 class PolyDog12 extends PolyAnimal12 {
@@ -1879,12 +1877,9 @@ class PolyUpiPayment12 extends PolyPayment12 {
 }
 
 
-const polyCardAlpha12 =
-    new PolyCardPayment12();
+const polyCardAlpha12 = new PolyCardPayment12();
 
-
-const polyUpiAlpha12 =
-    new PolyUpiPayment12();
+const polyUpiAlpha12 = new PolyUpiPayment12();
 
 
 document.querySelector("#polyInheritanceOutput12").textContent = polyCardAlpha12.processPayment12() +
@@ -1976,9 +1971,420 @@ function calculateTotal12(...amountList12) {
 
 const polyTwoAmount12 = calculateTotal12(100, 200);
 
-
 const polyThreeAmount12 = calculateTotal12(100, 200, 300);
 
 
 document.querySelector("#polyOverloadOutput12").textContent = "2 values = ₹" + polyTwoAmount12 +
  " | 3 values = ₹" + polyThreeAmount12;
+
+
+
+// PHASE 13 - ABSTRACTION
+// What is Abstraction? Why Abstraction?
+
+class PaymentService13 {
+
+    // Public method
+    // User only needs to call this method
+    makePayment13(amountValue13) {
+
+        // Hidden internal steps
+        const validAmount13 = this.checkAmount13(amountValue13);
+
+        if (!validAmount13) {
+
+            return "Invalid payment amount";
+        }
+
+        const paymentResult13 = this.processPayment13(amountValue13);
+
+        return paymentResult13;
+    }
+
+    // Internal validation method
+    checkAmount13(amountValue13) {
+
+        return amountValue13 > 0;
+    }
+
+
+    // Internal payment process
+    processPayment13(amountValue13) {
+
+        return "Payment of ₹" + amountValue13 + " completed";
+    }
+}
+
+
+const paymentServiceAlpha13 = new PaymentService13();
+
+document.querySelector( "#abstractionBasicOutput13").textContent =paymentServiceAlpha13.makePayment13(500);
+
+
+// Real-world Abstraction
+
+class CarControl13 {
+
+    startCar13() {
+
+        // User sees only startCar13()
+        // Internal engine steps stay hidden
+
+        const fuelCheck13 = this.checkFuel13();
+
+        if (!fuelCheck13) {
+
+            return "Car cannot start";
+        }
+
+        const engineStart13 = this.startEngine13();
+
+        return engineStart13;
+    }
+
+
+    checkFuel13() {
+        return true;
+    }
+
+    startEngine13() {
+        return "Car started successfully";
+    }
+}
+
+
+const carControlAlpha13 = new CarControl13();
+
+
+document.querySelector("#abstractionRealWorldOutput13").textContent = carControlAlpha13.startCar13();
+
+
+// Abstraction using Methods
+
+class OrderService13 {
+
+    placeOrder13() {
+
+        // User calls only one simple method
+
+        this.checkOrder13();
+
+        this.prepareOrder13();
+
+        return this.confirmOrder13();
+    }
+
+
+    // Hidden implementation
+    checkOrder13() {
+
+        return true;
+    }
+
+
+    // Hidden implementation
+    prepareOrder13() {
+        return true;
+    }
+
+
+    // Hidden implementation
+    confirmOrder13() {
+
+        return "Order placed successfully";
+    }
+}
+
+
+const orderServiceAlpha13 = new OrderService13();
+
+document.querySelector("#abstractionMethodOutput13").textContent = orderServiceAlpha13.placeOrder13();
+
+
+// Abstraction using Classes
+
+class ReportGenerator13 {
+
+    generateReport13() {
+
+        // User only calls generateReport13()
+        // Complex work stays inside the class
+
+        const dataText13 = this.collectData13();
+
+        const reportText13 =this.createReport13(dataText13);
+
+        return reportText13;
+    }
+
+    collectData13() {
+
+        return "Sales data";
+    }
+
+
+    createReport13(dataText13) {
+
+        return dataText13 + " → Report generated";
+    }
+}
+
+
+const reportGeneratorAlpha13 = new ReportGenerator13();
+
+document.querySelector( "#abstractionClassOutput13").textContent = reportGeneratorAlpha13.generateReport13();
+
+
+// Abstraction using Closures
+
+function createSecureAccount13(initialBalance13) {
+
+    // Private variable
+    // It cannot be accessed directly outside
+    let hiddenBalance13 = initialBalance13;
+
+    return {
+
+        // Controlled access
+        getBalance13() {
+
+            return hiddenBalance13;
+        },
+
+
+        // Controlled update
+        addMoney13(amountValue13) {
+
+            if (amountValue13 > 0) {
+
+                hiddenBalance13 += amountValue13;
+            }
+
+            return hiddenBalance13;
+        }
+
+    };
+}
+
+
+const secureAccountAlpha13 = createSecureAccount13(1000);
+
+secureAccountAlpha13.addMoney13(500);
+
+document.querySelector( "#abstractionClosureOutput13" ).textContent = "Available balance: ₹" + secureAccountAlpha13.getBalance13();
+
+
+// Abstract Class Concept
+// Abstract Methods Concept
+// True Abstract Class Concept in JavaScript
+
+class ShapeBase13 {
+
+    constructor() {
+
+        // Prevent direct object creation
+        if (new.target === ShapeBase13) {
+
+            throw new Error("ShapeBase13 cannot be created directly");
+        }
+    }
+
+
+    calculateArea13() {
+
+        // Force child class to implement this method
+        throw new Error("Child class must implement calculateArea13()");
+    }
+}
+
+
+// Child class
+class CircleShape13 extends ShapeBase13 {
+
+    constructor(radiusValue13) {
+
+        super();
+
+        this.radiusValue13 = radiusValue13;
+    }
+
+
+    calculateArea13() {
+
+        // Circle area formula
+        return Math.PI *this.radiusValue13 *this.radiusValue13;
+    }
+}
+
+
+// Create Child object
+const circleShapeAlpha13 =new CircleShape13(5);
+
+const circleAreaValue13 =circleShapeAlpha13.calculateArea13();
+
+document.querySelector("#abstractionAbstractOutput13").textContent ="Circle area: " +
+circleAreaValue13.toFixed(2) + " | Abstract behavior implemented by Child";
+
+
+// Phase 14 - Static Members
+// 1. What is Static?
+
+class SchoolCenter14 {
+
+    // This property belongs to the class
+    static schoolName = "Bright Future School";
+}
+
+const staticBasicItem14 = SchoolCenter14.schoolName;
+
+document.getElementById("staticBasicView14").textContent = "Static property: " + staticBasicItem14;
+
+
+// 2. Static Method
+
+class MathCenter14 {
+
+    // This method belongs to the class
+    static addNumbers14(firstNumber14, secondNumber14) {
+
+        return firstNumber14 + secondNumber14;
+    }
+}
+
+const staticMethodResult14 = MathCenter14.addNumbers14(20, 30);
+
+document.getElementById("staticMethodView14").textContent = "20 + 30 = " + staticMethodResult14;
+
+
+// 3. Static Property
+
+class CompanyCenter14 {
+
+    // Static properties belong to the class
+    static companyName14 = "Code World";
+    static employeeTotal14 = 150;
+}
+
+document.getElementById("staticPropertyView14").textContent = CompanyCenter14.companyName14 +" | Employees: " +
+    CompanyCenter14.employeeTotal14;
+
+
+// 4. Static vs Instance Property
+
+class CustomerCenter14 {
+
+    constructor(customerName14) {
+
+        // Instance property
+        this.customerName14 = customerName14;
+    }
+
+    // Static property
+    static customerType14 = "Premium";
+}
+
+const customerAlpha14 = new CustomerCenter14("Aadil");
+
+const customerBeta14 = new CustomerCenter14("Rahul");
+
+const instancePropertyText14 =customerAlpha14.customerName14 + " / " + customerBeta14.customerName14;
+
+const staticPropertyText14 = CustomerCenter14.customerType14;
+
+document.getElementById("staticInstanceView14").textContent = "Instance: " + instancePropertyText14 +
+       " | Static: " + staticPropertyText14;
+
+
+// 5. Static vs Instance Method
+
+class ServiceCenter14 {
+
+    constructor(serviceName14) {
+
+        this.serviceName14 = serviceName14;
+    }
+
+    // Instance method
+    showService14() {
+
+        return this.serviceName14;
+    }
+
+    // Static method
+    static showCategory14() {
+
+        return "Software Service";
+    }
+}
+
+const serviceItem14 = new ServiceCenter14("Web Development");
+
+const instanceMethodResult14 = serviceItem14.showService14();
+
+const staticMethodResultCompare14 = ServiceCenter14.showCategory14();
+
+document.getElementById("staticMethodCompare14").textContent = "Instance Method: " + instanceMethodResult14 +
+    " | Static Method: " + staticMethodResultCompare14;
+
+// 6. Accessing Static Members
+
+class StoreCenter14 {
+
+    static storeName14 = "Digital Store";
+
+    static showStore14() {
+
+        // this refers to the class here
+        return this.storeName14;
+    }
+}
+
+const staticStoreName14 = StoreCenter14.storeName14;
+
+const staticStoreMessage14 = StoreCenter14.showStore14();
+
+document.getElementById("staticAccessView14").textContent = staticStoreName14 + " | " + staticStoreMessage14;
+
+
+// 7. Static Members with Inheritance
+
+class CompanyParent14 {
+
+    static companyCategory14 = "Technology";
+
+    static showCategory14() {
+
+        return this.companyCategory14;
+    }
+}
+
+class CompanyChild14 extends CompanyParent14 {
+
+}
+
+const inheritedStaticValue14 = CompanyChild14.companyCategory14;
+
+const inheritedStaticMethod14 = CompanyChild14.showCategory14();
+
+document.getElementById("staticInheritanceView14").textContent = "Inherited Property: " + inheritedStaticValue14 +
+    " | Inherited Method: " + inheritedStaticMethod14;
+
+// 8. Static Initialization Block
+
+class ApplicationCenter14 {
+
+    static applicationName14 = "My Application";
+
+    static statusMessage14;
+
+    // Static block runs once during class initialization
+    static {
+
+        ApplicationCenter14.statusMessage14 = "Application configuration loaded";
+    }
+}
+
+const staticBlockMessage14 = ApplicationCenter14.statusMessage14;
+
+document.getElementById("staticBlockView14").textContent = ApplicationCenter14.applicationName14 +
+    " | " + staticBlockMessage14;
