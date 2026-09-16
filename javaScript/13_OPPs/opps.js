@@ -2388,3 +2388,401 @@ const staticBlockMessage14 = ApplicationCenter14.statusMessage14;
 
 document.getElementById("staticBlockView14").textContent = ApplicationCenter14.applicationName14 +
     " | " + staticBlockMessage14;
+
+
+
+// PHASE 15 - OBJECT PROPERTY DESCRIPTORS
+
+// 1. PROPERTY DESCRIPTOR
+
+const profileData15 = {
+    // This is a normal object property.
+    userName15: "Aadil"
+};
+
+
+// A property descriptor contains rules for a property.
+// Important descriptor fields are:
+// value -> stores the property value.
+// writable -> controls value modification.
+// enumerable -> controls property visibility in enumeration.
+// configurable -> controls deletion and descriptor changes.
+
+const basicDescriptor15 = {
+    value: profileData15.userName15,
+    writable: true,
+    enumerable: true,
+    configurable: true
+};
+
+
+// Show the basic descriptor idea.
+document.getElementById("descriptorBasicView15").textContent = "value: " + basicDescriptor15.value + " | writable: " +
+    basicDescriptor15.writable + " | enumerable: " + basicDescriptor15.enumerable + " | configurable: " + basicDescriptor15.configurable;
+
+// 2. Object.getOwnPropertyDescriptor()
+
+const accountData15 = {
+
+    // Normal object property.
+    balance15: 5000
+};
+
+
+// Get the descriptor of balance15. This method returns information about the property.
+const balanceDescriptor15 = Object.getOwnPropertyDescriptor( accountData15, "balance15");
+
+// Show descriptor information.
+document.getElementById("descriptorInspectView15").textContent = "Value: " + balanceDescriptor15.value + " | Writable: " +
+    balanceDescriptor15.writable + " | Enumerable: " +
+    balanceDescriptor15.enumerable + " | Configurable: " + balanceDescriptor15.configurable;
+
+
+// 3. Object.defineProperty()
+
+const productData15 = {};
+
+
+// defineProperty() creates or changes one property.
+// Here we create the price15 property.
+Object.defineProperty(productData15, "price15",
+    {
+        // Set the property value.
+        value: 500,
+
+        // Allow the value to be changed.
+        writable: true,
+
+        // Show the property in Object.keys().
+        enumerable: true,
+
+        // Allow descriptor changes.
+        configurable: true
+    }
+);
+
+
+// Change the property value.
+productData15.price15 = 700;
+
+// Show the result.
+document.getElementById("descriptorDefineView15").textContent = "Price after defineProperty(): " + productData15.price15;
+
+// 4. writable
+
+const writableData15 = {};
+
+
+// Create a property with writable true.
+Object.defineProperty( writableData15, "score15",
+    {
+        // Initial value.
+        value: 50,
+
+        // true means value can be changed.
+        writable: true,
+
+        // Allow enumeration.
+        enumerable: true,
+
+        // Allow configuration.
+        configurable: true
+    }
+);
+
+
+// Change the value because writable is true.
+writableData15.score15 = 90;
+
+
+// Create another property.
+Object.defineProperty( writableData15, "fixedScore15",
+    {
+        // Initial value.
+        value: 100,
+
+        // false means value cannot normally be changed.
+        writable: false,
+
+        // Allow enumeration.
+        enumerable: true,
+
+        // Allow configuration.
+        configurable: true
+    }
+);
+
+
+// Try to change the fixed value.
+// In a normal non-strict script this assignment is ignored.
+writableData15.fixedScore15 = 200;
+
+
+// Show both values.
+document.getElementById("descriptorWritableView15").textContent ="Writable value: " + writableData15.score15 +
+    " | Fixed value: " + writableData15.fixedScore15;
+
+
+// 5. enumerable
+
+const enumerationData15 = {};
+
+// Create a visible property.
+Object.defineProperty( enumerationData15, "visibleName15",
+    {
+        // Property value.
+        value: "Aadil",
+
+        // Value can be changed.
+        writable: true,
+
+        // true means Object.keys() can see it.
+        enumerable: true,
+
+        // Descriptor can be changed.
+        configurable: true
+    }
+);
+
+
+// Create a non-enumerable property.
+Object.defineProperty( enumerationData15, "hiddenCode15",
+    {
+        // Property value.
+        value: "XYZ123",
+
+        // Value can be changed.
+        writable: true,
+
+        // false hides it from Object.keys().
+        enumerable: false,
+
+        // Descriptor can be changed.
+        configurable: true
+    }
+);
+
+
+// Object.keys() returns only enumerable properties.
+const visibleKeys15 = Object.keys(enumerationData15);
+
+
+// Direct access can still work for hiddenCode15.
+const hiddenCodeValue15 = enumerationData15.hiddenCode15;
+
+
+// Show the result.
+document.getElementById("descriptorEnumerableView15").textContent = "Object.keys(): " + visibleKeys15.join(", ") +
+    " | Direct hidden value: " + hiddenCodeValue15;
+
+
+// 6. configurable
+const configurationData15 = {};
+
+
+// Create a configurable property.
+Object.defineProperty( configurationData15, "temporaryId15",
+    {
+        // Property value.
+        value: 101,
+
+        // Value can be changed.
+        writable: true,
+
+        // Property can appear in enumeration.
+        enumerable: true,
+
+        // true allows deletion and descriptor changes.
+        configurable: true
+    }
+);
+
+// Delete the property because configurable is true.
+delete configurationData15.temporaryId15;
+
+
+// Check whether the property still exists.
+const configurableResult15 =
+    "temporaryId15" in configurationData15;
+
+
+// Create a non-configurable property.
+Object.defineProperty( configurationData15, "permanentId15",
+    {
+        // Property value.
+        value: 202,
+
+        // Value can be changed.
+        writable: true,
+
+        // Show during enumeration.
+        enumerable: true,
+
+        // false prevents normal deletion.
+        configurable: false
+    }
+);
+
+
+// Check the descriptor.
+const permanentDescriptor15 =Object.getOwnPropertyDescriptor( configurationData15,"permanentId15" );
+
+
+// Show the result.
+document.getElementById("descriptorConfigurableView15").textContent = "temporaryId exists: " +configurableResult15 +
+    " | permanentId configurable: " + permanentDescriptor15.configurable;
+
+// 7. GETTER DESCRIPTOR
+
+const personData15 = {
+
+    // Store first name internally.
+    firstName15: "Aadil",
+
+    // Store last name internally.
+    lastName15: "Nezam"
+};
+
+
+// Create a getter descriptor.
+Object.defineProperty(personData15, "fullName15",
+    {
+
+        // Getter runs when fullName15 is read.
+        get() {
+
+            // Return combined name.
+            return (
+                personData15.firstName15 + " " +personData15.lastName15 );
+        },
+
+        // Make the property visible to Object.keys().
+        enumerable: true,
+
+        // Allow descriptor configuration.
+        configurable: true
+    }
+);
+
+
+// Access getter like a property.
+// We do NOT use parentheses.
+const getterName15 = personData15.fullName15;
+
+
+// Show the result.
+document.getElementById("descriptorGetterView15").textContent ="Getter result: " + getterName15;
+
+
+// 8. SETTER DESCRIPTOR
+
+const profileSettings15 = {
+
+    // This property stores the actual age.
+    currentAge15: 20
+};
+
+
+// Create a setter descriptor.
+Object.defineProperty( profileSettings15, "age15",
+    {
+
+        // Setter runs when age15 receives a new value.
+        set(newAge15) {
+
+            // Validate the new age.
+            if (newAge15 >= 18) {
+
+                // Save the valid age.
+                profileSettings15.currentAge15 = newAge15;
+
+            } else {
+
+                // Keep the old value if age is invalid.
+                profileSettings15.currentAge15 = profileSettings15.currentAge15;
+            }
+        },
+
+        // Make the property visible.
+        enumerable: true,
+
+        // Allow configuration.
+        configurable: true
+    }
+);
+
+
+// Assign a new value.
+// This automatically calls the setter.
+profileSettings15.age15 = 25;
+
+
+// Show the stored value.
+document.getElementById("descriptorSetterView15").textContent = "Age after setter: " + profileSettings15.currentAge15;
+
+
+// 9. Object.defineProperties()
+
+const employeeData15 = {};
+
+// defineProperties() creates multiple properties at once.
+Object.defineProperties( employeeData15,
+    {
+        employeeName15: {
+            // Property value.
+            value: "Aadil",
+
+            // Allow value changes.
+            writable: true,
+
+            // Show in Object.keys().
+            enumerable: true,
+
+            // Allow configuration.
+            configurable: true
+        },
+
+        employeeRole15: {
+
+            // Property value.
+            value: "Developer",
+
+            // Allow value changes.
+            writable: true,
+
+            // Show in Object.keys().
+            enumerable: true,
+
+            // Allow configuration.
+            configurable: true
+        },
+
+        employeeId15: {
+
+            // Property value.
+            value: 501,
+
+            // Do not allow value changes.
+            writable: false,
+
+            // Show in Object.keys().
+            enumerable: true,
+
+            // Allow configuration.
+            configurable: true
+        }
+    }
+);
+
+
+// Read the multiple properties.
+const employeeNameValue15 = employeeData15.employeeName15;
+
+const employeeRoleValue15 = employeeData15.employeeRole15;
+
+const employeeIdValue15 = employeeData15.employeeId15;
+
+
+// Show the result.
+document.getElementById("descriptorMultipleView15").textContent = "Name: " + employeeNameValue15 +
+    " | Role: " + employeeRoleValue15 + " | ID: " + employeeIdValue15;
