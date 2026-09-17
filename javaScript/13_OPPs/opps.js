@@ -2786,3 +2786,1008 @@ const employeeIdValue15 = employeeData15.employeeId15;
 // Show the result.
 document.getElementById("descriptorMultipleView15").textContent = "Name: " + employeeNameValue15 +
     " | Role: " + employeeRoleValue15 + " | ID: " + employeeIdValue15;
+
+
+
+// PHASE 16 - OBJECT CONTROL METHODS
+
+// 1. Object.freeze()
+
+const frozenProduct16 = {
+
+    // Create an existing property.
+    productName16: "Laptop",
+
+    // Create another existing property.
+    productPrice16: 50000
+};
+
+
+// Object.freeze() completely locks the object.
+// After freezing:
+// 1. New properties cannot be added.
+// 2. Existing properties cannot be deleted.
+// 3. Existing property values cannot be changed.
+// 4. Property descriptors cannot normally be changed.
+Object.freeze(frozenProduct16);
+
+
+// in a normal non-strict script.
+frozenProduct16.productPrice16 = 60000;
+
+frozenProduct16.productBrand16 = "Dell"; // no add new properties
+
+delete frozenProduct16.productName16;  // no delet properties
+
+
+// Show the final values.
+document.getElementById("freezeResult16").textContent ="Name: " + frozenProduct16.productName16 +
+    " | Price: " + frozenProduct16.productPrice16 +" | New property: " + frozenProduct16.productBrand16;
+
+// 2. Object.seal()
+
+const sealedProfile16 = {
+
+    // Existing property.
+    profileName16: "Aadil",
+
+    // Another existing property.
+    profileCity16: "Ara"
+};
+
+
+// Object.seal() seals the object.
+// After sealing:
+// 1. New properties cannot be added.
+// 2. Existing properties cannot be deleted.
+// 3. Existing writable values can still be changed.
+Object.seal(sealedProfile16);
+
+// Change an existing property.
+// This is allowed because seal does not make
+// writable properties read-only.
+sealedProfile16.profileCity16 = "Patna";
+
+sealedProfile16.profileAge16 = 22;   // Try to add a new property. This is not allowed 
+
+delete sealedProfile16.profileName16; // This is not allowed because the object is sealed.
+
+
+// Show the result.
+document.getElementById("sealResult16").textContent = "Name: " + sealedProfile16.profileName16 + " | City: " +
+    sealedProfile16.profileCity16 + " | New property: " + sealedProfile16.profileAge16;
+
+// 3. Object.preventExtensions()
+
+const extensionData16 = {
+    // Existing property.
+    userRole16: "Developer",
+
+    // Another existing property.
+    userLevel16: "Junior"
+};
+
+
+// preventExtensions() prevents new properties.
+Object.preventExtensions(extensionData16);
+
+extensionData16.userSkill16 = "JavaScript"; // Try to add a new property. This is not allowed.
+
+extensionData16.userLevel16 = "Senior"; // Existing property can still be updated.
+
+delete extensionData16.userRole16; // Existing property can still be deleted.
+
+
+// Show the result.
+document.getElementById("preventExtensionResult16").textContent = "Role: " + extensionData16.userRole16 +
+    " | Level: " + extensionData16.userLevel16 + " | New Skill: " + extensionData16.userSkill16;
+
+
+// 4. Object.isFrozen()
+
+const frozenCheckData16 = {
+    // Create a property before freezing.
+    accountType16: "Premium"
+};
+
+// Freeze the object.
+Object.freeze(frozenCheckData16);
+
+
+// Object.isFrozen() checks whether the object is frozen or not.
+const frozenStatus16 =Object.isFrozen(frozenCheckData16);
+
+
+// The result is true because the object was frozen.
+document.getElementById("frozenCheckResult16").textContent = "Is object frozen? " + frozenStatus16;
+
+// 5. Object.isSealed()
+
+const sealedCheckData16 = {
+    // Create a property before sealing.
+    memberName16: "Aadil"
+};
+
+
+// Seal the object.
+Object.seal(sealedCheckData16);
+
+// Object.isSealed() checks whether
+// the object is sealed or not.
+const sealedStatus16 = Object.isSealed(sealedCheckData16);
+
+
+// The result is true because the object was sealed.
+document.getElementById("sealedCheckResult16").textContent = "Is object sealed? " +sealedStatus16;
+
+// 6. Object.isExtensible()
+
+const extensibleCheckData16 = {
+
+    // Create a normal property.
+    status16: "Active"
+};
+
+
+// A normal object is extensible.
+// That means new properties can be added.
+const beforePreventStatus16 = Object.isExtensible(extensibleCheckData16);
+
+
+// Prevent new properties.
+Object.preventExtensions(extensibleCheckData16);
+
+
+// Check again.
+// Now the result becomes false.
+const afterPreventStatus16 = Object.isExtensible(extensibleCheckData16);
+
+
+// Show both results.
+document.getElementById("extensibleCheckResult16").textContent = "Before preventExtensions(): " +
+beforePreventStatus16 + " | After preventExtensions(): " + afterPreventStatus16;
+
+// PHASE 17 - OBJECT COPYING
+
+// REFERENCE VS VALUE
+
+// Primitive values are copied by VALUE.
+
+let numberValue17 = 50; // numberValue17 stores the value 50.
+
+let numberCopy17 = numberValue17;    // numberCopy17 gets a separate copy of 50.
+
+numberCopy17 = 100; // Changing numberCopy17 does NOT change numberValue17.
+
+
+// Objects work differently.
+let referenceObject17 = {       // referenceObject17 stores an object.
+    name: "Aadil",
+    age: 22
+};
+
+// referenceCopy17 does not create a new object.
+
+// It stores the REFERENCE of the same object.
+let referenceCopy17 = referenceObject17;
+
+// Changing through referenceCopy17 also changes referenceObject17.
+referenceCopy17.age = 25;
+
+
+// Display result.
+document.getElementById("referenceValueView17").innerHTML = "Primitive: numberValue17 = " + numberValue17 +
+    "<br>Primitive Copy: numberCopy17 = " + numberCopy17 +
+    "<br><br>Object: referenceObject17.age = " + referenceObject17.age +
+    "<br>Object Copy: referenceCopy17.age = " + referenceCopy17.age;
+
+
+// IMPORTANT:
+// Primitive:-  value -> 50   copy  -> 50
+// Object:-  object variable -> reference   another variable -> same reference
+
+// Therefore:
+// numberCopy17 = numberValue17 creates a separate primitive value.
+// referenceCopy17 = referenceObject17  points to the same object.
+
+
+
+// SHALLOW COPY
+
+// Shallow copy creates a NEW outer object.
+// But nested objects are still shared.
+
+let shallowSource17 = {
+    title: "JavaScript",
+    details: {
+        level: "Beginner"
+    }
+};
+
+// Spread creates a new outer object.
+let shallowClone17 = {
+    ...shallowSource17
+};
+
+
+shallowClone17.title = "Advanced"; // Changing a top-level property affects only the copy.
+// But details is a nested object.
+
+shallowClone17.details.level = "Intermediate"; // Both objects still point to the same nested object.
+
+
+// Display result.
+document.getElementById("shallowCopyView17").innerHTML = "Original title: " + shallowSource17.title +
+    "<br>Copied title: " + shallowClone17.title + "<br><br>Original nested level: " +
+    shallowSource17.details.level + "<br>Copied nested level: " + shallowClone17.details.level;
+
+
+// Top-level property -> copied
+// Nested object -> shared
+
+
+
+//  DEEP COPY
+// Deep copy creates a completely independent copy.
+// Nested objects are also copied.
+
+let deepSource17 = {
+    course: "Full Stack",
+    info: {
+        duration: "6 Months",
+        mode: "Online"
+    }
+};
+
+// structuredClone() creates a deep copy.
+let deepClone17 = structuredClone(deepSource17);
+
+// Change nested property in copied object.
+deepClone17.info.mode = "Offline";
+
+
+// Original object remains unchanged.
+document.getElementById("deepCopyView17").innerHTML = "Original mode: " + deepSource17.info.mode +
+    "<br>Copied mode: " + deepClone17.info.mode;
+
+
+
+// deepSource17.info and deepClone17.info are different objects.
+
+
+
+// Object.assign()
+
+// Object.assign() can copy properties from one object to another.
+
+// Create source object.
+let assignSource17 = {
+    product: "Laptop",
+    price: 50000
+};
+
+// Create empty target object.
+let assignTarget17 = {};
+
+// Copy properties from source to target.
+Object.assign(assignTarget17, assignSource17);
+
+// Change copied object.
+assignTarget17.price = 55000;
+
+
+// Display result.
+document.getElementById("assignCopyView17").innerHTML = "Source price: " + assignSource17.price +
+    "<br>Target price: " + assignTarget17.price;
+
+
+// Object.assign() creates a new outer object when target is an empty object.
+// But remember: Object.assign() performs SHALLOW COPY. Nested objects are still shared.
+
+
+// SPREAD OPERATOR
+
+// Spread operator (...) is another common
+// way to make a shallow copy.
+
+// Original object.
+let spreadSource17 = {
+    name: "Laptop",
+    brand: "Dell",
+    specs: {
+        ram: "16GB"
+    }
+};
+
+// Copy object using spread.
+let spreadClone17 = {
+    ...spreadSource17
+};
+
+// Change top-level property.
+spreadClone17.brand = "HP";
+
+// Change nested property.
+spreadClone17.specs.ram = "32GB";
+
+
+// Display result.
+document.getElementById("spreadCopyView17").innerHTML = "Original brand: " + spreadSource17.brand +
+    "<br>Copied brand: " + spreadClone17.brand + "<br><br>Original RAM: " + spreadSource17.specs.ram +
+    "<br>Copied RAM: " + spreadClone17.specs.ram;
+
+
+
+//structuredClone()
+
+// structuredClone() is used for DEEP COPYING
+// many types of JavaScript values.
+
+// Original object.
+let cloneSource17 = {
+    user: "Aadil",
+    address: {
+        city: "Ara",
+        state: "Bihar"
+    }
+};
+
+// Create deep copy.
+let cloneResult17 = structuredClone(cloneSource17);
+
+// Change nested city in copied object.
+cloneResult17.address.city = "Patna";
+
+
+// Original city remains unchanged.
+document.getElementById("structuredCloneView17").innerHTML = "Original city: " + cloneSource17.address.city +
+    "<br>Copied city: " + cloneResult17.address.city;
+
+
+
+// DEEP COPY LIMITATIONS
+
+// Deep copy does NOT mean that every JavaScript value can be copied perfectly in every method.
+
+// structuredClone() supports many built-in types, but it cannot clone everything.
+
+// Example:- Function cannot be cloned using structuredClone().
+
+let deepLimitSource17 = {
+    username: "Aadil",
+
+    // Function is present inside the object.
+    sayHello: function () {
+        return "Hello";
+    }
+};
+
+
+// Trying to clone an object containing a function with structuredClone() throws DataCloneError.
+
+// We will use try/catch so the program does not stop.
+try {
+
+    let deepLimitClone17 = structuredClone(deepLimitSource17);
+
+    document.getElementById("deepLimitView17").innerHTML = "Clone successful.";
+
+} catch (deepLimitError17) {
+
+    document.getElementById("deepLimitView17").innerHTML =
+        "structuredClone() cannot clone this object because it contains a function.";
+}
+
+
+// Important:- // structuredClone() is powerful, but it is not a universal solution for every value.
+
+// JSON.parse(JSON.stringify(obj))     is NOT a perfect deep-copy solution.
+
+// It can lose or change some values such as: undefined , functions , Symbol ,Date behavior ,special object types
+
+// Therefore choose the copying method according to the data you are working with.
+
+
+
+// OBJECT REFERENCES
+
+// An object variable contains a REFERENCE to an object in memory.
+
+let sharedObject17 = {
+    balance: 1000
+};
+
+// Both variables point to the same object.
+let firstHolder17 = sharedObject17;
+let secondHolder17 = sharedObject17;
+
+// Change using firstHolder17.
+firstHolder17.balance = 5000;
+
+
+// secondHolder17 also sees 5000
+// because both variables refer to the same object.
+
+document.getElementById("objectReferenceView17").innerHTML =
+    "Original balance: " + sharedObject17.balance +
+    "<br>First holder balance: " + firstHolder17.balance +
+    "<br>Second holder balance: " + secondHolder17.balance;
+
+
+
+// PHASE 18 - IMPORTANT OBJECT METHODS
+
+// 181. Object.keys() Object.keys() returns an array
+// containing the own enumerable property names.
+
+// Create an object.
+let keysBook18 = {
+    title: "JavaScript",
+    author: "Aadil",
+    pages: 300
+};
+
+let bookKeys18 = Object.keys(keysBook18);  // Get all property names.  o/p ["title", "author", "pages"]
+
+document.getElementById("keysOutput18").innerHTML = "Keys: " + bookKeys18.join(", ");
+
+// 182. Object.values()
+
+// Object.values() returns an array  containing the object's own enumerable values.
+
+let valuesBook18 = {
+    title: "React",
+    author: "Aadil",
+    pages: 250
+};
+
+
+// Get all values.
+let bookValues18 = Object.values(valuesBook18);  // ["React", "Aadil", 250]
+
+document.getElementById("valuesOutput18").innerHTML = "Values: " + bookValues18.join(", ");
+
+// 183. Object.entries()
+// Object.entries() returns an array of key-value pairs.
+
+let entriesBook18 = {
+    title: "Node.js",
+    level: "Intermediate",
+    duration: "3 Months"
+};
+
+
+// Get key-value pairs.
+let bookEntries18 = Object.entries(entriesBook18);
+// [
+//     ["title", "Node.js"],
+//     ["level", "Intermediate"],
+//     ["duration", "3 Months"]
+// ]
+
+document.getElementById("entriesOutput18").innerHTML = "Entries: " + JSON.stringify(bookEntries18);
+// entries() is useful when we want both key and value together.
+
+
+// 184. Object.fromEntries()
+// Object.fromEntries() does the opposite of Object.entries().
+// It converts key-value pairs into an object.
+
+let entryList18 = [
+
+    ["name", "Aadil"],
+
+    ["course", "MCA"],
+
+    ["city", "Ara"]
+];
+
+
+// Convert entries into object.
+let convertedProfile18 = Object.fromEntries(entryList18);
+
+
+// Result:
+//
+// {
+//     name: "Aadil",
+//     course: "MCA",
+//     city: "Ara"
+// }
+
+document.getElementById("fromEntriesOutput18").innerHTML =
+
+    "Name: " + convertedProfile18.name +
+    "<br>Course: " + convertedProfile18.course +
+    "<br>City: " + convertedProfile18.city;
+
+
+// 185. Object.assign()
+
+// Object.assign() copies properties from source objects into a target object.
+
+let assignTarget18 = {
+
+    name: "Aadil"
+};
+
+
+// Create source object.
+let assignSource18 = {
+
+    course: "MCA",
+
+    city: "Ara"
+};
+
+
+// Copy source properties into target.
+Object.assign(assignTarget18, assignSource18);
+
+
+
+document.getElementById("assignOutput18").innerHTML =
+    "Name: " + assignTarget18.name +
+    "<br>Course: " + assignTarget18.course +
+    "<br>City: " + assignTarget18.city;
+
+
+// IMPORTANT:
+// Object.assign() performs SHALLOW copying.
+// Nested objects are not deeply cloned.
+
+
+
+// 186. Object.hasOwn()
+
+// Object.hasOwn() checks whether  an object directly owns a property.
+
+let ownershipProfile18 = {
+
+    username: "Aadil",
+
+    city: "Ara"
+};
+
+
+// Check existing own property.
+let ownNameCheck18 = Object.hasOwn( ownershipProfile18,"username");
+
+// Check missing property.
+let ownAgeCheck18 = Object.hasOwn( ownershipProfile18,"age" );
+
+
+document.getElementById("hasOwnOutput18").innerHTML =
+
+    "Own username: " + ownNameCheck18 +
+    "<br>Own age: " + ownAgeCheck18;
+
+
+
+// 187. Object.is()
+
+// Object.is() checks whether two values are the same according to Object.is rules.
+
+// Compare numbers.
+let sameNumberCheck18 = Object.is(25, 25);
+
+
+// Compare different numbers.
+let differentNumberCheck18 = Object.is(25, 30);
+
+
+// Compare strings.
+let sameTextCheck18 = Object.is( "MCA", "MCA");
+
+
+// Display results.
+document.getElementById("isOutput18").innerHTML =
+
+    "25 and 25: " + sameNumberCheck18 +
+    "<br>25 and 30: " + differentNumberCheck18 +
+    "<br>MCA and MCA: " + sameTextCheck18;
+
+
+// Object.is() is similar to ===
+// but there are some important differences.
+// Object.is(NaN, NaN)
+// -> true
+// NaN === NaN
+// -> false
+// Also:
+// Object.is(0, -0)
+// -> false
+// 0 === -0
+// -> true
+
+
+
+// 188. Object.create()
+
+// Object.create() creates a new object with the given object as its prototype.
+
+// Create prototype object.
+let creatorPrototype18 = {
+
+    introduce18: function () {
+
+        return "Hello " + this.name;
+
+    }
+
+};
+
+// Create new object using prototype.
+let createdMember18 = Object.create(creatorPrototype18);
+
+// Add own property.
+createdMember18.name = "Aadil";
+
+// Call inherited method.
+let createdMessage18 = createdMember18.introduce18();
+
+
+document.getElementById("createOutput18").innerHTML = createdMessage18;
+
+
+// 189. Object.getPrototypeOf()
+
+// Object.getPrototypeOf() returns the prototype of an object.
+
+// Create prototype.
+let prototypeSource18 = {
+
+    greet18: function () {
+
+        return "Hello";
+
+    }
+
+};
+
+
+// Create object using prototype.
+let prototypeChild18 = Object.create(prototypeSource18);
+
+
+// Get prototype.
+let detectedPrototype18 =Object.getPrototypeOf(prototypeChild18);
+
+
+// Check whether returned prototype is the same as prototypeSource18.
+let prototypeMatch18 = detectedPrototype18 === prototypeSource18;
+
+
+document.getElementById("getPrototypeOutput18").innerHTML =
+
+    "Prototype match: " + prototypeMatch18;
+
+
+// Prototype match: true
+
+
+
+// 190. Object.setPrototypeOf()
+
+// Object.setPrototypeOf() changes the prototype of an existing object.
+
+// First prototype.
+let firstPrototype18 = {
+
+    message18: function () {
+
+        return "Message from first prototype";
+
+    }
+
+};
+
+
+// Second prototype.
+let secondPrototype18 = {
+
+    message18: function () {
+
+        return "Message from second prototype";
+
+    }
+
+};
+
+
+// Create object using first prototype.
+let prototypeSwitchObject18 = Object.create( firstPrototype18);
+
+
+// Change prototype.
+Object.setPrototypeOf( prototypeSwitchObject18,secondPrototype18);
+
+
+// Now object gets method from second prototype.
+let switchedMessage18 = prototypeSwitchObject18.message18();
+
+document.getElementById("setPrototypeOutput18").innerHTML = switchedMessage18;
+
+
+
+// PHASE 19 - SYMBOLS IN OOPs
+// 191. WHAT IS SYMBOL? Symbol is a primitive data type in JavaScript.
+// It is mainly used to create unique identifiers.
+
+// Create a Symbol.
+let symbolToken19 = Symbol("userId");
+
+// The text inside Symbol() is only a description. It is not the actual value of the Symbol.
+
+
+// Check the type.
+let symbolType19 = typeof symbolToken19;
+
+
+document.getElementById("symbolBasicOutput19").innerHTML = "Type of symbolToken19: " + symbolType19;
+
+// Type of symbolToken19: symbol
+
+// Important:
+// Symbol is a primitive type.
+// JavaScript primitive types include:
+// String
+// Number
+// BigInt
+// Boolean
+// Undefined
+// Null
+// Symbol
+
+
+
+// 192. SYMBOL AS OBJECT PROPERTY A Symbol can be used as an object property key.
+
+// Create a Symbol key.
+let propertyKey19 = Symbol("secretKey");
+
+
+// Create object.
+let symbolProfile19 = {
+
+    name: "Aadil",
+
+    age: 22
+};
+
+
+// Add a property using Symbol.
+symbolProfile19[propertyKey19] = "User-786";
+
+
+// Access Symbol property.
+let symbolPropertyValue19 = symbolProfile19[propertyKey19];
+
+
+document.getElementById("symbolPropertyOutput19").innerHTML =
+
+    "Normal property: " + symbolProfile19.name +
+    "<br>Symbol property: " + symbolPropertyValue19;
+
+
+// IMPORTANT:
+// Symbol property:
+// object[symbol]
+// Example:
+// symbolProfile19[propertyKey19]
+
+
+// Symbol properties do not appear in normal Object.keys().
+
+let normalKeys19 = Object.keys(symbolProfile19);
+
+
+// Symbol properties can be found using Object.getOwnPropertySymbols().
+
+let symbolKeys19 = Object.getOwnPropertySymbols(symbolProfile19);
+
+
+document.getElementById("symbolPropertyOutput19").innerHTML +=
+
+    "<br>Normal keys count: " + normalKeys19.length +
+    "<br>Symbol keys count: " + symbolKeys19.length;
+
+
+
+// 193. UNIQUE SYMBOL
+
+// Every Symbol() call creates a unique Symbol.  Create two Symbols with same description.
+let uniqueTokenA19 = Symbol("id");
+
+let uniqueTokenB19 = Symbol("id");
+
+
+// Compare them.
+let uniqueCheck19 = uniqueTokenA19 === uniqueTokenB19;
+
+
+document.getElementById("uniqueSymbolOutput19").innerHTML = "Are both Symbols same? " + uniqueCheck19;
+
+// false
+
+
+// Even though both descriptions are "id",
+// the Symbols are different.
+
+// Symbol("id") !== Symbol("id")
+
+
+// 194. WELL-KNOWN SYMBOLS
+
+// JavaScript provides some predefined Symbols.
+
+// These are called WELL-KNOWN SYMBOLS.
+
+// Some important examples:
+// Symbol.iterator
+// Symbol.toPrimitive
+// Symbol.toStringTag
+// There are more well-known Symbols,
+// but these three are important for this phase.
+
+
+// Check their type.
+let iteratorType19 = typeof Symbol.iterator;
+
+let primitiveType19 = typeof Symbol.toPrimitive;
+
+let tagType19 = typeof Symbol.toStringTag;
+
+
+// Display result.
+document.getElementById("wellKnownOutput19").innerHTML =
+
+    "Symbol.iterator type: " + iteratorType19 +
+    "<br>Symbol.toPrimitive type: " + primitiveType19 +
+    "<br>Symbol.toStringTag type: " + tagType19;
+
+
+// These Symbols allow us to customize
+// built-in JavaScript behavior.
+
+
+
+// 195. Symbol.iterator
+
+// Symbol.iterator allows an object to define how it should be iterated.
+
+// Create custom object.
+let iterableBox19 = {
+
+    items: ["HTML", "CSS", "JavaScript"],
+
+
+    // Define custom iterator.
+    [Symbol.iterator]: function* () {
+
+        // Return each item one by one.
+        yield this.items[0];
+
+        yield this.items[1];
+
+        yield this.items[2];
+
+    }
+
+};
+
+
+// for...of automatically looks for
+// Symbol.iterator.
+
+let iteratorResult19 = "";
+
+
+// Iterate through object.
+for (let topicItem19 of iterableBox19) {
+
+    iteratorResult19 += topicItem19 + "<br>";
+
+}
+
+
+// Display result.
+document.getElementById("iteratorOutput19").innerHTML = iteratorResult19;
+
+
+// IMPORTANT:
+// Symbol.iterator tells JavaScript:  "How should this object be iterated?"
+
+
+// 196. Symbol.toPrimitive
+
+// Symbol.toPrimitive allows an object to control how it converts into
+// primitive values.
+
+// Create object.
+let primitiveObject19 = {
+
+    amount: 500,
+
+
+    // Define custom primitive conversion.
+    [Symbol.toPrimitive]: function (hint) {
+
+        // hint tells us what kind of conversion
+        // JavaScript is trying to perform.
+
+        if (hint === "number") {
+
+            return this.amount;
+
+        }
+
+
+        if (hint === "string") {
+
+            return "Amount: " + this.amount;
+
+        }
+
+
+        // "default" conversion.
+        return this.amount;
+
+    }
+
+};
+
+
+// Number conversion.
+let numberResult19 = Number(primitiveObject19);
+
+
+// String conversion.
+let stringResult19 = String(primitiveObject19);
+
+
+// Display result.
+document.getElementById("primitiveOutput19").innerHTML =
+
+    "Number conversion: " + numberResult19 +
+    "<br>String conversion: " + stringResult19;
+
+
+// IMPORTANT:
+//
+// Symbol.toPrimitive lets us control
+// object -> primitive conversion.
+//
+// Possible hints:
+//
+// "number"
+// "string"
+// "default"
+
+
+// 197. Symbol.toStringTag
+
+// Symbol.toStringTag allows us to customize the result of Object.prototype.toString().
+
+// Create object.
+let tagObject19 = {
+
+    [Symbol.toStringTag]: "StudentRecord"
+
+};
+
+
+// Get object type string.
+let tagResult19 = Object.prototype.toString.call(tagObject19);
+
+
+// Display result.
+document.getElementById("stringTagOutput19").innerHTML = tagResult19;
+
+// Object.prototype.toString.call(object)
+// might return:
+// [object Object]
+
+// But Symbol.toStringTag lets us customize it.
+// Result:
+// [object StudentRecord]

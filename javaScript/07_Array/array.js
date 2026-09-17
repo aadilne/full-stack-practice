@@ -929,8 +929,6 @@ console.log("c:", c);
 
 
 
-
-
 // 42. REST OPERATOR WITH ARRAY
 // Rest operator (...) remaining values ko
 // ek naye Array me collect karta hai

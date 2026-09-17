@@ -423,3 +423,152 @@ body {
     font-size: 17px;
     line-height: 1.6;
 }
+
+/*  Object Control Methods */
+/* Main container */
+#objectControlRoom16 {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* Main heading */
+#objectControlRoom16 h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* Topic card */
+.object-control-card16 {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Card heading */
+.object-control-card16 h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+/* Result text */
+.object-control-card16 p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* PHASE 17 - OBJECT COPYING */
+/* Phase 17 - Object Copying */
+
+#copyingWorkshop17 {
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+#copyingWorkshop17 h1 {
+    text-align: center;
+}
+
+#copyingWorkshop17 > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.object-copy-card17 {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.object-copy-card17 h2 {
+    margin-top: 0;
+}
+
+.object-copy-card17 p {
+    line-height: 1.7;
+}
+
+
+
+/* Phase 18 - Important Object Methods */
+#objectMethodStation18 {
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+#objectMethodStation18 h1 {
+    text-align: center;
+}
+
+#objectMethodStation18 > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.object-method-card18 {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.object-method-card18 h2 {
+    margin-top: 0;
+}
+
+.object-method-card18 p {
+    line-height: 1.7;
+}
+
+
+/* Phase 19 - Symbols in OOPs */
+
+
+#symbolWorkshop19 {
+
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+
+#symbolWorkshop19 h1 {
+
+    text-align: center;
+}
+
+
+#symbolWorkshop19 > p {
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.symbol-card19 {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+
+.symbol-card19 h2 {
+    margin-top: 0;
+}
+
+
+.symbol-card19 p {
+    line-height: 1.7;
+}
