@@ -3791,3 +3791,1048 @@ document.getElementById("stringTagOutput19").innerHTML = tagResult19;
 // But Symbol.toStringTag lets us customize it.
 // Result:
 // [object StudentRecord]
+
+
+
+// PHASE 20 - ADVANCED CLASS CONCEPTS
+
+// 198. CLASS FIELDS
+
+// A class field is a variable/property declared directly inside a class.
+// We can declare a field without usingthe constructor.
+
+// Create class.
+class CourseBox20 {
+
+    // This is a class field.
+    courseName20 = "JavaScript";
+
+    // Another class field.
+    courseLevel20 = "Advanced";
+
+
+    // Normal class method.
+    showCourse20() {
+
+        return this.courseName20 +" - " + this.courseLevel20;
+
+    }
+
+}
+
+
+// Create object.
+let courseBoxItem20 = new CourseBox20();
+
+// Access class fields.
+document.getElementById("classFieldsOutput20").innerHTML =
+
+    "Course: " + courseBoxItem20.courseName20 +
+    "<br>Level: " + courseBoxItem20.courseLevel20 +
+    "<br>Info: " + courseBoxItem20.showCourse20();
+
+
+
+// 199. PUBLIC FIELDS
+
+// Public fields can be accessed from outside the class.
+
+// Create class.
+class PublicDevice20 {
+
+    // This field is public.
+    deviceName20 = "Laptop";
+
+    // This field is also public.
+    deviceBrand20 = "Lenovo";
+
+}
+
+
+// Create object.
+let publicDeviceItem20 = new PublicDevice20();
+
+
+// Public field can be accessed directly.
+let publicDeviceName20 =  publicDeviceItem20.deviceName20;
+
+// Public field can also be changed.
+publicDeviceItem20.deviceName20 = "Desktop";
+
+document.getElementById("publicFieldsOutput20").innerHTML =
+
+    "Original brand: " +publicDeviceItem20.deviceBrand20 +
+
+    "<br>Updated device: " + publicDeviceItem20.deviceName20;
+
+
+// 200. PRIVATE FIELDS
+
+// Private fields start with #. They can only be accessed inside the class.
+
+// Create class.
+class PrivateWallet20 {
+
+    // Private field.
+    #money20 = 5000;
+
+    // Public method.
+    showMoney20() {
+
+        return this.#money20;
+
+    }
+
+}
+
+
+// Create object.
+let privateWalletItem20 = new PrivateWallet20();
+
+
+
+document.getElementById("privateFieldsOutput20").innerHTML =
+
+    "Private money: " + privateWalletItem20.showMoney20();
+
+
+// 201. PRIVATE METHODS
+
+// A private method also starts with #. It can only be called from inside the same class.
+
+class PrivateService20 {
+
+    // Private method.
+    #checkService20() {
+
+        return "Service checked";
+
+    }
+
+    // Public method.
+    startService20() {
+
+        // Private method is called internally.
+        return this.#checkService20();
+
+    }
+
+}
+
+
+// Create object.
+let privateServiceItem20 = new PrivateService20();
+
+
+// Public method can be called.
+document.getElementById("privateMethodsOutput20").innerHTML = privateServiceItem20.startService20();
+
+// We cannot directly call: privateServiceItem20.#checkService20() because the method is private.
+
+
+// 202. STATIC FIELDS
+
+// Static field belongs to the CLASS, not to individual objects.
+
+// Create class.
+class AppConfig20 {
+
+    // Static field.
+    static appName20 = "My App";
+
+    // Another static field.
+    static appVersion20 = "2.0";
+
+}
+
+
+// Access static fields using CLASS name.
+let appNameValue20 = AppConfig20.appName20;
+
+let appVersionValue20 = AppConfig20.appVersion20;
+
+
+document.getElementById("staticFieldsOutput20").innerHTML =
+
+    "App: " + appNameValue20 + "<br>Version: " + appVersionValue20;
+
+
+    // 203. STATIC PRIVATE FIELDS
+
+
+class SecureConfig20 {
+
+    // Static private field.
+    static #secretKey20 = "SEC-2026";
+
+
+    // Public static method.
+    static showSecret20() {
+
+        return this.#secretKey20;
+
+    }
+
+}
+
+
+// We cannot access #secretKey20 directly.
+// SecureConfig20.#secretKey20 would cause an error.
+
+
+// We use a public static method.
+let secureKeyValue20 = SecureConfig20.showSecret20();
+
+
+document.getElementById("staticPrivateFieldsOutput20").innerHTML =
+
+    "Static private value: " + secureKeyValue20;
+
+
+// 204. STATIC PRIVATE METHODS
+
+// A static private method belongs to the class and is private.
+
+// Create class.
+class AccessControl20 {
+
+    // Private static method.
+    static #generateCode20() {
+
+        return "ACCESS-OK";
+
+    }
+
+
+    // Public static method.
+    static verifyAccess20() {
+
+        // Call private static method.
+        return this.#generateCode20();
+
+    }
+
+}
+
+
+// Call public static method.
+let accessResult20 = AccessControl20.verifyAccess20();
+
+
+document.getElementById("staticPrivateMethodsOutput20").innerHTML = accessResult20;
+
+
+// 205. COMPUTED CLASS FIELDS
+
+// Computed property names use [ ]. The property name comes from an expression.
+// Create a variable containing the field name.
+const computedFieldName20 = "userRole20";
+
+
+class DynamicUser20 {
+
+    // Computed class field.
+    [computedFieldName20] = "Developer";
+
+}
+
+
+// Create object.
+let dynamicUserItem20 = new DynamicUser20();
+
+
+// Access computed field.
+let dynamicRole20 = dynamicUserItem20.userRole20;
+
+document.getElementById("computedFieldsOutput20").innerHTML = "Computed field value: " + dynamicRole20;
+
+// IMPORTANT:
+// Instead of writing:
+// userRole20 = "Developer";
+// we created the property name dynamically:
+// [computedFieldName20] = "Developer";
+
+
+
+// 206. CLASS FIELD INITIALIZATION
+
+// Class fields are initialized when an object is created.
+
+// Create class.
+class StudentProfile20 {
+
+    // Field gets its initial value.
+    studentName20 = "Aadil";
+
+    studentCourse20 = "MCA";
+
+
+    // Constructor can change the field.
+    constructor(profileName20) {
+
+        // Update the field using constructor value.
+        this.studentName20 = profileName20;
+
+    }
+
+
+    showProfile20() {
+
+        return this.studentName20 + " - " + this.studentCourse20;
+
+    }
+
+}
+
+// Create object.
+let studentProfileItem20 = new StudentProfile20("Rahul");
+
+
+document.getElementById("fieldInitializationOutput20").innerHTML = studentProfileItem20.showProfile20();
+
+
+// What happens?
+// Step 1:
+// Class fields are initialized.
+
+// studentName20 = "Aadil"
+// studentCourse20 = "MCA"
+
+// Step 2:
+// Constructor runs.
+
+// this.studentName20 = profileName20
+
+// Step 3:
+// studentName20 becomes "Rahul".
+
+
+
+// 207. STATIC INITIALIZATION BLOCK
+
+// A static initialization block
+// uses:
+// static {
+// }
+// It runs once when the class is initialized.
+
+// Create class.
+class SystemSetup20 {
+
+    // Static field.
+    static systemName20 = "Learning System";
+
+    // Static field that will be set
+    // inside the static block.
+    static statusText20;
+
+
+    // Static initialization block.
+    static {
+
+        // This code runs once  during class initialization.
+        this.statusText20 = "System Ready";
+
+    }
+
+}
+
+
+// Access static fields.
+let systemNameValue20 = SystemSetup20.systemName20;
+
+let systemStatusValue20 = SystemSetup20.statusText20;
+
+
+document.getElementById("staticBlockOutput20").innerHTML =
+    "System: " + systemNameValue20 + "<br>Status: " + systemStatusValue20;
+
+
+
+
+// static {}
+
+// runs automatically when the class  is initialized. It is not called like a normal method. It is useful for complex static setup.
+
+
+// PHASE 21 - MIXINS
+
+// 208. WHAT IS MIXIN?
+
+// A Mixin is a reusable group of methods that can be added to another object or class.
+// A Mixin is NOT normally used as a standalone object. Its main purpose is to provide reusable behavior.
+
+
+// Create a Mixin object.
+const speakerMixin21 = {
+
+    speak21() {
+
+        return "Speaking...";
+
+    }
+
+};
+
+// Create another object.
+const personUnit21 = {
+
+    name21: "Aadil"
+
+};
+
+Object.assign( personUnit21, speakerMixin21 ); // Add Mixin behavior to the object.
+
+// Now personUnit21 has speak21().
+let mixinBasicResult21 =personUnit21.speak21();
+
+
+document.getElementById("mixinBasicOutput21").innerHTML =
+                "Name: " + personUnit21.name21 + "<br>Mixin behavior: " + mixinBasicResult21;
+
+
+// Mixin gives reusable behavior  to another object.
+// Mixin
+// Reusable behavior Object gets that behavior
+
+// 209. WHY MIXINS?
+
+// Mixins help us REUSE behavior without creating a strict parent-child hierarchy.
+
+// Create reusable logging behavior.
+const loggerMixin21 = {
+
+    log21(message21) {
+
+        return "LOG: " + message21;
+
+    }
+
+};
+
+// Create another object.
+const serviceUnit21 = {
+
+    serviceName21: "Payment Service"
+
+};
+
+
+// Add logging behavior.
+Object.assign( serviceUnit21, loggerMixin21 );
+
+
+// Use the added behavior.
+let mixinWhyResult21 =serviceUnit21.log21("Payment started");
+
+document.getElementById("mixinWhyOutput21").innerHTML =
+
+    serviceUnit21.serviceName21 + "<br>" + mixinWhyResult21;
+
+// Why use Mixins? 1. Reuse behavior 2. Avoid unnecessary inheritance 3. Combine different behaviors 4. Keep code modular
+
+// 210. MIXIN USING Object.assign()
+
+// Object.assign() can copy methods from a Mixin object into another object.
+
+// First Mixin.
+const movementMixin21 = {
+
+    move21() {
+
+        return "Moving";
+
+    }
+
+};
+
+// Second Mixin.
+const alertMixin21 = {
+
+    alert21() {
+
+        return "Alert sent";
+
+    }
+
+};
+
+
+// Create target object.
+const robotUnit21 = {
+    robotName21: "RX-1"
+
+};
+
+
+// Add both Mixins.
+Object.assign(robotUnit21, movementMixin21, alertMixin21);
+
+
+// Now robotUnit21 has both behaviors.
+
+let movementResult21 = robotUnit21.move21();
+let alertResult21 = robotUnit21.alert21();
+
+document.getElementById("mixinAssignOutput21").innerHTML =
+    "Robot: " + robotUnit21.robotName21 +
+    "<br>" + movementResult21 +
+    "<br>" + alertResult21;
+
+// Object.assign(target, mixin1, mixin2)
+// copies the properties/methods into the target object.
+
+
+
+// 211. MIXIN WITH CLASSES
+
+// Mixins can also be used with classes.
+
+// Create a Mixin function.
+const trackingMixin21 = (BaseClass21) => {
+
+    // Return a new class extending BaseClass.
+    return class extends BaseClass21 {
+
+        track21() {
+
+            return "Tracking enabled";
+
+        }
+
+    };
+
+};
+
+
+// Create another Mixin.
+const timestampMixin21 = (BaseClass21) => {
+
+    return class extends BaseClass21 {
+
+        getTime21() {
+
+            return "Time recorded";
+
+        }
+
+    };
+
+};
+
+
+// Base class.
+class DeliveryUnit21 {
+
+    deliver21() {
+
+        return "Package delivered";
+
+    }
+
+}
+
+
+// Add first Mixin.
+const TrackedDelivery21 = trackingMixin21(DeliveryUnit21);
+
+// Add second Mixin.
+const CompleteDelivery21 = timestampMixin21(TrackedDelivery21);
+
+// Create final object.
+const deliveryUnitItem21 = new CompleteDelivery21();
+
+
+// The object has:
+// Base behavior  + tracking behavior  + timestamp behavior
+
+document.getElementById("mixinClassOutput21").innerHTML =
+
+    deliveryUnitItem21.deliver21() +
+    "<br>" +
+    deliveryUnitItem21.track21() +
+    "<br>" +
+    deliveryUnitItem21.getTime21();
+
+// This is called Mixin with Classes.
+
+
+
+// 212. MULTIPLE BEHAVIOR COMPOSITION
+
+// Composition means building an object  by combining multiple independent behaviors.
+
+// Mixin 1.
+const cameraBehavior21 = {
+
+    takePhoto21() {
+
+        return "Photo captured";
+
+    }
+
+};
+
+
+// Mixin 2.
+const musicBehavior21 = {
+
+    playMusic21() {
+
+        return "Music playing";
+
+    }
+
+};
+
+
+// Mixin 3.
+const locationBehavior21 = {
+
+    getLocation21() {
+
+        return "Location found";
+
+    }
+
+};
+
+
+// Create device object.
+const smartDevice21 = {
+
+    deviceName21: "Smart Phone"
+
+};
+
+// Combine three behaviors.
+Object.assign( smartDevice21, cameraBehavior21, musicBehavior21, locationBehavior21);
+
+// Use all behaviors.
+let photoResult21 = smartDevice21.takePhoto21();
+
+let musicResult21 = smartDevice21.playMusic21();
+
+let locationResult21 =smartDevice21.getLocation21();
+
+document.getElementById("multiBehaviorOutput21").innerHTML =
+
+    "Device: " + smartDevice21.deviceName21 +
+    "<br>" + photoResult21 +
+    "<br>" + musicResult21 +
+    "<br>" + locationResult21;
+
+// One object now has multiple independent behaviors.
+
+
+
+
+// 213. INHERITANCE VS COMPOSITION
+
+// INHERITANCE:- "is-a" relationship.
+// Dog IS an Animal.
+
+// Composition:- "has-a" or "uses-a" relationship.
+// Car HAS an Engine.
+
+
+// INHERITANCE EXAMPLE
+
+class AnimalModel21 {
+
+    eat21() {
+
+        return "Animal eats";
+
+    }
+
+}
+
+
+class DogModel21 extends AnimalModel21 {
+
+    bark21() {
+
+        return "Dog barks";
+
+    }
+
+}
+
+const dogModelItem21 = new DogModel21();
+
+// Dog inherits from Animal.
+let inheritanceResult21 = dogModelItem21.eat21();
+
+
+// COMPOSITION EXAMPLE
+
+const engineUnit21 = {
+
+    startEngine21() {
+
+        return "Engine started";
+
+    }
+
+};
+
+
+const musicUnit21 = {
+
+    playMusic21() {
+
+        return "Music playing";
+
+    }
+
+};
+
+
+// Car uses independent behaviors.
+const carUnit21 = {
+
+    drive21() {
+
+        return "Car driving";
+
+    }
+
+};
+
+
+// Add engine behavior.
+Object.assign( carUnit21, engineUnit21, musicUnit21 );
+
+
+let compositionResult21 = carUnit21.startEngine21();
+
+
+document.getElementById( "inheritanceCompositionOutput21" ).innerHTML =
+
+    "Inheritance: " + inheritanceResult21 + "<br>Composition: " + compositionResult21;
+
+
+// Inheritance:
+// Child extends Parent.
+
+// Composition:
+// Object is built using multiple behaviors.
+
+
+
+// 214. COMPOSITION OVER INHERITANCE
+
+// Composition over inheritance means:
+
+// Prefer combining small independent behaviors
+// when inheritance is not necessary.
+
+// Create behavior 1.
+const paymentBehavior21 = {
+
+    pay21(amount21) {
+
+        return "Paid ₹" + amount21;
+
+    }
+
+};
+
+
+// Create behavior 2.
+const notificationBehavior21 = {
+
+    notify21() {
+
+        return "Notification sent";
+
+    }
+
+};
+
+
+// Create behavior 3.
+const historyBehavior21 = {
+
+    saveHistory21() {
+
+        return "Payment history saved";
+
+    }
+
+};
+
+
+// Create payment service.
+const paymentServiceUnit21 = {
+
+    serviceTitle21: "Payment Service"
+
+};
+
+
+// Compose the required behaviors.
+Object.assign( paymentServiceUnit21, paymentBehavior21, notificationBehavior21, historyBehavior21);
+
+
+// Use all behaviors.
+let paymentResult21 = paymentServiceUnit21.pay21(500);
+
+let notificationResult21 = paymentServiceUnit21.notify21();
+
+let historyResult21 = paymentServiceUnit21.saveHistory21();
+
+
+document.getElementById( "compositionOverInheritanceOutput21").innerHTML =
+
+    paymentServiceUnit21.serviceTitle21 +
+    "<br>" +
+    paymentResult21 +
+    "<br>" +
+    notificationResult21 +
+    "<br>" +
+    historyResult21;
+
+
+// Here we did not create:
+//
+// PaymentService extends Payment
+//
+// Instead we composed:
+//
+// Payment behavior
+// + Notification behavior
+// + History behavior
+//
+// This keeps behaviors independent.
+
+
+
+// OOPs Design Concepts
+// 1. COMPOSITION
+
+class EnginePart22 {
+    startEngine22() {
+        return "Engine started";
+    }
+}
+
+class CarUnit22 {
+    constructor() {
+        // Car creates and owns the engine
+        this.engineUnit22 = new EnginePart22();
+    }
+
+    driveCar22() {
+        return this.engineUnit22.startEngine22();
+    }
+}
+
+const carUnit22 = new CarUnit22();
+
+document.getElementById("compositionView22").textContent = "Composition: " + carUnit22.driveCar22();
+
+
+// 2. AGGREGATION
+
+class TeacherPerson22 {
+    constructor(nameValue22) {
+        this.teacherName22 = nameValue22;
+    }
+}
+
+// Teachers can exist independently
+const teacherAlpha22 = new TeacherPerson22("Rahul");
+const teacherBeta22 = new TeacherPerson22("Amit");
+
+const studentGroup22 = {
+    teachers22: [teacherAlpha22, teacherBeta22]
+};
+
+document.getElementById("aggregationView22").textContent =
+    "Aggregation: " + studentGroup22.teachers22
+        .map(itemValue22 => itemValue22.teacherName22).join(", ");
+
+
+// 3. ASSOCIATION
+
+const doctorUnit22 = {
+    doctorName22: "Dr. Khan"
+};
+
+const patientUnit22 = {
+    patientName22: "Aman"
+};
+
+// Both objects exist independently
+const associationResult22 = `${doctorUnit22.doctorName22} treats ${patientUnit22.patientName22}`;
+
+document.getElementById("associationView22").textContent = "Association: " + associationResult22;
+
+// 4. DEPENDENCY
+
+class ReportService22 {
+    generateReport22() {
+        return "Report generated";
+    }
+}
+
+class ReportApp22 {
+    createReport22(serviceTool22) {
+        // App temporarily depends on service
+        return serviceTool22.generateReport22();
+    }
+}
+
+const reportService22 = new ReportService22();
+const reportApp22 = new ReportApp22();
+
+const dependencyResult22 = reportApp22.createReport22(reportService22);
+
+document.getElementById("dependencyView22").textContent = "Dependency: " + dependencyResult22;
+
+
+// 5. COUPLING
+
+class TightLogger22 {
+    saveLog22(messageValue22) {
+        return `Log saved: ${messageValue22}`;
+    }
+}
+
+class TightService22 {
+    constructor() {
+        // Direct dependency creates tight coupling
+        this.loggerTool22 = new TightLogger22();
+    }
+
+    runService22() {
+        return this.loggerTool22.saveLog22("Service running");
+    }
+}
+
+const tightService22 = new TightService22();
+
+document.getElementById("couplingView22").textContent = "Coupling: " + tightService22.runService22();
+
+
+// 6. COHESION
+
+class OrderRepository22 {
+    createOrderRecord22() {
+        return "Order created";
+    }
+
+    updateOrderRecord22() {
+        return "Order updated";
+    }
+
+    cancelOrderRecord22() {
+        return "Order cancelled";
+    }
+}
+
+const orderRepository22 = new OrderRepository22();
+
+const cohesionResult22 = orderRepository22.createOrderRecord22();
+
+document.getElementById("cohesionView22").textContent = "Cohesion: " + cohesionResult22;
+
+
+// 7. LOOSE COUPLING
+
+class PaymentGateway22 {
+    makePayment22(amountValue22) {
+        return `Payment of ₹${amountValue22} completed`;
+    }
+}
+
+class CheckoutService22 {
+    constructor(paymentTool22) {
+        // Dependency comes from outside
+        this.paymentTool22 = paymentTool22;
+    }
+
+    completeCheckout22() {
+        return this.paymentTool22.makePayment22(500);
+    }
+}
+
+const paymentGateway22 = new PaymentGateway22();
+
+const checkoutService22 = new CheckoutService22(paymentGateway22);
+
+const looseCouplingResult22 = checkoutService22.completeCheckout22();
+
+document.getElementById("looseCouplingView22").textContent = "Loose Coupling: " + looseCouplingResult22;
+
+
+// 8. HIGH COHESION
+
+class EmailSender22 {
+    sendEmail22(receiverValue22, messageValue22) {
+        return `Email sent to ${receiverValue22}`;
+    }
+}
+
+class SmsSender22 {
+    sendSms22(receiverValue22, messageValue22) {
+        return `SMS sent to ${receiverValue22}`;
+    }
+}
+
+const emailSender22 = new EmailSender22();
+
+const highCohesionResult22 = emailSender22.sendEmail22("user@example.com", "Welcome");
+
+document.getElementById("highCohesionView22").textContent = "High Cohesion: " + highCohesionResult22;
+
+
+// 9. COMPOSITION VS INHERITANCE
+
+// ----- Inheritance -----
+
+class InheritanceVehicle22 {
+    moveVehicle22() {
+        return "Vehicle is moving";
+    }
+}
+
+class InheritanceCar22 extends InheritanceVehicle22 {
+    driveInheritedCar22() {
+        return this.moveVehicle22();
+    }
+}
+
+const inheritanceCar22 = new InheritanceCar22();
+
+
+// ----- Composition -----
+
+class CompositionEngine22 {
+    startEnginePart22() {
+        return "Engine is running";
+    }
+}
+
+class CompositionCar22 {
+    constructor(enginePartObject22) {
+        // Car receives an engine object
+        this.enginePartObject22 = enginePartObject22;
+    }
+
+    driveComposedCar22() {
+        return this.enginePartObject22.startEnginePart22();
+    }
+}
+
+const compositionEngine22 = new CompositionEngine22();
+
+const compositionCar22 = new CompositionCar22(compositionEngine22);
+
+const comparisonResult22 =
+    `Inheritance: ${inheritanceCar22.driveInheritedCar22()} | ` +
+    `Composition: ${compositionCar22.driveComposedCar22()}`;
+
+document.getElementById("compositionInheritanceView22").textContent = comparisonResult22;

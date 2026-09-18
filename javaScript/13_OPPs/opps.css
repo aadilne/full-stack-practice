@@ -572,3 +572,108 @@ body {
 .symbol-card19 p {
     line-height: 1.7;
 }
+
+
+
+/* Phase 20 - Advanced Class Concepts */
+
+
+#advancedClassRoom20 {
+
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+
+#advancedClassRoom20 h1 {
+    text-align: center;
+}
+
+
+#advancedClassRoom20 > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.advanced-class-card20 {
+
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.advanced-class-card20 h2 {
+
+    margin-top: 0;
+}
+
+.advanced-class-card20 p {
+    line-height: 1.7;
+}
+
+
+
+/* Phase 21 - Mixins */
+
+#mixinWorkshop21 {
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+#mixinWorkshop21 h1 {
+    text-align: center;
+}
+
+#mixinWorkshop21 > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mixin-card21 {
+
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.mixin-card21 h2 {
+    margin-top: 0;
+}
+
+.mixin-card21 p {
+    line-height: 1.7;
+}
+
+
+/* OOPs Design Concepts */
+#designConceptHub22 {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.design-concept-card22 {
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.design-concept-card22 h2 {
+    margin-bottom: 20px;
+}
+
+.design-concept-card22 p {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    background: white;
+}
