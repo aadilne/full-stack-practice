@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="Api.css">
+</head>
+<body>
+
+    <!-- Phase 1 — API Fundamentals -->
+     <div id="apiFundamentalWrapper">
+
+        <h1 id="apiFundamentalHeading">API Fundamentals</h1>
+
+        <p id="apiFundamentalIntro">
+            Learn how Client, Server and API communicate.
+        </p>
+
+        <!-- Client information -->
+        <div class="apiClientPanel">
+            <h2 id="apiClientHeading">Client</h2>
+            <p id="apiClientText">JavaScript Application</p>
+        </div>
+
+        <!-- API information -->
+        <div class="apiGatewayPanel">
+            <h2 id="apiGatewayHeading">API</h2>
+            <p id="apiGatewayText">Communication Medium</p>
+        </div>
+
+        <!-- Server information -->
+        <div class="apiServerPanel">
+            <h2 id="apiServerHeading">Server</h2>
+            <p id="apiServerText">Provides Data</p>
+        </div>
+
+        <!-- API URL -->
+        <div class="apiUrlPanel">
+            <h2 id="apiUrlHeading">API URL</h2>
+            <p id="apiUrlText">https://example.com/api/users</p>
+        </div>
+
+        <!-- Request information -->
+        <div class="apiRequestPanel">
+            <h2 id="apiRequestHeading">Request</h2>
+
+            <p id="apiRequestMethod">
+                Method: GET
+            </p>
+
+            <p id="apiRequestEndpoint">
+                Endpoint: /users
+            </p>
+
+            <p id="apiRequestParameter">
+                Parameter: userId = 101
+            </p>
+
+            <p id="apiRequestQuery">
+                Query: city=Ara
+            </p>
+        </div>
+
+        <!-- Response information -->
+        <div class="apiResponsePanel">
+            <h2 id="apiResponseHeading">Response</h2>
+
+            <p id="apiResponseStatus">
+                Status: 200
+            </p>
+
+            <p id="apiResponseBody">
+                User data received successfully.
+            </p>
+        </div>
+
+        <!-- Request body -->
+        <div class="apiBodyPanel">
+            <h2 id="apiBodyHeading">Request Body</h2>
+
+            <pre id="apiBodyOutput"></pre>
+        </div>
+
+        <!-- Headers -->
+        <div class="apiHeaderPanel">
+            <h2 id="apiHeaderHeading">Headers</h2>
+
+            <p id="apiHeaderOutput">
+                Content-Type: application/json
+            </p>
+        </div>
+
+        <!-- Authentication -->
+        <div class="apiAuthPanel">
+            <h2 id="apiAuthHeading">Authentication</h2>
+
+            <p id="apiAuthOutput">
+                Authentication: Required
+            </p>
+        </div>
+
+        <!-- Documentation -->
+        <div class="apiDocumentationPanel">
+            <h2 id="apiDocumentationHeading">API Documentation</h2>
+
+            <p id="apiDocumentationOutput">Documentation explains URL, endpoint, method,parameters, headers and response.</p>
+        </div>
+
+        <!-- Button -->
+        <button id="apiFundamentalButton">Simulate API Request</button>
+
+        <!-- Final result -->
+        <div class="apiResultPanel">
+            <h2 id="apiResultHeading">API Result</h2>
+
+            <p id="apiResultOutput"> Waiting for request...</p>
+        </div>
+
+    </div>
+    <script src="Api.js"></script>
+</body>
+</html>

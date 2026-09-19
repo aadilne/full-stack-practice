@@ -1,0 +1,125 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Phase 1 — API Fundamentals */
+/* Main wrapper */
+#apiFundamentalWrapper {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+#apiFundamentalHeading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Introduction */
+#apiFundamentalIntro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Client panel */
+.apiClientPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* API panel */
+.apiGatewayPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Server panel */
+.apiServerPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* URL panel */
+.apiUrlPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Request panel */
+.apiRequestPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Response panel */
+.apiResponsePanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Body panel */
+.apiBodyPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Header panel */
+.apiHeaderPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Authentication panel */
+.apiAuthPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Documentation panel */
+.apiDocumentationPanel {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/* Button */
+#apiFundamentalButton {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Result panel */
+.apiResultPanel {
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
