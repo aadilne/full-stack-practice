@@ -123,3 +123,47 @@
     border: 1px solid #999;
     border-radius: 8px;
 }
+
+/* Phase 2 — Complete Combined Example */
+/* Main container */
+#httpBox {
+    width: 80%;
+    max-width: 850px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+#httpTitle {
+    text-align: center;
+}
+
+/* Introduction */
+#httpIntro {
+    text-align: center;
+}
+
+/* Common section style */
+.httpSec,
+.reqSec,
+.metSec,
+.resSec,
+.codeSec,
+.outSec {
+    padding: 18px;
+    margin: 15px 0;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+/* Method buttons */
+.metSec button {
+    margin: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+/* Output */
+#outText {
+    font-weight: bold;
+}
