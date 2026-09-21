@@ -202,4 +202,200 @@ oBtn.addEventListener("click", function () { // Run when OPTIONS button is click
 });
 
 
+// Phase 3 JSON = JavaScript Object Notation 
+// 1. JSON OBJECT
+// _______________
+
+const jObj = {                                      // Create a normal JavaScript object
+    name: "Aadil",                                  
+    age: 22,                                        
+    student: true                                   
+};
+
+const jObjView = document.querySelector("#jsonObjectView"); // Select the HTML element where object will be shown
+
+jObjView.textContent = JSON.stringify(jObj, null, 2);       // Convert object into readable JSON text and display it
+
+/* Example:
+ //Bina 2 ke (ya null, 0):
+        JSON{"name":"Aadil","age":22,"student":true}
+ 
+// null, 2 ke saath:
+ 
+ JSON{
+   "name": "Aadil",
+   "age": 22,
+   "student": true
+ }*/
+
+
+// 2. JSON ARRAY
+
+
+const jArr = [                                      // Create an array containing multiple values
+    "HTML",                                        
+    "CSS",                                         
+    "JavaScript"                                   
+];
+
+const jArrView = document.querySelector("#jsonArrayView"); // Select array output element
+
+jArrView.textContent = JSON.stringify(jArr, null, 2);       // Convert array into formatted JSON text
+
+
+
+// 3. JSON DATA TYPES
+
+const jStr = "Aadil";                               // JSON String example
+
+const jNum = 22;                                    // JSON Number example
+
+const jBool = true;                                 // JSON Boolean example
+
+const jNull = null;                                 // JSON null means no value
+
+
+document.querySelector("#jsonStringView").textContent = "String: " + jStr;             // Display the string value
+
+document.querySelector("#jsonNumberView").textContent = "Number: " + jNum;             // Display the number value
+
+document.querySelector("#jsonBooleanView").textContent = "Boolean: " + jBool;          // Display the boolean value
+
+document.querySelector("#jsonNullView").textContent = "Null: " + jNull;                // Display the null value
+
+
+
+// 4. NESTED JSON
+
+const jNested = {                           // Create an object
+    name: "Aadil",                                  
+
+    address: {                             // Create another object inside the main object
+        city: "Ara",                                
+        state: "Bihar"                              
+    }
+};
+
+const jNestedView = document.querySelector("#jsonNestedView"); // Select nested JSON output element
+
+jNestedView.textContent = JSON.stringify(jNested, null, 2);    // Convert nested object into readable JSON
+
+
+
+// 5. OBJECTS INSIDE ARRAY
+
+const jUsers = [                                    // Create an array
+    {
+        id: 1,                                      // First user's ID
+        name: "Aadil"                               // First user's name
+    },
+
+    {
+        id: 2,                                      // Second user's ID
+        name: "Rahul"                               // Second user's name
+    }
+];
+
+const jListView = document.querySelector("#jsonListView"); // Select output element
+
+jListView.textContent = JSON.stringify(jUsers, null, 2);   // Convert array of objects into JSON text
+
+
+
+// 6. ARRAY INSIDE OBJECT
+
+const jStudent = {                                  // Create student object
+
+    name: "Aadil",                                  // Store student name
+
+    skills: [                                       // Store multiple skills inside an array
+        "HTML",                                     
+        "CSS",                                      
+        "JavaScript"                                
+    ]
+};
+
+const jInsideView = document.querySelector("#jsonInsideView"); // Select output element
+
+jInsideView.textContent = JSON.stringify(jStudent, null, 2);    // Convert object containing array into JSON text
+
+
+
+// 7. JSON.parse()
+
+const jText = `{
+    "name": "Aadil",
+    "age": 22,
+    "student": true
+}`;                                                  // This is JSON stored as a string
+
+const jData = JSON.parse(jText);                    // Convert JSON string into a JavaScript object
+
+const jParseView = document.querySelector("#jsonParseView"); // Select parse output element
+
+jParseView.textContent = jData.name + " - " + jData.age;     // Read values from the converted JavaScript object
+
+
+// 8. JSON.stringify()
+
+const jProduct = {                                  // Create a JavaScript object
+
+    name: "Laptop",                                 
+
+    price: 50000,                                   
+
+    available: true                                 
+};
+
+const jJsonText = JSON.stringify(jProduct);         // Convert JavaScript object into JSON string
+
+const jStringifyView = document.querySelector("#jsonStringifyView");   // Select stringify output element
+
+jStringifyView.textContent = jJsonText;             // Display JSON string
+
+
+
+// 9. JSON API RESPONSE
+
+const jApiResponse = {                              // Simulate data received from an API
+
+    success: true,                                  // Tell whether request was successful
+
+    user: {                                         // Store user information inside another object
+
+        id: 101,                                    
+
+        name: "Aadil",                              
+
+        skills: [                                   // User skills stored in an array
+            "JavaScript",                           
+            "React",                                
+            "Node.js"                               
+        ]
+    }
+};
+
+const jApiView = document.querySelector("#jsonApiView"); // Select API output element
+
+jApiView.textContent = JSON.stringify(jApiResponse, null, 2);  // Convert API-like object into readable JSON
+
+
+
+// 10. READ JSON DATA
+
+const jReadBtn = document.querySelector("#jsonReadBtn");  // Select the button
+
+const jResultView = document.querySelector("#jsonResultView");            // Select the result paragraph
+
+
+function readJson() {                                     // Create a function to read JSON data
+
+    const jName = jApiResponse.user.name;                 // Access name from nested JSON data
+
+    const jSkill = jApiResponse.user.skills[0];           // Access first skill from the skills array
+
+    jResultView.textContent = "Name: " + jName + " | First Skill: " + jSkill; // Show selected JSON values on the webpage
+}
+
+jReadBtn.addEventListener("click", readJson);             // Run readJson function when button is clicked
 

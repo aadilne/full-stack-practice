@@ -167,3 +167,55 @@
 #outText {
     font-weight: bold;
 }
+
+/* Phase 3 JSON = JavaScript Object Notation  */
+
+#jsonMainArea {
+    max-width: 900px;
+    margin: auto;
+}
+
+#jsonMainTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#jsonMainIntro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.jsonObjectCard,
+.jsonArrayCard,
+.jsonTypeCard,
+.jsonNestedCard,
+.jsonListCard,
+.jsonInsideCard,
+.jsonParseCard,
+.jsonStringifyCard,
+.jsonApiCard,
+.jsonResultCard {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+pre {
+    background: #1e1e1e;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+button {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
