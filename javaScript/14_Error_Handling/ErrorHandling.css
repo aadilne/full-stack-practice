@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Phase 2 - Try Catch */
+.eh-p2-wrapper {
+    width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#ehP2Heading {
+    margin-bottom: 20px;
+}
+
+.ehP2-btn {
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+#ehP2Result {
+    margin-top: 20px;
+    padding: 12px;
+    min-height: 25px;
+}
+
+
+/* Phase 3 - Finally */
+.eh-p3-container {
+    width: 550px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.eh-p3-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#ehP3Result {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 18px;
+}
