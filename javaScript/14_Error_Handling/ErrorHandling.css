@@ -52,3 +52,50 @@
     padding: 12px;
     font-size: 18px;
 }
+
+
+/* Phase 4 - Throw new error */
+.eh-p4-container {
+    width: 550px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.eh-p4-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#ehP4Result {
+    margin-top: 20px;
+    padding: 12px;
+    min-height: 25px;
+    font-size: 18px;
+}
+
+/* Phase 5 — Built-in Error Types */
+.eh-p5-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.eh-p5-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#ehP5Result {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 17px;
+    min-height: 25px;
+}

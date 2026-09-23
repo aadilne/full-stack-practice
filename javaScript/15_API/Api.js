@@ -399,3 +399,129 @@ function readJson() {                                     // Create a function t
 
 jReadBtn.addEventListener("click", readJson);             // Run readJson function when button is clicked
 
+
+
+// Phase 4 - Fetch API
+
+// 1. SELECT HTML ELEMENTS
+
+const fBtn = document.querySelector("#fetchStartBtn");       // Select the button that starts the API request
+
+const fLoad = document.querySelector("#fetchLoadingText");   // Select the element that shows loading/request status
+
+const fCode = document.querySelector("#fetchCodeText");     // Select the element that shows HTTP status code
+
+const fMsg = document.querySelector("#fetchMessageText");    // Select the element that shows HTTP status text
+
+const fHead = document.querySelector("#fetchHeaderText");   // Select the element that shows response header information
+
+const fData = document.querySelector("#fetchDataOutput");   // Select the element where API data will be displayed
+
+const fErr = document.querySelector("#fetchErrorOutput");   // Select the element where error messages will be displayed
+
+
+
+// 2. API URL
+
+const fUrl = "https://dummyjson.com/users";                  // Store the API endpoint inside a variable
+
+// 3. CREATE FETCH FUNCTION
+
+function getUsers() {                                        // Create a function that will request users from the API
+
+    fLoad.textContent = "Status: Loading...";                // Tell the user that the API request has started
+
+    fCode.textContent = "Status Code: -";                    // Clear the previous status code
+
+    fMsg.textContent = "Status Text: -";                     // Clear the previous status text
+
+    fHead.textContent = "Content-Type: -";                   // Clear the previous header information
+
+    fData.textContent = "Loading data...";                   // Show loading text while waiting for API response
+
+    fErr.textContent = "No error.";                          // Clear any previous error message
+
+
+
+    // 4. FETCH API REQUEST
+
+    fetch(fUrl, {                                     // Send a request to the API URL
+
+        method: "GET",                                // Tell the server that we want to read/get data
+
+        headers: {                                    // Define headers that will be sent with the request
+
+            "Accept": "application/json"              // Tell the server that we expect JSON data
+        }
+
+    })
+
+
+    // 5. FIRST THEN - GET RESPONSE
+
+    .then(function (fRes) {                       // Run this function when the server sends a response
+
+        fCode.textContent = "Status Code: " + fRes.status;        // Read and display the HTTP status code
+
+        fMsg.textContent = "Status Text: " + fRes.statusText;     // Read and display the HTTP status text
+
+
+        // 6. CHECK RESPONSE.OK
+
+        if (!fRes.ok) {                                      // Check whether the HTTP response is successful
+
+            throw new Error("HTTP Error: " + fRes.status);   // Stop the chain and create an error for bad HTTP status
+
+
+
+        // 7. READ RESPONSE HEADER
+
+        }
+
+        const fType = fRes.headers.get("content-type");      // Read the Content-Type header from the server response
+
+        fHead.textContent = "Content-Type: " + fType;        // Display the response Content-Type
+
+
+
+        // 8. CONVERT RESPONSE TO JSON
+
+        return fRes.json();                         // Convert the response body from JSON into JavaScript data
+
+    })
+
+
+    // 9. SECOND THEN - GET ACTUAL DATA
+
+    .then(function (fDataObj) {                             // Receive the JavaScript data created by response.json()
+
+        fLoad.textContent = "Status: Data Loaded";          // Tell the user that API data has been received
+
+        fData.textContent = JSON.stringify(fDataObj, null, 2);      // Convert the data into readable text and display it
+
+    })
+
+
+    // 10. CATCH - HANDLE ERRORS
+
+    .catch(function (fProblem) {                             // Run this function if the request fails or an error is thrown
+
+        fLoad.textContent = "Status: Failed";                // Tell the user that the request failed
+
+        fErr.textContent = fProblem.message;                 // Display the error message
+
+    })
+
+
+    // 11. FINALLY
+
+    .finally(function () {                                   // Run this code after success or failure
+
+        console.log("Fetch request finished.");              // Show a message in the browser console
+    });
+}
+
+
+// 12. BUTTON EVENT
+
+fBtn.addEventListener("click", getUsers);                    // Run getUsers() when the user clicks the button

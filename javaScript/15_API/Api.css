@@ -219,3 +219,61 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
+
+
+/* Phase 4 - Fetch API */
+
+
+#fetchMainArea {
+    max-width: 900px;
+    margin: auto;
+}
+
+#fetchMainTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#fetchIntroText {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.fetchRequestCard,
+.fetchStatusCard,
+.fetchDataCard,
+.fetchErrorCard {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#fetchApiUrl {
+    padding: 12px;
+    background: #f1f1f1;
+    border-radius: 6px;
+    word-break: break-all;
+}
+
+#fetchStartBtn {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#fetchLoadingText {
+    font-weight: bold;
+}
+
+pre {
+    padding: 15px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 8px;
+    overflow-x: auto;
+    min-height: 100px;
+}

@@ -169,8 +169,6 @@ ehP3ErrorBtn.addEventListener("click", function () {
 
     try {
 
-        
-
         console.log("Try block started");       // try contains code that may create an error
 
         console.log(ehP3UnknownValue);       // This variable does not exist. So JavaScript will create an error here.
@@ -198,8 +196,6 @@ ehP3ErrorBtn.addEventListener("click", function () {
 });
 
 // 2. SUCCESS + FINALLY
-
-
 // Run this code when the second button is clicked
 
 ehP3SuccessBtn.addEventListener("click", function () {
@@ -256,7 +252,6 @@ function ehP3ReturnExample() {
 
 }
 
-
 ehP3ReturnBtn.addEventListener("click", function () {
 
     // Call the function
@@ -264,14 +259,12 @@ ehP3ReturnBtn.addEventListener("click", function () {
     let ehP3ReturnValue = ehP3ReturnExample();
 
     // Show the returned value
-
     ehP3Result.textContent = ehP3ReturnValue + " | Finally was executed first.";
 
 });
 
 
 // 4. CLEANUP EXAMPLE
-
 
 ehP3CleanupBtn.addEventListener("click", function () {
 
@@ -288,16 +281,12 @@ ehP3CleanupBtn.addEventListener("click", function () {
 
         console.log("Work value:", ehP3WorkValue);
 
-        // We can also create an error here
-        // Uncomment the next line to test the error
-
-        // console.log(ehP3FakeData);
+//        console.log(ehP3FakeData);       // We can also create an error here Uncomment the next line to test the error
     }
 
     catch (ehP3CleanupError) {
 
-        // If an error occurs,
-        // catch will handle that error
+        // If an error occurs, catch will handle that error
 
         console.log("Work error:", ehP3CleanupError.message);
 
@@ -311,10 +300,367 @@ ehP3CleanupBtn.addEventListener("click", function () {
         // This block executes after the work is finished
 
         console.log("Cleanup completed");
-        // Update the final status
+        
+        ehP3Result.textContent += " Cleanup completed.";    // Update the final status
+    }
 
-        ehP3Result.textContent += " Cleanup completed.";
+});
+
+
+
+// PHASE 4 - THROW new error
+
+let ehP4ErrorBtn = document.getElementById("ehP4ErrorBtn");
+
+let ehP4StringBtn = document.getElementById("ehP4StringBtn");
+
+let ehP4NumberBtn = document.getElementById("ehP4NumberBtn");
+
+let ehP4ObjectBtn = document.getElementById("ehP4ObjectBtn");
+
+let ehP4ValidationBtn = document.getElementById("ehP4ValidationBtn");
+
+let ehP4Result = document.getElementById("ehP4Result");
+
+// 2. throw new Error()
+
+// Run when "Throw Error" button is clicked
+
+ehP4ErrorBtn.addEventListener("click", function () {
+
+    try {
+
+        throw new Error( "This is a manually created error.");  // throw manually creates an error
+    }
+    catch (ehP4Error) {
+
+        console.log( "Error Name:", ehP4Error.name );   // catch receives the thrown Error object error.name gives the error type
+
+        console.log( "Error Message:", ehP4Error.message);
+
+        ehP4Result.textContent = ehP4Error.message;
 
     }
 
 });
+
+// 3. throw with String
+
+ehP4StringBtn.addEventListener("click", function () {
+
+    try {
+
+        throw "This is a string error.";    // A string can also be thrown
+
+    }
+    catch (ehP4StringError) {
+
+        console.log(ehP4StringError);   // catch receives the thrown string
+
+        ehP4Result.textContent = ehP4StringError;
+    }
+
+});
+
+// 4. throw with Number
+
+ehP4NumberBtn.addEventListener("click", function () {
+
+    try {
+
+
+        throw 404;      // A number can also be thrown
+
+    }
+    catch (ehP4NumberError) {   // catch receives the number
+
+        console.log( "Error Code:", ehP4NumberError );
+
+        ehP4Result.textContent = "Error Code: " + ehP4NumberError;
+
+    }
+
+});
+
+// 5. throw with Object
+
+ehP4ObjectBtn.addEventListener("click", function () {
+
+    try {
+
+        // We can throw an object  containing custom information
+        throw {
+            code: 400,
+            message: "Invalid request"
+        };
+
+    }
+    catch (ehP4ObjectError) {    // Access the object's properties
+
+        console.log( "Code:", ehP4ObjectError.code );
+
+        console.log( "Message:", ehP4ObjectError.message );
+
+        ehP4Result.textContent = "Code: " + ehP4ObjectError.code + " | " + ehP4ObjectError.message;
+
+    }
+
+});
+
+
+// 6. Validation using throw
+
+// This function checks the user's age
+function ehP4CheckAge(age) {
+
+    // Check if age is less than 18
+
+    if (age < 18) {                 // The condition is invalid, so manually create an error
+
+        throw new Error( "Age must be 18 or above." );
+    }
+
+    return "Access allowed.";    // This line runs only when the age is valid
+
+}
+
+
+// Run when "Check Age" button is clicked
+
+ehP4ValidationBtn.addEventListener( "click", function () {
+
+        try {
+
+            let ehP4AgeResult = ehP4CheckAge(15);       // Test the function with age 15
+
+            ehP4Result.textContent = ehP4AgeResult;   // This line runs only if no error was thrown
+
+        }
+        catch (ehP4AgeError) {          // The error thrown inside the function comes here
+
+            console.log( ehP4AgeError.message );
+
+            ehP4Result.textContent = ehP4AgeError.message;
+
+        }
+
+    }
+);
+
+
+// PHASE 5 BUILT-IN ERROR TYPES
+
+let ehP5ErrorBtn = document.getElementById("ehP5ErrorBtn");
+
+let ehP5TypeBtn = document.getElementById("ehP5TypeBtn");
+
+let ehP5ReferenceBtn = document.getElementById("ehP5ReferenceBtn");
+
+let ehP5RangeBtn = document.getElementById("ehP5RangeBtn");
+
+let ehP5UriBtn = document.getElementById("ehP5UriBtn");
+
+let ehP5AggregateBtn = document.getElementById("ehP5AggregateBtn");
+
+let ehP5CheckBtn = document.getElementById("ehP5CheckBtn");
+
+let ehP5Result = document.getElementById("ehP5Result");
+
+
+// 2. Error
+// Error JavaScript ka basic/general error object hai.
+
+// Run when Error button is clicked
+
+ehP5ErrorBtn.addEventListener("click", function () {
+
+    try {
+
+        throw new Error("This is a normal Error.");    // Manually create a normal Error
+
+    }
+    catch (ehP5Error) {
+
+        console.log("Error Name:",ehP5Error.name);      // Show the error type
+
+        console.log( "Error Message:", ehP5Error.message);      // Show the error message
+
+        ehP5Result.textContent = ehP5Error.name + ": " + ehP5Error.message;     // Display result
+
+    }
+
+});
+
+
+// 3. TypeError
+// TypeError tab aata hai jab hum kisi value ko wrong type ke tarike se use karte hain.
+ehP5TypeBtn.addEventListener("click", function () {
+
+    try {
+
+        let ehP5Number = 100;       // This is a number
+
+        // toUpperCase() belongs to strings, so using it on a number causes TypeError
+
+        ehP5Number.toUpperCase();
+
+    }
+    catch (ehP5TypeError) {
+
+        // Print the error name
+
+        console.log( "Error Name:", ehP5TypeError.name);
+
+        console.log( "Error Message:", ehP5TypeError.message );   // Print the error message
+
+        ehP5Result.textContent = ehP5TypeError.name + ": " + ehP5TypeError.message;  // Show result
+
+    }
+
+});
+
+// 4. ReferenceError
+// Jab hum kisi exist na karne wale variable ko access karte hain.
+
+ehP5ReferenceBtn.addEventListener( "click", function () {
+
+        try {
+            console.log(ehP5UnknownVariable);  // This variable does not exist
+
+        }
+        catch (ehP5ReferenceError) {
+
+            // JavaScript creates ReferenceError
+            console.log( "Error Name:", ehP5ReferenceError.name );
+
+            // Show the message
+
+            console.log( "Error Message:", ehP5ReferenceError.message );
+
+            ehP5Result.textContent = ehP5ReferenceError.name + ": " + ehP5ReferenceError.message;
+
+        }
+
+    }
+);
+
+
+// 5. RangeError
+// Jab koi value allowed range ke bahar hoti hai.
+
+ehP5RangeBtn.addEventListener("click", function () {
+
+    try {
+
+        // toFixed() does not accept an extremely large number of digits
+
+        let ehP5Price = 25.50;
+
+        ehP5Price.toFixed(100);
+
+    }
+    catch (ehP5RangeError) {
+
+        console.log( "Error Name:", ehP5RangeError.name );
+
+        console.log( "Error Message:", ehP5RangeError.message );
+
+        ehP5Result.textContent = ehP5RangeError.name + ": " + ehP5RangeError.message;
+
+    }
+
+});
+
+
+// 6. URIError
+// URI-related function ko invalid URI data dene par URIError aa sakta hai.
+
+ehP5UriBtn.addEventListener("click", function () {
+
+    try {
+
+        // "%" alone is not a valid // URI encoded value
+
+        decodeURIComponent("%");
+
+    }
+    catch (ehP5UriError) {
+
+        // Show the error type
+
+        console.log( "Error Name:", ehP5UriError.name );
+
+        console.log( "Error Message:", ehP5UriError.message );
+
+        ehP5Result.textContent = ehP5UriError.name + ": " + ehP5UriError.message;
+
+    }
+
+});
+
+// 7. AggregateError
+// Jab multiple errors ko ek saath represent karna ho, AggregateError useful hai.
+
+ehP5AggregateBtn.addEventListener( "click", function () {
+
+        // Create multiple Error objects
+
+        let ehP5ErrorList = [
+
+            new Error("First error"),
+
+            new Error("Second error"),
+
+            new Error("Third error")
+
+        ];
+
+
+        // Put multiple errors into one AggregateError
+
+        let ehP5Aggregate = new AggregateError(ehP5ErrorList, "Multiple errors occurred." );
+
+        console.log(ehP5Aggregate);
+
+        // The errors property contains the individual errors
+
+        console.log( ehP5Aggregate.errors );
+
+        ehP5Result.textContent = ehP5Aggregate.name + ": " +ehP5Aggregate.message;
+
+    }
+);
+
+
+// 8. instanceof
+
+ehP5CheckBtn.addEventListener( "click", function () {
+
+        try {
+
+            console.log( ehP5MissingVariable );     // Create a ReferenceError
+
+        }
+        catch (ehP5CheckError) {
+
+            let ehP5IsError = ehP5CheckError instanceof Error;      // Check if it is an Error
+
+            let ehP5IsTypeError = ehP5CheckError instanceof TypeError;  // // Check if it is a TypeError
+
+            let ehP5IsReferenceError = ehP5CheckError instanceof ReferenceError;    // Check if it is a ReferenceError
+
+
+            // Print all results
+            console.log( "Is Error:", ehP5IsError );
+
+            console.log( "Is TypeError:", ehP5IsTypeError );
+
+            console.log( "Is ReferenceError:", ehP5IsReferenceError );
+
+            ehP5Result.innerHTML = "Error: " + ehP5IsError + "<br>TypeError: " + ehP5IsTypeError +
+                        "<br>ReferenceError: " + ehP5IsReferenceError;
+
+        }
+
+    }
+);
