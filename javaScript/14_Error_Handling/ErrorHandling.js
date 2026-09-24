@@ -649,7 +649,6 @@ ehP5CheckBtn.addEventListener( "click", function () {
 
             let ehP5IsReferenceError = ehP5CheckError instanceof ReferenceError;    // Check if it is a ReferenceError
 
-
             // Print all results
             console.log( "Is Error:", ehP5IsError );
 
@@ -664,3 +663,326 @@ ehP5CheckBtn.addEventListener( "click", function () {
 
     }
 );
+
+
+// PHASE 8 - PROMISE ERROR HANDLING
+
+// Get HTML elements
+let ehP8RejectBtn = document.getElementById("ehP8RejectBtn");
+let ehP8CatchBtn = document.getElementById("ehP8CatchBtn");
+let ehP8FinallyBtn = document.getElementById("ehP8FinallyBtn");
+let ehP8ThrowBtn = document.getElementById("ehP8ThrowBtn");
+let ehP8PropagationBtn = document.getElementById("ehP8PropagationBtn");
+let ehP8MultipleCatchBtn = document.getElementById("ehP8MultipleCatchBtn");
+let ehP8AllBtn = document.getElementById("ehP8AllBtn");
+let ehP8AllSettledBtn = document.getElementById("ehP8AllSettledBtn");
+let ehP8RaceBtn = document.getElementById("ehP8RaceBtn");
+let ehP8AnyBtn = document.getElementById("ehP8AnyBtn");
+let ehP8AggregateBtn = document.getElementById("ehP8AggregateBtn");
+
+let ehP8Result = document.getElementById("ehP8Result");
+
+
+// 1. PROMISE REJECTION
+
+ehP8RejectBtn.addEventListener("click", function () {
+
+    let ehP8RejectPromise = new Promise(function (resolve, reject) {
+
+        let ehP8IsSuccessful = false;
+
+        // Check whether operation was successful
+        if (ehP8IsSuccessful) {
+
+            resolve("Operation successful.");
+        }
+        else {
+
+            // Reject the Promise
+            reject(new Error("Operation failed."));
+        }
+    });
+
+
+    ehP8RejectPromise
+
+        .catch(function (ehP8RejectError) {
+
+            // Handle rejected Promise
+            ehP8Result.textContent = "Rejected: " + ehP8RejectError.message;
+        });
+});
+
+// 2. THEN().CATCH()
+
+ehP8CatchBtn.addEventListener("click", function () {
+
+    let ehP8DataPromise = new Promise(function (resolve, reject) {
+
+        let ehP8DataFound = false;
+
+        // Check whether data exists
+        if (ehP8DataFound) {
+
+            resolve("Data found.");
+        }
+        else {
+
+            reject(new Error("Data not found."));
+        }
+    });
+
+
+    ehP8DataPromise
+
+        .then(function (ehP8Data) {
+
+            // Handle success
+            ehP8Result.textContent = ehP8Data;
+        })
+
+        .catch(function (ehP8DataError) {
+
+            // Handle error
+            ehP8Result.textContent = "Error: " + ehP8DataError.message;
+        });
+});
+
+
+// 3. FINALLY
+
+ehP8FinallyBtn.addEventListener("click", function () {
+
+    let ehP8FinallyPromise = Promise.reject(
+        new Error("Request failed.")
+    );
+
+
+    ehP8FinallyPromise
+
+        .catch(function (ehP8FinallyError) {
+
+            // Handle the error
+            ehP8Result.textContent = ehP8FinallyError.message;
+        })
+
+        .finally(function () {
+
+            // This always runs
+            console.log("Request finished.");
+        });
+});
+
+// 4. THROW INSIDE THEN
+
+ehP8ThrowBtn.addEventListener("click", function () {
+
+    Promise.resolve("User found.")
+
+        .then(function (ehP8UserMessage) {
+
+            // Show success message
+            console.log(ehP8UserMessage);
+
+            // Create an error inside then
+            throw new Error("User processing failed.");
+        })
+
+        .catch(function (ehP8ThenError) {
+
+            // Catch error from then
+            ehP8Result.textContent = "Then error: " + ehP8ThenError.message;
+        });
+});
+
+
+// 5. ERROR PROPAGATION
+
+ehP8PropagationBtn.addEventListener("click", function () {
+
+    Promise.resolve("Start")
+
+        .then(function () {
+
+            // Create error
+            throw new Error("First step failed.");
+        })
+
+        .then(function () {
+
+            // This will not run
+            console.log("Second step");
+        })
+
+        .catch(function (ehP8PropagationError) {
+
+            // Catch propagated error
+            ehP8Result.textContent = "Propagation: " + ehP8PropagationError.message;
+        });
+});
+
+
+// 6. MULTIPLE CATCH
+
+ehP8MultipleCatchBtn.addEventListener("click", function () {
+
+    Promise.reject(new Error("First error."))
+
+        .catch(function (ehP8FirstError) {
+
+            // Handle first error
+            console.log( "First catch:", ehP8FirstError.message);
+
+            // Throw a new error
+            throw new Error("Second error.");
+        })
+
+        .catch(function (ehP8SecondError) {
+
+            // Handle second error
+            ehP8Result.textContent = "Second catch: " + ehP8SecondError.message;
+        });
+});
+
+// 7. PROMISE.ALL()
+
+ehP8AllBtn.addEventListener("click", function () {
+
+    let ehP8AllTaskOne = Promise.resolve("Task 1 complete.");
+
+    let ehP8AllTaskTwo = Promise.resolve("Task 2 complete.");
+
+    let ehP8AllTaskThree = Promise.reject(
+        new Error("Task 3 failed.")
+    );
+
+
+    Promise.all([ ehP8AllTaskOne, ehP8AllTaskTwo, ehP8AllTaskThree ])
+
+    .then(function (ehP8AllResults) {
+
+        // Run when all Promises succeed
+        ehP8Result.textContent = ehP8AllResults.join(" | ");
+    })
+
+    .catch(function (ehP8AllError) {
+
+        // One rejection makes Promise.all reject
+        ehP8Result.textContent = "Promise.all Error: " + ehP8AllError.message;
+    });
+});
+
+
+// 8. PROMISE.ALLSETTLED()
+
+ehP8AllSettledBtn.addEventListener("click", function () {
+
+    let ehP8SettledOne = Promise.resolve("User loaded.");
+
+    let ehP8SettledTwo = Promise.reject( new Error("Orders failed.") );
+
+
+    Promise.allSettled([ ehP8SettledOne, ehP8SettledTwo ])
+
+    .then(function (ehP8SettledResults) {
+
+        // Convert results into readable text
+        let ehP8SettledOutput = ehP8SettledResults.map(function (ehP8Item) {
+
+                return ehP8Item.status;
+            });
+
+        ehP8Result.textContent = "Results: " + ehP8SettledOutput.join(" | ");
+    });
+});
+
+// 9. PROMISE.RACE()
+
+ehP8RaceBtn.addEventListener("click", function () {
+
+    let ehP8RaceOne = new Promise(function (resolve) {
+
+        setTimeout(function () {
+
+            resolve("Server 1 success.");
+        }, 1000);
+    });
+
+
+    let ehP8RaceTwo = new Promise(function (resolve, reject) {
+
+        setTimeout(function () {
+
+            reject(new Error("Server 2 failed first."));
+        }, 500);
+    });
+
+
+    Promise.race([ ehP8RaceOne, ehP8RaceTwo ])
+
+    .then(function (ehP8RaceResult) {
+
+        // First settled Promise succeeded
+        ehP8Result.textContent = ehP8RaceResult;
+    })
+
+    .catch(function (ehP8RaceError) {
+
+        // First settled Promise rejected
+        ehP8Result.textContent = "Race Error: " + ehP8RaceError.message;
+    });
+});
+
+// 10. PROMISE.ANY()
+
+ehP8AnyBtn.addEventListener("click", function () {
+
+    let ehP8AnyOne = Promise.reject( new Error("Server 1 failed.") );
+
+    let ehP8AnyTwo = Promise.reject( new Error("Server 2 failed."));
+
+    let ehP8AnyThree = Promise.resolve( "Server 3 success." );
+
+
+    Promise.any([ ehP8AnyOne, ehP8AnyTwo, ehP8AnyThree ])
+
+    .then(function (ehP8AnyResult) {
+
+        // First fulfilled Promise wins
+        ehP8Result.textContent = "Any: " + ehP8AnyResult;
+    })
+
+    .catch(function (ehP8AnyError) {
+
+        // Runs only when all Promises reject
+        ehP8Result.textContent =
+            ehP8AnyError.name;
+    });
+});
+
+// 11. AGGREGATEERROR
+
+ehP8AggregateBtn.addEventListener("click", function () {
+
+    Promise.any([
+
+        Promise.reject( new Error("Server 1 failed.")),
+
+        Promise.reject(new Error("Server 2 failed.")),
+
+        Promise.reject( new Error("Server 3 failed."))
+
+    ])
+
+    .catch(function (ehP8AggregateError) {
+
+        // All Promises rejected
+        console.log( ehP8AggregateError.name );
+
+        // Show all errors
+        console.log( ehP8AggregateError.errors );
+
+        ehP8Result.textContent = ehP8AggregateError.name +" - All Promises rejected.";
+    });
+});
+
