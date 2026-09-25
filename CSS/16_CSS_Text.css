@@ -1,0 +1,151 @@
+
+
+   /* Common Section Styling */
+
+.cssTextMainTitle {
+    text-align: center;                 /* Centers the main heading */
+}
+
+
+   /* 1. text-align */
+
+.textAlignDemo {
+    width: 500px;                       /* Sets the paragraph width */
+    text-align: center;                 /* Centers the text */
+}
+
+
+   /* 2. text-align-last */
+
+.textAlignLastDemo {
+    width: 350px;                       /* Sets the paragraph width */
+    text-align: justify;                /* Justifies normal lines */
+    text-align-last: center;            /* Centers the last line */
+}
+
+
+   /* 3. text-decoration */
+
+.textDecorationDemo {
+    text-decoration: underline;         /* Adds an underline */
+}
+
+
+   /* 4. text-decoration-line */
+
+.textDecorationLineDemo {
+    text-decoration-line: underline overline; /* Adds lines above and below */
+}
+
+
+   /* 5. text-decoration-color */
+
+.textDecorationColorDemo {
+    text-decoration-line: underline;    /* Adds an underline */
+    text-decoration-color: red;         /* Makes the underline red */
+}
+
+
+   /* 6. text-decoration-style */
+
+.textDecorationStyleDemo {
+    text-decoration-line: underline;    /* Adds an underline */
+    text-decoration-style: wavy;       /* Makes the underline wavy */
+}
+
+
+   /* 7. text-decoration-thickness */
+
+.textDecorationThicknessDemo {
+    text-decoration-line: underline;    /* Adds an underline */
+    text-decoration-thickness: 4px;     /* Makes the underline 4px thick */
+}
+
+
+   /* 8. text-transform */
+
+.textTransformDemo {
+    text-transform: uppercase;          /* Converts text to uppercase */
+}
+
+
+   /* 9. text-indent */
+
+.textIndentDemo {
+    width: 350px;                       /* Sets the paragraph width */
+    text-indent: 40px;                  /* Moves the first line 40px */
+}
+
+
+   /* 10. text-shadow */
+
+.textShadowDemo {
+    text-shadow: 2px 2px 4px gray;     /* Adds shadow to the text */
+}
+
+   /* 11. letter-spacing */
+
+.letterSpacingDemo {
+    letter-spacing: 5px;                /* Adds space between letters */
+}
+
+
+   /* 12. word-spacing */
+
+.wordSpacingDemo {
+    word-spacing: 15px;                 /* Adds space between words */
+}
+
+
+   /* 13. line-height */
+
+.lineHeightDemo {
+    width: 300px;                       /* Sets the paragraph width */
+    line-height: 2;                     /* Adds vertical space between lines */
+}
+
+   /* 14. white-space */
+
+.whiteSpaceDemo {
+    white-space: pre;                   /* Preserves extra spaces */
+}
+
+   /* 15. word-break */
+
+.wordBreakDemo {
+    width: 180px;                       /* Sets a small container width */
+    border: 1px solid black;            /* Shows the container boundary */
+    word-break: break-all;              /* Allows words to break anywhere */
+}
+
+   /* 16. overflow-wrap */
+
+.overflowWrapDemo {
+    width: 180px;                       /* Sets the container width */
+    border: 1px solid black;            /* Shows the container boundary */
+    overflow-wrap: break-word;         /* Breaks long words when needed */
+}
+
+   /* 17. text-overflow */
+
+.textOverflowDemo {
+    width: 220px;                       /* Sets the container width */
+    white-space: nowrap;                /* Keeps text on one line */
+    overflow: hidden;                   /* Hides extra text */
+    text-overflow: ellipsis;            /* Shows three dots for hidden text */
+}
+
+
+   /* 18. direction */
+
+.directionDemo {
+    direction: rtl;                     /* Changes text direction right-to-left */
+}
+
+
+   /* 19. unicode-bidi */
+
+.unicodeBidiDemo {
+    direction: rtl;                     /* Sets right-to-left text direction */
+    unicode-bidi: embed;                /* Embeds the text direction */
+}
