@@ -70,3 +70,11 @@ border-radius: 5px;
     padding: 8px 12px;
     border-radius: 5px;
 }
+
+.todoContainer .todo .saveBtn{
+    display: none;
+}
+
+.todoContainer .todo #editInput{
+    display: none;
+}
