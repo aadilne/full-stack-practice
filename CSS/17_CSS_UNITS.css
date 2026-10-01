@@ -1,0 +1,404 @@
+
+   /* CSS UNITS  */
+  
+
+
+/* ---------- Root ---------- */
+
+html {
+    font-size: 16px; /* Sets the root font size for rem */
+}
+
+
+/* ---------- Global Reset ---------- */
+
+* {
+    box-sizing: border-box; /* Includes padding and border inside element size */
+}
+
+
+/* ---------- Body ---------- */
+
+body {
+    margin: 0; /* Removes browser default margin */
+    min-height: 100vh; /* Makes body at least full screen height */
+    background: #f3f6fb; /* Creates a soft background */
+    color: #1f2937; /* Sets default text color */
+    font-family: Arial, sans-serif; /* Sets the default font */
+}
+
+
+/* ---------- Main Container ---------- */
+
+.unitsPhaseContainer {
+    width: min(1100px, 92%); /* Keeps content responsive */
+    margin: 40px auto; /* Centers the complete content */
+}
+
+
+   /* HERO SECTION */
+
+.unitsHeroSection {
+    padding: 55px 30px; /* Adds space inside hero */
+    margin-bottom: 30px; /* Adds space below hero */
+    text-align: center; /* Centers all hero content */
+    background: linear-gradient(135deg, #172554, #1e3a8a); /* Creates a modern gradient */
+    border-radius: 24px; /* Rounds hero corners */
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18); /* Adds a soft shadow */
+}
+
+
+.unitsHeroBadge {
+    display: inline-block; /* Allows padding around badge */
+    padding: 8px 16px; /* Adds badge spacing */
+    margin-bottom: 15px; /* Adds space below badge */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Adds a soft border */
+    border-radius: 50px; /* Creates pill shape */
+    background: rgba(255, 255, 255, 0.1); /* Creates transparent badge */
+    color: #dbeafe; /* Sets badge text color */
+    font-size: 13px; /* Sets small badge text */
+    font-weight: 700; /* Makes badge bold */
+    letter-spacing: 2px; /* Adds spacing between letters */
+}
+
+
+.unitsHeroTitle {
+    margin: 0; /* Removes default heading margin */
+    color: #ffffff; /* Makes heading white */
+    font-size: clamp(38px, 7vw, 68px); /* Creates responsive heading size */
+    font-weight: 800; /* Makes heading extra bold */
+    letter-spacing: -2px; /* Tightens large heading letters */
+}
+
+
+.unitsHeroText {
+    max-width: 650px; /* Limits paragraph width */
+    margin: 18px auto 0; /* Centers paragraph */
+    color: #dbeafe; /* Sets soft blue-white text */
+    font-size: 17px; /* Sets readable text size */
+    line-height: 1.7; /* Improves paragraph spacing */
+}
+
+
+   /* LESSON CARD */
+
+.unitsLessonCard {
+    position: relative; /* Creates positioning context */
+    overflow: hidden; /* Keeps decorative elements inside card */
+    margin-bottom: 22px; /* Adds space between cards */
+    padding: 30px; /* Adds inner card spacing */
+    background: #ffffff; /* Creates white card */
+    border: 1px solid #e5e7eb; /* Adds a light border */
+    border-radius: 20px; /* Rounds card corners */
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06); /* Adds a soft shadow */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Makes hover smooth */
+}
+
+
+.unitsLessonCard:hover {
+    transform: translateY(-4px); /* Moves card slightly upward */
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.1); /* Makes shadow stronger */
+}
+
+
+.unitsLessonCard h2 {
+    margin: 0 0 10px; /* Adds space below heading */
+    color: #111827; /* Sets heading color */
+    font-size: 23px; /* Sets heading size */
+    font-weight: 700; /* Makes heading bold */
+}
+
+
+.unitsDescription {
+    margin: 0 0 22px; /* Adds space below description */
+    color: #64748b; /* Sets secondary text color */
+    font-size: 15px; /* Sets description size */
+    line-height: 1.6; /* Improves readability */
+}
+
+
+.unitsCardNumber {
+    position: absolute; /* Positions number inside card */
+    top: 20px; /* Places number from top */
+    right: 25px; /* Places number from right */
+    color: #dbeafe; /* Sets light number color */
+    font-size: 48px; /* Makes number large */
+    font-weight: 800; /* Makes number bold */
+    line-height: 1; /* Keeps number compact */
+}
+
+
+   /* 1. PX */
+
+.unitsPxBox {
+    width: 300px; /* Sets fixed width using px */
+    max-width: 100%; /* Prevents overflow on small screens */
+    padding: 18px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #e0f2fe; /* Adds light blue background */
+    color: #075985; /* Sets blue text */
+    font-size: 20px; /* Sets text size in px */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers the text */
+}
+
+
+   /* 2. PERCENTAGE */
+
+.unitsPercentParent {
+    width: 100%; /* Parent takes full available width */
+    padding: 8px; /* Adds inner spacing */
+    background: #f1f5f9; /* Gives parent a light background */
+    border-radius: 14px; /* Rounds parent corners */
+}
+
+
+.unitsPercentChild {
+    width: 70%; /* Child takes 70% of parent width */
+    padding: 16px; /* Adds inner spacing */
+    border-radius: 10px; /* Rounds child corners */
+    background: #dbeafe; /* Adds light blue background */
+    color: #1e40af; /* Sets blue text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 3. EM */
+
+.unitsEmParent {
+    font-size: 20px; /* Sets parent font size */
+}
+
+
+.unitsEmChild {
+    padding: 1em; /* Padding is relative to current font size */
+    border-radius: 12px; /* Rounds the box */
+    background: #dcfce7; /* Adds light green background */
+    color: #166534; /* Sets green text */
+    font-size: 1.5em; /* Makes text 1.5 times the parent font size */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* 4. REM */
+
+.unitsRemBox {
+    padding: 1rem; /* Padding uses root font size */
+    border-radius: 12px; /* Rounds the box */
+    background: #fef3c7; /* Adds light yellow background */
+    color: #92400e; /* Sets dark orange text */
+    font-size: 2rem; /* Makes text two times the root size */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* 5. VW */
+
+.unitsVwBox {
+    width: 40vw; /* Width is 40% of viewport width */
+    max-width: 100%; /* Prevents overflow */
+    padding: 18px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #ede9fe; /* Adds light purple background */
+    color: #5b21b6; /* Sets purple text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 6. VH */
+
+.unitsVhBox {
+    height: 20vh; /* Height is 20% of viewport height */
+    display: flex; /* Enables flex alignment */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border-radius: 16px; /* Rounds the box */
+    background: #fce7f3; /* Adds light pink background */
+    color: #9d174d; /* Sets dark pink text */
+    font-size: 20px; /* Sets text size */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* 7. VMIN */
+
+.unitsVminBox {
+    width: 20vmin; /* Uses 20% of the smaller viewport dimension */
+    height: 20vmin; /* Uses 20% of the smaller viewport dimension */
+    display: flex; /* Enables center alignment */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    border-radius: 18px; /* Rounds the box */
+    background: #cffafe; /* Adds light cyan background */
+    color: #155e75; /* Sets dark cyan text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 8. VMAX */
+
+.unitsVmaxBox {
+    width: 20vmax; /* Uses 20% of the larger viewport dimension */
+    height: 80px; /* Gives the example a visible height */
+    display: flex; /* Enables center alignment */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    border-radius: 16px; /* Rounds the box */
+    background: #ffedd5; /* Adds light orange background */
+    color: #9a3412; /* Sets dark orange text */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* 9. CH */
+
+.unitsChText {
+    width: 45ch; /* Limits width based on character size */
+    max-width: 100%; /* Prevents overflow on small screens */
+    margin: 0; /* Removes default paragraph margin */
+    padding: 18px; /* Adds inner spacing */
+    border-left: 5px solid #6366f1; /* Adds a visual indicator */
+    background: #eef2ff; /* Adds light indigo background */
+    color: #3730a3; /* Sets indigo text */
+    line-height: 1.7; /* Improves paragraph readability */
+}
+
+
+   /* 10. EX */
+
+.unitsExBox {
+    padding: 15px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #f0fdf4; /* Adds light green background */
+    color: #166534; /* Sets green text */
+    font-size: 3ex; /* Uses the x-height of the current font */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* 11. CM */
+
+.unitsCmBox {
+    width: 5cm; /* Sets width using centimeters */
+    max-width: 100%; /* Prevents overflow */
+    padding: 16px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #fef2f2; /* Adds light red background */
+    color: #991b1b; /* Sets dark red text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 12. MM */
+
+.unitsMmBox {
+    width: 50mm; /* Sets width using millimeters */
+    max-width: 100%; /* Prevents overflow */
+    padding: 16px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #f5f3ff; /* Adds light violet background */
+    color: #6d28d9; /* Sets violet text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 13. IN */
+
+.unitsInBox {
+    width: 2in; /* Sets width using inches */
+    max-width: 100%; /* Prevents overflow */
+    padding: 16px; /* Adds inner spacing */
+    border-radius: 12px; /* Rounds the box */
+    background: #ecfdf5; /* Adds light emerald background */
+    color: #047857; /* Sets dark green text */
+    font-weight: 700; /* Makes text bold */
+    text-align: center; /* Centers text */
+}
+
+
+   /* 14. PT / PC */
+
+.unitsPtText {
+    margin: 0 0 10px; /* Adds space below point example */
+    color: #1d4ed8; /* Sets blue text */
+    font-size: 18pt; /* Sets font size using points */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+.unitsPcText {
+    margin: 0; /* Removes default paragraph margin */
+    color: #7c3aed; /* Sets purple text */
+    font-size: 2pc; /* Sets font size using picas */
+    font-weight: 700; /* Makes text bold */
+}
+
+
+   /* QUICK SUMMARY */
+
+.unitsSummaryCard {
+    margin-top: 30px; /* Adds space above summary */
+    padding: 30px; /* Adds inner spacing */
+    border-radius: 20px; /* Rounds summary corners */
+    background: #111827; /* Creates dark summary card */
+    color: #ffffff; /* Makes text white */
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15); /* Adds shadow */
+}
+
+
+.unitsSummaryCard h2 {
+    margin: 0 0 22px; /* Adds space below summary heading */
+    font-size: 25px; /* Sets heading size */
+}
+
+
+.unitsSummaryGrid {
+    display: grid; /* Creates a grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    gap: 12px; /* Adds gap between items */
+}
+
+
+.unitsSummaryGrid span {
+    padding: 14px 16px; /* Adds item spacing */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Adds subtle border */
+    border-radius: 10px; /* Rounds item corners */
+    background: rgba(255, 255, 255, 0.06); /* Adds transparent background */
+    color: #e5e7eb; /* Sets item text color */
+}
+
+
+   /* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+
+    .unitsPhaseContainer {
+        width: 94%; /* Gives more width on small screens */
+        margin: 20px auto; /* Reduces outer spacing */
+    }
+
+    .unitsHeroSection {
+        padding: 40px 20px; /* Reduces hero spacing */
+    }
+
+    .unitsLessonCard {
+        padding: 24px 20px; /* Reduces card spacing */
+    }
+
+    .unitsVwBox {
+        width: 80vw; /* Makes vw example easier to see on mobile */
+    }
+
+    .unitsVmaxBox {
+        width: 70vw; /* Prevents very large box on small screens */
+    }
+
+    .unitsSummaryGrid {
+        grid-template-columns: 1fr; /* Changes summary to one column */
+    }
+}
