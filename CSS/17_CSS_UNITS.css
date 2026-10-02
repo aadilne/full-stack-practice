@@ -356,7 +356,7 @@ body {
     font-size: 25px; /* Sets heading size */
 }
 
-
+ 
 .unitsSummaryGrid {
     display: grid; /* Creates a grid layout */
     grid-template-columns: repeat(2, 1fr); /* Creates two columns */
