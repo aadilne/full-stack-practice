@@ -1,0 +1,171 @@
+:root {
+    --fnMainColor: #2563eb; /* Stores the main color */
+}
+
+* {
+    box-sizing: border-box; /* Includes padding and border in size */
+}
+
+body {
+    margin: 0;          /* Removes default margin */
+    padding: 30px;      /* Adds page spacing */
+    background: #f1f5f9; 
+    font-family: Arial, sans-serif; /* Sets font */
+}
+
+.fnPhaseWrap {
+    width: min(900px, 100%); /* Uses smaller value */
+    margin: auto; /* Centers the content */
+}
+
+.fnPhaseTitle {
+    margin-bottom: 30px;            /* Adds space below title */
+    color: var(--fnMainColor);      /* Uses CSS variable */
+    text-align: center;             
+    font-size: clamp(32px, 6vw, 55px); /* Responsive title size */
+}
+
+.fnCard {
+    margin-bottom: 18px; 
+    padding: 24px; 
+    background: #ffffff; 
+    border-radius: 16px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07); 
+}
+
+.fnCard h2 {
+    margin-top: 0; 
+    color: #1e293b; 
+}
+
+
+/* 1. calc() */
+/* 100% me se 40px minus karega. */
+
+.fnCalcBox {
+    width: calc(100% - 40px); /* Calculates width */
+    padding: 18px; 
+    background: #dbeafe; 
+    color: #1e40af; 
+    text-align: center; 
+}
+
+
+/* 2. min() */
+/* 700px aur 90% me jo chhota hoga, wahi use hoga. */
+
+.fnMinBox {
+    width: min(700px, 90%); 
+    padding: 18px; 
+    background: #dcfce7; 
+    color: #166534; 
+    text-align: center; 
+}
+
+
+/* 3. max() */
+/* 300px aur 50% me jo bada hoga, wahi use hoga. */
+.fnMaxBox {
+    width: max(300px, 50%); /* Uses larger value */
+    padding: 18px; 
+    background: #fef3c7; 
+    color: #92400e; 
+    text-align: center; 
+}
+
+
+/* 4. clamp() */
+/* Size 20px se kam aur 50px se zyada nahi hoga. */
+.fnClampBox {
+    padding: 18px; 
+    background: #ede9fe; 
+    color: #6d28d9; 
+    font-size: clamp(20px, 5vw, 50px); /* Keeps size between limits */
+    text-align: center; 
+}
+
+
+/* 5. var() */
+
+.fnVarBox {
+    padding: 18px; 
+    background: var(--fnMainColor);             /* Uses CSS variable */
+    color: #ffffff; 
+    text-align: center; 
+}
+
+
+/* 6. url() */
+
+.fnUrlBox {
+    padding: 60px 20px; 
+    background-image: url("image.jpg"); /* Loads image from path */
+    background-size: cover;         /* Covers the complete box */
+    background-position: center;    /* Centers the image */
+    color: #ffffff;                 /* Sets white text */
+    text-align: center;             /* Centers text */
+}
+
+
+/* 7. rgb() */
+
+.fnRgbBox {
+    padding: 18px; 
+    background: rgb(37, 99, 235); /* Creates blue using RGB */
+    color: rgb(255, 255, 255); /* Creates white using RGB */
+    text-align: center; 
+}
+
+
+/* 8. rgba() */
+
+.fnRgbaBox {
+    padding: 18px; 
+    background: rgba(37, 99, 235, 0.4); /* Creates transparent blue */
+    text-align: center; 
+}
+
+
+/* 9. hsl() */
+/* Hue, Saturation, Lightness se color banata hai. */
+.fnHslBox {
+    padding: 18px;
+    background: hsl(220, 80%, 55%); /* Creates blue using HSL */
+    color: hsl(0, 0%, 100%); /* Creates white using HSL */
+    text-align: center; 
+}
+
+
+/* 10. hsla() */
+/* Hue, Saturation, Lightness se color banata hai. */
+.fnHslaBox {
+    padding: 18px; 
+    background: hsla(220, 80%, 55%, 0.4); /* Creates transparent blue */
+    text-align: center; 
+}
+
+
+/* :is() */
+.card:is(.red, .blue) {
+    color: red; /* Selects red or blue card */
+}
+
+/* :where() */
+.card:where(.red, .blue) {
+    background: lightblue; /* Selects red or blue card */
+}
+
+/* :has() */
+.card:has(img) {
+    border: 2px solid green; /* Selects card containing image */
+}
+
+/* :not() */
+.card:not(.active) {
+    opacity: 0.6; /* Selects cards except active */
+}
+
+/* :scope */
+.selectorDemo:scope > .card {
+    padding: 15px; /* Selects direct cards inside current box */
+}
