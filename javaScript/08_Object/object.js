@@ -1457,4 +1457,16 @@ student10.introduce();
 
 }
 
+function getData(data) {          // ← yahan `data` parameter hai
+    return {
+        name: 'Aadil Nezam',
+        data: data                // yahan parameter ki value use ho rahi hai
+    }
+}
+
+// Function call karte waqt argument de rahe ho:
+console.log(getData(1));   // { name: 'Aadil Nezam', data: 1 }
+console.log(getData(100)); // { name: 'Aadil Nezam', data: 100 }
+console.log(getData("hello")); // { name: 'Aadil Nezam', data: "hello" }
+
 

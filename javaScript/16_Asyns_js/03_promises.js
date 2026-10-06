@@ -44,19 +44,19 @@ promise.then((data) => {
 // })
 
 
-let p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject({
-            name: "arish shekh",
-        })
-    }, 5000);
-})
+// let p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject({
+//             name: "arish shekh",
+//         })
+//     }, 5000);
+// })
 
-p1.then((data) => {
-    console.log(data);
-}).catch((err) => {
-    console.error(err);
-})
+// p1.then((data) => {
+//     console.log(data);
+// }).catch((err) => {
+//     console.error(err);
+// })
 
 
 // function fetchData() {
@@ -99,15 +99,15 @@ p1.then((data) => {
 //     })
 
 
-// let response = fetch('https://jsonplaceholder.typicode.com/users');
-// response
-//     .then(data => {
-//         console.log(data)
-//         return fetch('https://jsonplaceholder.typicode.com/users');
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
+let response = fetch('https://jsonplaceholder.typicode.com/users');
+response
+    .then(data => {
+        console.log(data)
+        return fetch('https://jsonplaceholder.typicode.com/users');
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch(err => {
+        console.log(err)
+    })
