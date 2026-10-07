@@ -1,0 +1,54 @@
+.storage-panel {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.storage-panel input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.storage-panel button {
+    padding: 8px 14px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#phaseTwoResultText {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* session storage */
+.session-box {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.session-box input {
+    width: 90%;
+    padding: 10px;
+}
+
+.session-box button {
+    padding: 8px 14px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#sessionOutputText {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* String, Number & Boolean Data */
