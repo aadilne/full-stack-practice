@@ -52,3 +52,43 @@
 }
 
 /* String, Number & Boolean Data */
+.type-storage-box {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.type-storage-box button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#typeOutputText {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* object and array and JSON.stringify() and JSON.parse() */
+.phase-five-storage-panel {
+    width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.phase-five-storage-panel button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#phaseFiveOutputText {
+    margin-top: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,1 @@
+console.log("Spread and Rest Operators in JavaScript");
