@@ -1,0 +1,126 @@
+
+/* Main container */
+.trnPhaseWrap {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+/* Heading */
+.trnPhaseTitle {
+    text-align: center;
+    color: #1e293b;
+}
+
+.trnPhaseInfo {
+    text-align: center;
+    color: #64748b;
+}
+
+/* Cards layout */
+.trnGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.trnCard {
+    padding: 15px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.trnCard h3 {
+    font-size: 15px;
+    color: #334155;
+}
+
+/* Common box */
+.trnBox {
+    padding: 18px 8px;
+    margin: 15px auto;
+    color: white;
+    background: #2563eb;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 1. Transition property */
+.trnProperty {
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.trnProperty:hover {
+    background-color: green;
+}
+
+/* 2. Transition duration */
+.trnDuration {
+    transition: background-color 2s;
+}
+
+.trnDuration:hover {
+    background-color: orange;
+}
+
+/* 3. Transition timing function */
+.trnTiming {
+    transition: transform 1s ease-in-out;
+}
+
+.trnTiming:hover {
+    transform: translateX(15px);
+}
+
+/* 4. Transition delay */
+.trnDelay {
+    transition: background-color 1s;
+    transition-delay: 0.5s;
+}
+
+.trnDelay:hover {
+    background-color: purple;
+}
+
+/* 5. Shorthand */
+.trnShort {
+    transition: background-color 1s ease;
+}
+
+.trnShort:hover {
+    background-color: crimson;
+}
+
+/* 6. Timing function */
+.trnEase {
+    transition: transform 1s ease-in;
+}
+
+.trnEase:hover {
+    transform: scale(1.1);
+}
+
+/* 7. Hover effect */
+.trnHoverBox {
+    transition: background-color 0.5s;
+}
+
+.trnHoverBox:hover {
+    background-color: #0f766e;
+}
+
+/* 8. Multiple transitions */
+.trnMultiple {
+    transition: background-color 1s, transform 0.5s;
+}
+
+.trnMultiple:hover {
+    background-color: #db2777;
+    transform: scale(1.1);
+}

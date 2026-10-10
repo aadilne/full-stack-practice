@@ -1,0 +1,137 @@
+/* Main container */
+.anPhaseWrap {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+/* Heading */
+.anPhaseTitle {
+    text-align: center;
+    color: #1e293b;
+}
+
+.anPhaseInfo {
+    text-align: center;
+    color: #64748b;
+}
+
+/* Cards layout */
+.anGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.anCard {
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.anCard h3 {
+    color: #334155;
+    font-size: 15px;
+}
+
+/* Animation track */
+.anTrack {
+    padding: 8px;
+    background: #e2e8f0;
+    border-radius: 8px;
+}
+
+/* Common animated box */
+.anBox {
+    width: 90px;
+    padding: 12px 4px;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 1. Keyframes */
+/* Animation mein element kaise change hoga, ye define karta hai. */
+@keyframes anMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(50px); }
+}
+
+.anKey {
+    animation: anMove 2s infinite alternate;
+}
+
+/* 2. Animation name */
+@keyframes anFade {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+.anName {
+    animation-name: anFade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* 3. Duration */
+@keyframes anColor {
+    from { background: #2563eb; }
+    to { background: #16a34a; }
+}
+
+.anDuration {
+    animation: anColor 2s infinite alternate;
+}
+
+/* 4. Timing function */
+.anTiming {
+    animation: anMove 2s ease-in-out infinite alternate;
+}
+
+/* 5. Delay */
+.anDelay {
+    animation: anColor 2s ease 1s infinite alternate;
+}
+
+/* 6. Iteration count */
+.anCount {
+    animation: anMove 1s ease 3 alternate;
+}
+
+/* 7. Direction */
+.anDirection {
+    animation: anMove 1s ease-in-out 3 alternate;
+}
+
+/* 8. Fill mode */
+@keyframes anFinish {
+    from { transform: translateX(0); }
+    to { transform: translateX(35px); background: #16a34a; }
+}
+/* Animation khatam hone ke baad final style ko maintain karta hai. */
+.anFill {
+    animation: anFinish 2s forwards;
+}
+
+/* 9. Play state */
+.anPlay {
+    animation: anMove 2s infinite alternate;
+    animation-play-state: running;
+}
+
+.anPlay:hover {
+    animation-play-state: paused; /* Pauses animation on hover */
+}
+
+/* 10. Shorthand */
+.anShort {
+    animation: anColor 2s ease-in-out 0s 3 alternate;
+}

@@ -1,0 +1,94 @@
+/* Main container */
+.trPhaseWrap {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+/* Main heading */
+.trPhaseTitle {
+    text-align: center;
+    color: #1e293b;
+}
+
+/* Cards layout */
+.trGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+    /*minmax(220px, 1fr)Har column ka minimum size 220px hoga, aur maximum 1fr (available space ko equal divide karega)*/
+    /* auto-fitAvailable space ke hisaab se jitne columns fit ho sakte hain, utne automatically bana deta hai */
+    gap: 25px;
+}
+
+/* Individual card */
+.trCard {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.trCard h3 {
+    color: #334155;
+    font-size: 16px;
+}
+
+/* Common box style */
+.trBox {
+    width: 100px;
+    height: 70px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #2563eb;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* 1. Move in both directions */
+.trTranslate {
+    transform: translate(15px, 5px);
+}
+
+/* 2. Move horizontally */
+.trTranslateX {
+    transform: translateX(15px);
+}
+
+/* 3. Move vertically */
+.trTranslateY {
+    transform: translateY(10px);
+}
+
+/* 4. Increase size */
+.trScale {
+    transform: scale(1.1);
+}
+
+/* 5. Rotate the box */
+.trRotate {
+    transform: rotate(15deg);
+}
+
+/* 6. Slant the box */
+.trSkew {
+    transform: skew(10deg, 3deg);
+}
+
+/* 7. Set transformation starting point */
+.trOrigin {
+    transform: rotate(15deg);
+    transform-origin: top left;
+    /* → Decide karta hai ki transform kis point se hoga. */
+}
+
+/* 8. Move using matrix */
+.trMatrix {
+    transform: matrix(1, 0, 0, 1, 10, 0);
+}

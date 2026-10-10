@@ -1,0 +1,119 @@
+
+/* Main container */
+.sfPhaseWrap {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+/* Heading */
+.sfPhaseTitle {
+    text-align: center;
+    color: #1e293b;
+    text-shadow: 1px 1px 2px #cbd5e1; /* Adds a soft heading shadow */
+}
+
+.sfPhaseInfo {
+    text-align: center;
+    color: #64748b;
+}
+
+/* Cards layout */
+.sfGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.sfCard {
+    min-height: 150px;
+    padding: 16px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.sfCard h3 {
+    font-size: 15px;
+    color: #334155;
+}
+
+/* 1. Box shadow */
+.sfBox {
+    padding: 25px 10px;
+    background: #dbeafe;
+    border-radius: 8px;
+}
+
+.sfBoxShadow {
+    box-shadow: 4px 4px 10px gray;
+}
+
+/* 2. Text shadow */
+.sfTextShadow {
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+    text-shadow: 3px 3px 4px #94a3b8;
+}
+
+/* Common sample boxes */
+.sfSample {
+    padding: 28px 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #f43f5e);
+}
+
+/* 3. Blur */
+/* Image ya element ko dhundhla karta hai. */
+.sfBlur {
+    filter: blur(3px);
+}
+
+/* 4. Brightness */
+.sfBrightness {
+    filter: brightness(1.5);
+}
+
+/* 5. Contrast */
+.sfContrast {
+    filter: contrast(150%);
+}
+
+/* 6. Grayscale */
+.sfGrayscale {
+    filter: grayscale(100%);
+}
+
+/* 7. Sepia */
+.sfSepia {
+    filter: sepia(100%);
+}
+
+/* 8. Saturate */
+.sfSaturate {
+    filter: saturate(200%);
+}
+
+/* 9. Opacity */
+.sfOpacity {
+    filter: opacity(50%);
+}
+
+/* 10. Drop shadow */
+.sfDropShape {
+    width: 100px;
+    margin: 30px auto;
+    padding: 20px 5px;
+    color: white;
+    font-weight: bold;
+    background: #2563eb;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    filter: drop-shadow(4px 4px 5px gray);
+}
