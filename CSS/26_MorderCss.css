@@ -1,0 +1,137 @@
+/* Main page */
+.mdPhaseWrap {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 16px;
+}
+
+.mdTitle {
+    text-align: center;
+    color: #1e293b;
+}
+
+/* Common cards */
+.mdCard {
+    margin: 18px 0;
+    padding: 20px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.mdCard img {
+    width: 100%;
+    max-width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 1. is() and where() */
+.mdCard:is(.mdRed, .mdBlue) {
+    border-color: #2563eb;
+}
+
+/* 2. has() */
+.mdCard:has(img) {
+    background: #f0fdf4;
+}
+
+/* 3. CSS nesting */
+.mdNesting {
+    & h2 {
+        color: #2563eb;
+    }
+
+    & p {
+        color: #475569;
+    }
+}
+
+/* 4. Supports */
+@supports (display: grid) {
+    .mdSupport {
+        display: grid;
+        padding: 15px;
+        background: #dbeafe;
+    }
+}
+
+/* 5. Container queries */
+.mdContainer {
+    container-type: inline-size;
+    padding: 10px;
+    background: #e2e8f0;
+}
+
+@container (min-width: 400px) {
+    .mdContainerCard h2 {
+        font-size: 24px;
+        color: #15803d;
+    }
+}
+
+/* 6. Subgrid */
+.mdParentGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.mdSubItem {
+    padding: 15px;
+    background: #dbeafe;
+    border-radius: 6px;
+}
+
+/* Subgrid example */
+.mdSubItem:nth-child(1),
+.mdSubItem:nth-child(2) {
+    border: 1px solid #2563eb;
+}
+
+/* 7. Aspect ratio */
+.mdRatioBox {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    background: #bfdbfe;
+    border-radius: 8px;
+}
+
+/* 8. Smooth scroll */
+.mdPhaseWrap {
+    scroll-behavior: smooth;
+}
+
+.mdScrollSpace {
+    height: 100px;
+}
+
+/* 9. Scroll snap */
+.mdSlider {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.mdSlide {
+    flex: 0 0 80%;
+    padding: 35px 10px;
+    text-align: center;
+    background: #dbeafe;
+    border-radius: 8px;
+    scroll-snap-align: start;
+}
+
+/* 10. Accent color */
+.mdCheck {
+    accent-color: #16a34a;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}

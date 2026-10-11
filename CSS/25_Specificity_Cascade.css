@@ -1,0 +1,107 @@
+
+/* 7. Universal selector */
+* {
+    box-sizing: border-box; /* Includes padding and border in element width */
+}
+
+/* 9. Cascade layers */
+@layer base, theme;
+
+/* Base layer has lower priority than theme for normal declarations */
+@layer base {
+    .spLayer {
+        color: blue;
+    }
+}
+
+@layer theme {
+    .spLayer {
+        color: green;
+    }
+}
+
+/* Main layout */
+.spPhaseWrap {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    border-radius: 14px;
+}
+
+/* Heading */
+#spTitle {
+    text-align: center;
+    color: #1e293b;
+}
+
+/* Cards */
+.spCard {
+    margin: 16px 0;
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+}
+
+.spCard h2 {
+    color: #334155;
+    font-size: 18px;
+}
+
+/* 1. Cascade */
+.spCascade {
+    color: blue;
+}
+
+.spCascade {
+    color: green; /* Later equal-priority rule wins */
+}
+
+/* 2. Specificity */
+.spSpecific {
+    color: blue;
+}
+
+#spSpecific {
+    color: red; /* ID wins over class */
+}
+
+/* 3. External CSS */
+.spExternal {
+    color: teal;
+}
+
+/* 4. Important */
+.spImportant {
+    color: red !important;
+    color: blue; /* Normal declaration cannot override important */
+}
+
+/* 5. Inheritance */
+.spParent {
+    color: purple;
+}
+
+/* 6. Source order */
+.spOrder {
+    color: blue;
+}
+
+.spOrder {
+    color: red; /* Same specificity, later rule wins */
+}
+
+/* 8. Specificity calculation */
+#spBox .spText p {
+    color: green; /* Demonstrates a combined selector */
+}
+
+/* 10. Shorthand vs longhand */
+.spMarginBox {
+    margin: 10px;
+    margin-left: 20px; /* Overrides only the left margin */
+    padding: 15px;
+    background: #dbeafe;
+    border-radius: 8px;
+}

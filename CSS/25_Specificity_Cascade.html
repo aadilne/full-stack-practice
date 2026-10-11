@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="25_Specificity_Cascade.css">
+
+    <style>
+        .spInternal {
+            color: purple; /* Internal CSS example */
+        }
+    </style>
+
+</head>
+<body>
+    
+  <main class="spPhaseWrap">
+        <h1 id="spTitle">CSS Specificity & Cascade</h1>
+
+        <section class="spCard">
+            <h2>1. CSS Cascade</h2>
+            <p class="spCascade">Cascade example paragraph</p>
+        </section>
+
+        <section class="spCard">
+            <h2>2. Specificity</h2>
+            <p id="spSpecific" class="spSpecific">ID vs class example</p>
+        </section>
+
+        <section class="spCard">
+            <h2>3. CSS Types</h2>
+            <p style="color: red;">Inline CSS example</p>
+            <p class="spInternal">Internal CSS example</p>
+            <p class="spExternal">External CSS example</p>
+        </section>
+
+        <section class="spCard">
+            <h2>4. Important</h2>
+            <p class="spImportant">Important example</p>
+        </section>
+
+        <section class="spCard spParent">
+            <h2>5. Inheritance</h2>
+            <p>Child inherits the parent's text color.</p>
+        </section>
+
+        <section class="spCard">
+            <h2>6. Source Order</h2>
+            <p class="spOrder">Check my final color</p>
+        </section>
+
+        <section class="spCard">
+            <h2>7. Universal Selector</h2>
+            <p>All elements use border-box sizing.</p>
+        </section>
+
+        <section class="spCard">
+            <h2>8. Specificity Calculation</h2>
+            <div id="spBox">
+                <p class="spText">Combined selector example</p>
+            </div>
+        </section>
+
+        <section class="spCard">
+            <h2>9. Cascade Layers</h2>
+            <p class="spLayer">Layer example</p>
+        </section>
+
+        <section class="spCard">
+            <h2>10. Shorthand vs Longhand</h2>
+            <div class="spMarginBox">Margin example</div>
+        </section>
+    </main>
+
+
+</body>
+</html>
