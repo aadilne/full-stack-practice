@@ -1,0 +1,11 @@
+declare let age: number;
+declare let mk: number;
+declare const islogedin: boolean;
+declare let city: string;
+declare let score: number;
+declare let user: string;
+declare let price: number;
+declare let qty: number;
+declare let x: number, y: number;
+declare const tax: number;
+declare let cnt: number;

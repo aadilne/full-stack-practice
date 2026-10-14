@@ -1,5 +1,5 @@
 "use strict";
 let Kuka = "Aadil Nezam";
 console.log(Kuka);
-let num = 7782;
+let num = 778289;
 console.log(num);
