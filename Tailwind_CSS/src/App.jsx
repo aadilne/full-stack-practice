@@ -1,12 +1,14 @@
 
-import Selector from './Tailwind_css/Practice/01_Selectors'
+import App_Main from './CSS_All/App_Main';
 
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <Selector />
+
+      <App_Main />
+
     </div>
   )
 }
