@@ -1,0 +1,12 @@
+declare let ar1: number[];
+declare let ar2: string[];
+declare let ar3: number[];
+declare let ar4: boolean[];
+declare let ar5: Array<string>;
+declare let ar5b: Array<number>;
+declare let ar6: readonly number[];
+declare let tp7: [string, number];
+declare let tp8: [string, number, boolean];
+declare let tp9: [string, number?];
+declare let tp9b: [string, number?];
+declare let tp10: readonly [string, number];

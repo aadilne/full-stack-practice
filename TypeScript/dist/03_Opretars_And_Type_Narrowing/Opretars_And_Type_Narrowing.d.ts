@@ -1,0 +1,18 @@
+declare let a1: number;
+declare let b1: number;
+declare let a2: number;
+declare let b2: number;
+declare let a3: boolean;
+declare let b3: boolean;
+declare let n4: number;
+declare let s5: string;
+declare let n5: number;
+declare let b5: boolean;
+declare let v6: string | number;
+declare let s7: string | null;
+declare let e7: string;
+declare let v8: string | null;
+declare let e8: string | null;
+declare let v9: string | number;
+declare let v10: unknown;
+declare let s10: string;
