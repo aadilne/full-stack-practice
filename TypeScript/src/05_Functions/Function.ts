@@ -13,7 +13,7 @@ console.log(add1(10, 20)); // 30
 function greet2(n2: string): string {            // Accepts a string parameter
     return "Hello " + n2;      // Returns a greeting
 }
-console.log(greet2("Aadil")); // Prints Hello Aadil
+console.log(greet2("Aadil")); // Hello Aadil
 
 
 // Topic 3: Return Types
@@ -53,7 +53,7 @@ console.log(sum6(10, 20, 30)); // 60
 // Topic 7: Arrow Functions
 
 const sub7 = (a7: number, b7: number): number => a7 - b7; // Creates an arrow function
-console.log(sub7(20, 8)); // Prints 12
+console.log(sub7(20, 8)); // 12
 
 
 // Topic 8: Function Expressions
@@ -68,7 +68,7 @@ console.log(sq8(5)); //  25
 
 type Op9 = (a9: number, b9: number) => number; // Defines a function type
 
-const div9: Op9 = (a9, b9) => a9 / b9; // Uses the defined function type
+const div9 : Op9 = (a9, b9) => a9 / b9; // Uses the defined function type
 console.log(div9(20, 4)); //  5
 
 

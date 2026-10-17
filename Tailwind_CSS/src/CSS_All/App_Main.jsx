@@ -1,5 +1,8 @@
 
-import  Colors_Backgrounds_Borders from './Colors_Backgrounds_Borders/Colors_Backgrounds_Borders.jsx'
+import  Colors_Backgrounds_Borders from './01_Colors_Backgrounds_Borders/Colors_Backgrounds_Borders.jsx'
+import  SpacingAndSizing from './02_Spacing_And_Sizing/Spacing_And_Sizing.jsx'
+import Typography from './03_Typography/Typography.jsx'
+import FlexBox_and_Display from './04_FlexBox_and_Display/FlexBox_and_Display.jsx'
 
 function App_Main(){
 
@@ -8,6 +11,12 @@ function App_Main(){
         <div>
 
             <Colors_Backgrounds_Borders />
+
+            <SpacingAndSizing />
+
+            <Typography />
+
+            <FlexBox_and_Display/>
 
         </div>
     )

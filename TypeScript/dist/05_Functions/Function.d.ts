@@ -1,0 +1,16 @@
+declare function add1(a1: number, b1: number): number;
+declare function greet2(n2: string): string;
+declare function mul3(a3: number, b3: number): number;
+declare function info4(n4: string, a4?: number): string;
+declare function bill5(p5: number, q5?: number): number;
+declare function sum6(...ns6: number[]): number;
+declare const sub7: (a7: number, b7: number) => number;
+declare const sq8: (n8: number) => number;
+type Op9 = (a9: number, b9: number) => number;
+declare const div9: Op9;
+declare function calc10(a10: number, cb10: (n10: number) => number): number;
+declare function fmt11(n11: number): string;
+declare function fmt11(n11: string): string;
+declare function msg12(t12: string): void;
+declare function err13(): never;
+declare function total14(p14: number, q14: number): number;
