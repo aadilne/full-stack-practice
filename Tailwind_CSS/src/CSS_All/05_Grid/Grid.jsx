@@ -149,9 +149,9 @@ function Grid() {
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div className="col-span-1 bg-rose-200 p-4 sm:col-span-2 lg:col-span-2"> Featured Item </div>
+            <div className="col-span-1 bg-rose-200 p-4 sm:col-span-2 lg:col-span-3"> Featured Item </div>
 
-            <div className="bg-rose-300 p-4">Product 2</div>
+            <div className="bg-rose-300 p-4 ">Product 2</div>
             <div className="bg-rose-400 p-4">Product 3</div>
             <div className="bg-rose-200 p-4">Product 4</div>
           </div>
