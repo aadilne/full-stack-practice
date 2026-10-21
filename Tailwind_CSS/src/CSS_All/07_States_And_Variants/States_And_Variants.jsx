@@ -4,11 +4,11 @@ function    States_And_Variants(){
 
 
     return (
-        <div>
+        <div className="mx-20">
 
          <div className="min-h-screen space-y-8 bg-gray-100 p-6">
 
-      <h1 className="text-3xl font-bold text-blue-700">
+      <h1 className="text-5xl font-bold text-shadow-2xs text-shadow-white  bg-purple-700 text-black w-full p-4 rounded-lg text-center">
         Phase 8: States & Variants
       </h1>
 

@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+
+/* custom css  add */
+@keyframes wiggle {
+    0% , 100%{transform: rotate(-3deg);}
+    50% {transform: rotate(3deg);}
+}
+
+.animate-wiggle{
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Enabel dark them Phase - 12 */
+/* Enable manual dark mode using the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom brand colors */
+@theme {
+  --color-brand-500: #2563eb;
+  --color-brand-700: #1d4ed8;
+}
+
+
