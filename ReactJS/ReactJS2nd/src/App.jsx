@@ -7,9 +7,9 @@ function App() {
   
 
   return (
-    <>
+    <div className='bg-lime-700'>
       <Main_Component />
-    </>
+    </div>
   )
 }
 
