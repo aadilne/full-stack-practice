@@ -6,7 +6,9 @@ import ImportFile from "./03_ImportFile/ImportFile"
 import JsxPractice from "./04_JsxPractice/JsxPractice"
 import React_Icons from "./05_React_Icons/React_Icons"
 import Function_And_Events from "./06_Function_And_Events/Function_And_Events"
-
+import Array_And_Object from "./07_Array_And_Object/Array_And_Object"
+//import Conditional_Rendering from "./08_Conditional_Rendering/Conditional_Rendering"
+import LminCompo from "./08_Conditional_Rendering/LminCompo"
 
 
 
@@ -27,6 +29,13 @@ function    Main_Component(){
             <React_Icons />
 
             <Function_And_Events/>
+
+            <Array_And_Object />
+
+            {/* <Conditional_Rendering /> */}
+            <LminCompo />
+
+
 
         </div>
     )

@@ -24,6 +24,15 @@ function    Function_And_Events(){
 
     }
 
+    const TextClick = () => {
+        console.log("Double clicked on Paragraph");
+    }
+
+    const TextHovr = () => {
+        console.log("Mouse over on Pragraph");
+    }
+
+
     return(
         <div>
             <h1>Functin and Events</h1>
@@ -35,11 +44,13 @@ function    Function_And_Events(){
             <button onClick={AlertMessage}>Alert Button</button>
 
             <button onClick={() =>{alert("button click in line function")}}>inline button</button>
+
             
             <br />
 
             <input type="text" placeholder="Enter your Name:-" onChange={getValue} />
 
+            <p onDoubleClick={TextClick}  onMouseOver={TextHovr}>Text hover and clicked</p>
 
 
         </div>
