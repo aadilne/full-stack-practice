@@ -8,7 +8,7 @@ function    React_Icons(){
 
 
     return (
-        <div className="w-3xl h-50 rounded-2xl border">
+        <div className="w-2xl h-50 rounded-2xl border">
             <h1 className="text-center text-6xl bg-amber-400 text-purple-800 rounded-2xl">React Icons</h1>
             
             <div className="w-full h-full flex flex-row  justify-around gap-4 text-4xl mt-5"> 
