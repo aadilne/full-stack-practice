@@ -1,4 +1,6 @@
 import Form_Handling from "./Form_Handling";
+import Multiple_Form from "./Multiple_Form";
+import Advance_Form from "./Advance_Form";
 
 function  App_UseRef(){
 
@@ -7,6 +9,10 @@ function  App_UseRef(){
         <div>
 
             <Form_Handling />
+
+            <Multiple_Form />
+
+            <Advance_Form />
         </div>
     )
 }
