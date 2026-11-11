@@ -11,6 +11,7 @@ import Array_And_Object from "./07_Array_And_Object/Array_And_Object"
 //import Conditional_Rendering from "./08_Conditional_Rendering/Conditional_Rendering"
 import LminCompo from "./08_Conditional_Rendering/LminCompo"
 import App_UseRef from "./09_UseRef/App_UseRef"
+import App_UseEffect from "./10_UseEffect/App_UseEffect"
 
 
 
@@ -42,7 +43,7 @@ function    Main_Component(){
 
             <App_UseRef />
 
-            
+            <App_UseEffect />
 
 
 
