@@ -20,7 +20,7 @@ function D_API_Users() {
 
 
   return (
-    <div className="w-100 h-70 mx-35 pl-7  bg-gray-700">
+    <div className="w-100 h-80 rounded-2xl mx-35 pl-7  bg-gray-700">
         <h1>useEffect Practice</h1>
         <h1>API Users</h1>
         <h2>User List</h2>

@@ -13,6 +13,7 @@ import LminCompo from "./08_Conditional_Rendering/LminCompo"
 import App_UseRef from "./09_UseRef/App_UseRef"
 import App_UseEffect from "./10_UseEffect/App_UseEffect"
 import APP_React_Router from "./11_React_Router/App_React_Router"
+import App_useEffectEvent from "./12_UseEffectEvent/App_useEffectEvent"
 
 
 
@@ -47,6 +48,8 @@ function    Main_Component(){
             <App_UseEffect />
 
             <APP_React_Router />
+
+            <App_useEffectEvent />
 
 
 
