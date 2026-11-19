@@ -9,7 +9,9 @@ function      A_SingleValue(){
 
     return(
         <div>
-
+           <UserContext.Provider value={user}>
+            <Parent />
+            </UserContext.Provider> 
         </div>
     )
 }
@@ -20,6 +22,7 @@ function Parent(){
     return(
         <div>
 
+            <Child />
         </div>
     )
 }
@@ -28,16 +31,19 @@ function  Child(){
 
     return(
         <div>
-
+            <GrandChild />
         </div>
     )
 }
 
 function   GrandChild(){
 
+    const userA = useContext(UserContext)
+
     return(
         <div>
-
+            <p>useContext with single value</p>
+            <p>Single user Name : {userA}</p>
         </div>
     )
 }
