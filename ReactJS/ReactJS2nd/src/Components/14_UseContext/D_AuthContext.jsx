@@ -3,7 +3,7 @@ import { Children , createContext , useState } from "react"
 
 const AuthContext = createContext();
 
-const AuthProvider = ({Children}) =>{
+const AuthProvider = ({Children}) => {
 
     const [isLoggedIn , setIsLoogedIN] = useState(false);
 
@@ -13,6 +13,7 @@ const AuthProvider = ({Children}) =>{
     return(
         <AuthContext.Provider value={{isLoggedIn , login , logOut}}>
             {Children}
+            
         </AuthContext.Provider>
     )
 
