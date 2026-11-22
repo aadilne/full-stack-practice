@@ -1,20 +1,24 @@
 
-import { Children , createContext , useState } from "react"
+import { createContext , useState } from "react"
 
 const AuthContext = createContext();
 
-const AuthProvider = ({Children}) => {
+const AuthProvider = ({children}) => {   
 
-    const [isLoggedIn , setIsLoogedIN] = useState(false);
+    const [isLoggedIn , setIsLoogedIn] = useState(false);
 
-    const login = () => setIsLoogedIN(true);
-    const logOut = () => setIsLoogedIN(false);
+    const login = () => setIsLoogedIn(true);
+    const logOut = () => setIsLoogedIn(false);
 
     return(
+        <div>
+            <p>Multipules components use This is to be usederstood</p>
         <AuthContext.Provider value={{isLoggedIn , login , logOut}}>
-            {Children}
+            {children}   
             
         </AuthContext.Provider>
+
+        </div>
     )
 
 }

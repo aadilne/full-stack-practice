@@ -3,11 +3,12 @@ import { useContext } from "react"
 import { AuthContext } from "./D_AuthContext"
 
 const D_ChildAuthContext = () => {
-    const {isLoggedIn , login , logout} = useContext(AuthContext);
+    
+    const {isLoggedIn , login , logOut} = useContext(AuthContext);
     
     return(
         <nav>
-            {isLoggedIn ? (<button onClick={logout}>Logout</button>) : (<button onClick={login}>Login</button>)}
+            {isLoggedIn ? (<button onClick={logOut}>Logout</button>) : (<button onClick={login}>Login</button>)}
         </nav>
     )
 }
