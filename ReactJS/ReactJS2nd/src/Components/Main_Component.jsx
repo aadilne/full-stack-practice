@@ -16,6 +16,7 @@ import APP_React_Router from "./11_React_Router/App_React_Router"
 import App_useEffectEvent from "./12_UseEffectEvent/App_useEffectEvent"
 import App_Data_Flow from "./13_Data_Flow/App_Data_Flow"
 import App_UseContext from "./14_UseContext/APP_UseContext"
+import App_UseReducer from "./15_UseReducer/App_UseReducer"
 
 
 
@@ -56,6 +57,8 @@ function    Main_Component(){
             <App_Data_Flow />
 
             <App_UseContext />
+
+            <App_UseReducer />
 
 
 
