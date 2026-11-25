@@ -17,6 +17,7 @@ import App_useEffectEvent from "./12_UseEffectEvent/App_useEffectEvent"
 import App_Data_Flow from "./13_Data_Flow/App_Data_Flow"
 import App_UseContext from "./14_UseContext/APP_UseContext"
 import App_UseReducer from "./15_UseReducer/App_UseReducer"
+import App_UseMemo from "./16_UseMemo/App_UseMemo"
 
 
 
@@ -59,6 +60,8 @@ function    Main_Component(){
             <App_UseContext />
 
             <App_UseReducer />
+
+            <App_UseMemo />
 
 
 
