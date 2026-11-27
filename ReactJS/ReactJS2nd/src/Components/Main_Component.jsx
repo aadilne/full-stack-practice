@@ -19,6 +19,7 @@ import App_UseContext from "./14_UseContext/APP_UseContext"
 import App_UseReducer from "./15_UseReducer/App_UseReducer"
 import App_UseMemo from "./16_UseMemo/App_UseMemo"
 import App_UseCallback from "./17_UseCallback/App_UseCallback"
+import App_UseLayoutEffect from "./18_UseLayoutEffect/App_UseLayoutEffect"
 
 
 
@@ -65,6 +66,8 @@ function    Main_Component(){
             <App_UseMemo />
 
             <App_UseCallback />
+
+            <App_UseLayoutEffect />
 
 
 

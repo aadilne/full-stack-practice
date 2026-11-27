@@ -12,6 +12,7 @@ function App_UseEffect() {
 
     return (
         <div>
+            <p>ye component lode hone ke baad useEffect automatice lode hota hai</p>
            
             <A_DOM_Manipulation />
 
